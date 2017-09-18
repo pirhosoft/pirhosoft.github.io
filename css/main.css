@@ -129,12 +129,54 @@ body
 
 .content
 {
+	margin: 40px;
 }
 
 .content .title
 {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 36px;
 }
 
 .content .article
 {
+	margin: 40px;
+}
+
+.content .article a
+{
+	text-decoration: none;
+}
+
+.content .article img
+{
+	height: 120px;
+	border-radius: 8px;
+	float: left;
+	margin-right: 16px;
+}
+
+.content .article .name
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	color: black;
+}
+
+.content .article .date
+{
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #666;
+}
+
+.content .article .words
+{
+	margin-top: 10px;
+	font-family: serif;
+	font-size: 18px;
+	color: #333;
+	max-width: 1200px;
 }
