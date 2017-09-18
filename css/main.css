@@ -1,0 +1,140 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.links
+{
+	background-color: #333;
+	padding: 10px;
+	text-align: right;
+}
+
+.links a
+{
+	color: white;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 16px;
+	margin-right: 16px;
+}
+
+.links a:hover
+{
+	text-decoration: underline;
+}
+
+.links a i
+{
+	margin-right: 6px;
+}
+
+.header
+{
+	background-color: grey;
+	text-align: center;
+	height: 100px;
+	position: relative;
+}
+
+.header a
+{
+	color: #333;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	margin-right: 40px;
+}
+
+.header a:hover
+{
+	text-decoration: underline;
+}
+
+.header a i
+{
+	margin-right: 6px;
+}
+
+.header a img
+{
+	width: 150px;
+	height: 63.25px;
+	position: relative;
+	top: 20px;
+}
+
+.description
+{
+	color: #333;
+	max-width: 800px;
+	margin: 50px auto;
+	font-family: serif;
+	font-size: 20px;
+}
+
+.description a
+{
+	color: black;
+}
+
+.social
+{
+	text-align: center;
+}
+
+.social a
+{
+	margin: 10px;
+	padding: 12px;
+	border-radius: 6px;
+	color: white;
+	font-family: sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.social a:hover
+{
+	text-decoration: underline;
+}
+
+.social a.twitter
+{
+	background-color: #1DA1F2;
+}
+
+.social a.facebook
+{
+	background-color: #3B5998;
+}
+
+.social a.github
+{
+	background-color: #24292e;
+}
+
+.social a.newsletter
+{
+	background-color: #ea4335;
+}
+
+.social a i
+{
+	margin-right: 8px;
+}
+
+.content
+{
+}
+
+.content .title
+{
+}
+
+.content .article
+{
+}
