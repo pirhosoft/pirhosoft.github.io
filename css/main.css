@@ -1,17 +1,79 @@
+html
+{
+	height: 100%;
+}
+
 body
 {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-.links
+.body
 {
-	background-color: #333;
-	padding: 10px;
-	text-align: right;
+	background-image: url("../images/canvas.jpg");
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
 }
 
-.links a
+.header
+{
+	background-color: #333;
+	padding: 0 20px 0 10px;
+	display: flex;
+	align-items: center;
+}
+
+.header .logo img
+{
+	height:96px;
+}
+
+.header .page-links
+{
+	display: inline-block;
+	white-space: nowrap;
+	margin-left: 100px;
+}
+
+.header .page-link
+{
+	color: #EEE;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	margin-right: 40px;
+}
+
+.header .page-link:hover
+{
+	color: white;
+	text-decoration: underline;
+}
+
+.header .page-link i
+{
+	margin-right: 6px;
+}
+
+.header .spacer
+{
+	flex: 100%;
+}
+
+.header .social-links
+{
+	display: inline-block;
+	white-space: nowrap;
+	align-self: flex-start;
+	padding-top: 20px;
+}
+
+.header .social-link
 {
 	color: white;
 	text-decoration: none;
@@ -20,57 +82,32 @@ body
 	margin-right: 16px;
 }
 
-.links a:hover
+.header .social-link:hover
 {
 	text-decoration: underline;
 }
 
-.links a i
+.header .social-link i
 {
 	margin-right: 6px;
 }
 
-.header
+.title
 {
-	background-color: grey;
 	text-align: center;
+	margin-top: 50px;
+}
+
+.title img
+{
 	height: 100px;
-	position: relative;
-}
-
-.header a
-{
-	color: #333;
-	text-decoration: none;
-	font-family: sans-serif;
-	font-size: 26px;
-	font-weight: bold;
-	margin-right: 40px;
-}
-
-.header a:hover
-{
-	text-decoration: underline;
-}
-
-.header a i
-{
-	margin-right: 6px;
-}
-
-.header a img
-{
-	width: 150px;
-	height: 63.25px;
-	position: relative;
-	top: 20px;
 }
 
 .description
 {
 	color: #333;
 	max-width: 800px;
-	margin: 50px auto;
+	margin: 30px auto;
 	font-family: serif;
 	font-size: 20px;
 }
@@ -80,49 +117,50 @@ body
 	color: black;
 }
 
-.social
+.social-buttons
 {
 	text-align: center;
+	margin-top: 50px;
 }
 
-.social a
+.social-buttons a
 {
 	margin: 10px;
 	padding: 12px;
 	border-radius: 6px;
 	color: white;
 	font-family: sans-serif;
-	font-size: 26px;
+	font-size: 16px;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.social a:hover
+.social-buttons a:hover
 {
 	text-decoration: underline;
 }
 
-.social a.twitter
+.social-buttons a.twitter
 {
 	background-color: #1DA1F2;
 }
 
-.social a.facebook
+.social-buttons a.facebook
 {
 	background-color: #3B5998;
 }
 
-.social a.github
+.social-buttons a.github
 {
 	background-color: #24292e;
 }
 
-.social a.newsletter
+.social-buttons a.newsletter
 {
 	background-color: #ea4335;
 }
 
-.social a i
+.social-buttons a i
 {
 	margin-right: 8px;
 }
@@ -130,53 +168,96 @@ body
 .content
 {
 	margin: 40px;
+	text-align: center;
 }
 
-.content .title
+.content .content-column
+{
+	display: inline-block;
+	width: 300px;
+	padding: 50px;
+}
+
+.content-column img
+{
+	width: 300px;
+	height: 168.75px;
+}
+
+.content-column .label
 {
 	font-family: sans-serif;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 30px;
+	margin-top: 20px;
 }
 
-.content .article
+.content-column .label a
 {
-	margin: 40px;
-}
-
-.content .article a
-{
+	color: black;
 	text-decoration: none;
 }
 
-.content .article img
+.content-column .label a:hover
 {
-	height: 120px;
-	border-radius: 8px;
-	float: left;
-	margin-right: 16px;
+	text-decoration: underline;
 }
 
-.content .article .name
+.content-column .caption
 {
-	font-family: sans-serif;
-	font-weight: bold;
-	font-size: 24px;
-	color: black;
-}
-
-.content .article .date
-{
-	font-family: sans-serif;
-	font-size: 14px;
-	color: #666;
-}
-
-.content .article .words
-{
-	margin-top: 10px;
+	margin: 20px;
 	font-family: serif;
 	font-size: 18px;
-	color: #333;
-	max-width: 1200px;
+}
+
+.footer-spacing
+{
+	height: 60px;
+}
+
+.footer
+{
+	text-align: center;
+	background-color: #333;
+	color: #AAA;
+	height: 20px;
+	padding: 20px;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+.footer .logo
+{
+	display: inline-block;
+	height: 40px;
+	margin-top: -8px;
+}
+
+.footer .logo img
+{
+	height: 100%;
+}
+
+.footer .copyright
+{
+	display: inline-block;
+	margin: 0 160px;
+	vertical-align: 16px;
+}
+
+.footer .legal
+{
+	display: inline-block;
+	vertical-align: 16px;
+}
+
+.footer .legal a
+{
+	color: #AAA;
+	text-decoration: none;
+}
+
+.footer .legal a:hover
+{
+	text-decoration: underline;
 }
