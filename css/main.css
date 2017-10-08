@@ -12,6 +12,7 @@ body
 
 .body
 {
+	background-color: #F0D8BE;
 	background-image: url("../images/canvas.jpg");
 	min-height: 100%;
 	height: auto !important;
@@ -22,7 +23,7 @@ body
 .header
 {
 	background-color: #333;
-	padding: 0 20px 0 10px;
+	padding: 0 10px 0 30px;
 	display: flex;
 	align-items: center;
 }
@@ -57,7 +58,23 @@ body
 
 .header .page-link i
 {
+	display: inline-block;
 	margin-right: 6px;
+}
+
+.header .page-link .fa-newspaper-o
+{
+	width: 30px;
+}
+
+.header .page-link .fa-gamepad
+{
+	width: 28px;
+}
+
+.header .page-link .fa-rss-square
+{
+	width: 22px;
 }
 
 .header .spacer
