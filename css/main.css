@@ -62,21 +62,6 @@ body
 	margin-right: 6px;
 }
 
-.header .page-link .fa-newspaper-o
-{
-	width: 30px;
-}
-
-.header .page-link .fa-gamepad
-{
-	width: 28px;
-}
-
-.header .page-link .fa-rss-square
-{
-	width: 22px;
-}
-
 .header .spacer
 {
 	flex: 100%;

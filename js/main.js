@@ -1,5 +1,21 @@
-function setPageContent(href)
+var baseTitle = "PiRho Soft";
+
+var urlmap =
 {
+	"/": [ "", "/content/index.html" ],
+	"/news": [ "News", "/content/news.html" ],
+	"/games": [ "Games", "/content/games.html" ],
+	"/blog": [ "Blog", "/content/blog.html" ]
+};
+
+function getContent(url)
+{
+	return urlmap[url] || urlmap["/"];
+}
+
+function setPage(url, push, replace)
+{
+	var data = getContent(url);
 	var page = document.getElementsByClassName("page").item(0);
 	var pageRequest = new XMLHttpRequest();
 
@@ -8,27 +24,36 @@ function setPageContent(href)
 		page.outerHTML = this.responseText;
 	});
 
-	var host = "file:///C:/Users/larso/Projects/pirhosoft.github.io/";
-	var location = href.substring(host.length);
-
-	pageRequest.open("GET", "content/" + location);
+	pageRequest.open("GET", data[1]);
 	pageRequest.send();
+
+	if (push)
+		window.history.pushState({ url: url }, "", url);
+
+	if (replace)
+		window.history.replaceState({ url: url }, "", url);
+
+	document.title = data[0] ? "PiRho Soft " + data[0] : "PiRho Soft";
 }
 
 document.addEventListener("DOMContentLoaded", function(event)
 {
-	setPageContent(window.location.href);
+	setPage(window.location.pathname, false, true);
 
-	var links = document.getElementsByClassName("internal-link");
-
-	for (var i = 0; i < links.length; i++)
+	window.addEventListener("popstate", function(event)
 	{
-		var link = links.item(i);
+		setPage(event.state.url);
+	});
 
-		link.addEventListener("click", function(event)
+	window.addEventListener("click", function(event)
+	{
+		var path = event.target.dataset.path || event.target.parentElement.dataset.path
+
+		if (path)
 		{
-			setPageContent(link.href);
+			setPage(path, true);
 			event.preventDefault();
-		});
-	}
+			event.stopPropagation();
+		}
+	});
 });
