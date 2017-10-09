@@ -20,10 +20,96 @@ body
 	margin: 0 auto -60px;
 }
 
+@media all and (min-width: 1100px)
+{
+	.header
+	{
+		padding: 0 10px 0 30px;
+	}
+
+	.header .page-links
+	{
+		margin-left: 100px;
+	}
+
+	.header .social-links
+	{
+		align-self: flex-start;
+		margin-right: 16px;
+	}
+
+	.footer .copyright
+	{
+		margin: 0 160px;
+	}
+	
+	.footer-spacing
+	{
+		height: 60px;
+	}
+
+	.footer
+	{
+		height: 20px;
+	}
+}
+
+@media all and (max-width: 1099px)
+{
+	.header
+	{
+		flex-direction: column;
+		padding: 10px;
+	}
+
+	.header .logo
+	{
+		order: 1;
+	}
+	
+	.header .page-links
+	{
+		order: 2;
+	}
+
+	.header .social-links
+	{
+		order: 0;
+	}
+	
+	.footer-spacing
+	{
+		height: 140px;
+	}
+
+	.footer
+	{
+		height: 100px;
+	}
+
+	.footer .copyright
+	{
+		display: block !important;
+		padding: 10px 0 20px 0;
+	}
+}
+
+@media all and (max-width: 414px)
+{
+	.header .page-link
+	{
+		font-size: 18px !important;
+	}
+
+	.header .social-link
+	{
+		font-size: 12px !important;
+	}
+}
+
 .header
 {
 	background-color: #333;
-	padding: 0 10px 0 30px;
 	display: flex;
 	align-items: center;
 }
@@ -37,7 +123,6 @@ body
 {
 	display: inline-block;
 	white-space: nowrap;
-	margin-left: 100px;
 }
 
 .header .page-link
@@ -47,6 +132,10 @@ body
 	font-family: sans-serif;
 	font-size: 26px;
 	font-weight: bold;
+}
+
+.header .page-link:not(:last-child)
+{
 	margin-right: 40px;
 }
 
@@ -71,7 +160,6 @@ body
 {
 	display: inline-block;
 	white-space: nowrap;
-	align-self: flex-start;
 	padding-top: 20px;
 }
 
@@ -81,6 +169,10 @@ body
 	text-decoration: none;
 	font-family: sans-serif;
 	font-size: 16px;
+}
+
+.header .social-link:not(:last-child)
+{
 	margin-right: 16px;
 }
 
@@ -212,17 +304,11 @@ body
 	font-size: 18px;
 }
 
-.footer-spacing
-{
-	height: 60px;
-}
-
 .footer
 {
 	text-align: center;
 	background-color: #333;
 	color: #AAA;
-	height: 20px;
 	padding: 20px;
 	font-family: sans-serif;
 	font-size: 12px;
@@ -243,8 +329,8 @@ body
 .footer .copyright
 {
 	display: inline-block;
-	margin: 0 160px;
 	vertical-align: 16px;
+	white-space: nowrap;
 }
 
 .footer .legal
