@@ -56,6 +56,8 @@ function getPageContent(url)
 
 	var content = pages[url];
 	content.unshift(url);
+
+	return content;
 }
 
 function getContent(url)
