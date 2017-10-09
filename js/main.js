@@ -6,6 +6,10 @@ var urlmap =
 	"/news": [ "News", "/content/news.html" ],
 	"/games": [ "Games", "/content/games.html" ],
 	"/blog": [ "Blog", "/content/blog.html" ],
+	"/press": [ "Press", "/content/press.html" ],
+	"/games/photon-phanatics/": [ "Photon Phanatics", "/content/games/photon-phanatics/index.html" ],
+	"/games/the-art-of-war/": [ "The Art of War", "/content/games/the-art-of-war/index.html" ],
+	"/legal/privacy-policy": [ "Privacy Policy", "/content/legal/privacy-policy.html" ],
 	"/legal/terms-of-service": [ "Terms of Service", "/content/legal/terms-of-service.html" ]
 };
 
