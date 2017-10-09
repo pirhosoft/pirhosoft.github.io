@@ -5,7 +5,8 @@ var urlmap =
 	"/": [ "", "/content/index.html" ],
 	"/news": [ "News", "/content/news.html" ],
 	"/games": [ "Games", "/content/games.html" ],
-	"/blog": [ "Blog", "/content/blog.html" ]
+	"/blog": [ "Blog", "/content/blog.html" ],
+	"/legal/terms-of-service": [ "Terms of Service", "/content/legal/terms-of-service.html" ]
 };
 
 function getContent(url)
@@ -21,7 +22,10 @@ function setPage(url, push, replace)
 
 	pageRequest.addEventListener("load", function()
 	{
-		page.outerHTML = this.responseText;
+		if (this.status == 200)
+			page.innerHTML = this.responseText;
+		else
+			page.innerHTML = "";
 	});
 
 	pageRequest.open("GET", data[1]);
