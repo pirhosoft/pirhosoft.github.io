@@ -156,6 +156,8 @@ body
 .header .logo img
 {
 	height:96px;
+	margin-top: 10px;
+	margin-bottom: -10px;
 }
 
 .header .page-links
