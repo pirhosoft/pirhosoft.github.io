@@ -5,48 +5,29 @@ var pages =
 	"/games": [ "PiRho Soft Games", "/content/games.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
-	"/games/photon-phanatics/": [ "Photon Phanatics", "/content/games/photon-phanatics/index.html" ],
-	"/games/the-art-of-war/": [ "The Art of War", "/content/games/the-art-of-war/index.html" ],
+	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
+	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.html" ],
 	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.html" ]
 };
 
 var posts =
 {
-	"2017":
-	{
-		"10":
-		{
-			"9": [ "First Post", "the first post whose summary is this" ]
-		}
-	}
+	"2017-10-09": [ "First Post", "the first post whose summary is this" ]
 };
 
 var articles =
 {
-	"2017":
-	{
-		"10":
-		{
-			"9": [ "First Post", "the first post whose summary is this" ]
-		}
-	}
+	"2017-10-09": [ "First Article", "the first article whose summary is this" ]
 };
 
 function getPostContent(url, list)
 {
-	var path = url.split("/");
-	if (path.length == 5)
-	{
-		var year = list[path[2]];
-		var month = year ? year[path[3]] : undefined;
-		var day = month ? month[path[4]] : undefined;
-
-		if (day)
-			return [ url, day[0], "/content" + url + ".md" ]
-	}
-	
-	return undefined;
+	var date = url.substring(6);
+	if (!posts[date])
+		return undefined;
+		
+	return [ url, posts[date][0], "/content" + url + ".md" ]
 }
 
 function getPageContent(url)
@@ -54,7 +35,7 @@ function getPageContent(url)
 	if (!pages[url])
 		url = "/";
 
-	var content = pages[url];
+	var content = pages[url].slice(0);
 	content.unshift(url);
 
 	return content;
@@ -82,7 +63,7 @@ function getContent(url)
 	return getPageContent(url);
 }
 
-function setContent(content, md)
+function setContent(url, content, md)
 {
 	var page = document.getElementsByClassName("page").item(0);
 
@@ -98,6 +79,17 @@ function setContent(content, md)
 	}
 
 	page.innerHTML = content;
+
+	if (url == "/blog")
+	{
+		var container = document.getElementsByClassName("content").item(0);
+		loadPosts(container);
+	}
+	else if (url == "/news")
+	{
+		var container = document.getElementsByClassName("content").item(0);
+		loadArticles(container);
+	}
 }
 
 function setPage(url, push)
@@ -108,9 +100,9 @@ function setPage(url, push)
 	pageRequest.addEventListener("load", function()
 	{
 		if (this.status == 200)
-			setContent(this.responseText, data[2].endsWith(".md"));
+			setContent(data[0], this.responseText, data[2].endsWith(".md"));
 		else
-			setContent("", false);
+			setContent(data[0], "", false);
 	});
 
 	pageRequest.open("GET", data[2]);
@@ -130,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	window.addEventListener("popstate", function(event)
 	{
-		setPage(event.state.url, true);
+		setPage(event.state.url, false);
 	});
 
 	window.addEventListener("click", function(event)
@@ -138,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 		var domain = window.location.origin;
 		var href = event.target.href || event.target.parentElement.href;
 
-		if (href.startsWith(domain))
+		if (href && href.startsWith(domain))
 		{
 			var path = href.substring(domain.length);
 			setPage(path, true);
@@ -147,3 +139,55 @@ document.addEventListener("DOMContentLoaded", function(event)
 		}
 	});
 });
+
+var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+
+function getMonth(month)
+{
+	var index = parseInt(month);
+	return months[index - 1]
+}
+
+var contentTemplate = "\
+<div class='<type>'>\
+	<div class='thumbnail'><img src='<thumbnail>' /></div>\
+	<div class='name'><name></div>\
+	<div class='date'><date></div>\
+	<div class='summary'><summary></div>\
+	<div class='read'><a href='<url>'>Read More...</a></div>\
+</div>";
+
+function loadContent(container, root, type, contents)
+{
+	var content = "";
+
+	for (date in contents)
+	{
+		var components = date.split("-");
+
+		var article = contents[date];
+		var url = root + "/" + date;
+		var image = "/images" + root + "/" + date + "/thumbnail.png";
+		var date = getMonth(components[1]) + " " + components[2] + ", " + components[0];
+
+		content += contentTemplate
+			.replace("<type>", type)
+			.replace("<thumbnail>", image)
+			.replace("<name>", article[0])
+			.replace("<date>", date)
+			.replace("<summary>", article[1])
+			.replace("<url>", url);
+	}
+
+	return content;
+}
+
+function loadPosts(container)
+{
+	container.innerHTML = loadContent(container, "/blog", "post", posts);
+}
+
+function loadArticles(container)
+{
+	container.innerHTML = loadContent(container, "/news", "article", articles);
+}
