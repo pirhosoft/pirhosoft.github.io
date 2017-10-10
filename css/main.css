@@ -12,7 +12,7 @@ body
 
 .body
 {
-	background-color: #F0D8BE;
+	background-color: #F5F0E6;
 	background-image: url("../images/canvas.png");
 	min-height: 100%;
 	height: auto !important;
@@ -225,38 +225,39 @@ body
 	margin-right: 6px;
 }
 
-.title
+.page .title
 {
 	text-align: center;
 	margin-top: 50px;
 }
 
-.title img
+.page .title img
 {
 	height: 100px;
 }
 
-.description
+.page .description
 {
 	color: #333;
 	max-width: 800px;
 	margin: 30px auto;
 	font-family: serif;
 	font-size: 20px;
+	text-align: center;
 }
 
-.description a
+.page .description a
 {
 	color: black;
 }
 
-.social-buttons
+.page .social-buttons
 {
 	text-align: center;
 	margin: 20px 0;
 }
 
-.social-buttons a
+.page .social-buttons a
 {
 	display: inline-block;
 	margin: 10px;
@@ -270,83 +271,39 @@ body
 	white-space: nowrap;
 }
 
-.social-buttons a:hover
+.page .social-buttons a:hover
 {
 	text-decoration: underline;
 }
 
-.social-buttons a.twitter
+.page .social-buttons a.twitter
 {
 	background-color: #1DA1F2;
 }
 
-.social-buttons a.facebook
+.page .social-buttons a.facebook
 {
 	background-color: #3B5998;
 }
 
-.social-buttons a.youtube
+.page .social-buttons a.youtube
 {
 	background-color: #FF0000;
 }
 
-.social-buttons a.github
+.page .social-buttons a.github
 {
 	background-color: #24292E;
 }
 
-.social-buttons a.newsletter
+.page .social-buttons a.newsletter
 {
 	background-color: #43AA35;
 }
 
-.social-buttons a i
+.page .social-buttons a i
 {
 	margin-right: 8px;
-}
-
-.content
-{
-	margin: 40px;
-	text-align: center;
-}
-
-.content .content-column
-{
-	display: inline-block;
-	width: 300px;
-	padding: 0 50px;
-}
-
-.content-column img
-{
-	width: 200px;
-}
-
-.content-column .label
-{
-	font-family: sans-serif;
-	font-weight: bold;
-	font-size: 30px;
-	margin-top: 20px;
-}
-
-.content-column .label a
-{
-	color: black;
-	text-decoration: none;
-}
-
-.content-column .label a:hover
-{
-	text-decoration: underline;
-}
-
-.content-column .caption
-{
-	margin: 20px;
-	font-family: serif;
-	font-size: 18px;
 }
 
 .footer
@@ -376,12 +333,14 @@ body
 	display: inline-block;
 	vertical-align: 16px;
 	white-space: nowrap;
+	cursor: default;
 }
 
 .footer .legal
 {
 	display: inline-block;
 	vertical-align: 16px;
+	cursor: default;
 }
 
 .footer .legal a
@@ -395,86 +354,46 @@ body
 	text-decoration: underline;
 }
 
-#Signup
+.index.content
 {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	display: none;
-	background-color: rgba(0, 0, 0, 0.75);
+	margin: 40px;
+	text-align: center;
 }
 
-#Signup .popup
+.index .content-column
 {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background:#fff;
-	clear:left;
-	font:14px Helvetica,Arial,sans-serif;
-	width: 500px;
-}
-
-#Signup .form
-{
-	padding: 10px 16px 16px 16px;
-}
-
-#Signup .inputs
-{
-	width: 96%;
-	padding-bottom: 14px;
-}
-
-#Signup .inputs label
-{
-	display: block;
-}
-
-#Signup .inputs input
-{
-	width: 100%;
-	padding: 8px;
-}
-
-#Signup .button
-{
-	background-color: #AAA;
-	border: 0 none;
-	border-radius: 4px;
-	color: #FFFFFF;
-	cursor: pointer;
 	display: inline-block;
-	font-size: 15px;
-	height: 32px;
-	padding: 0 22px;
+	width: 300px;
+	padding: 0 50px;
 }
 
-#Signup .button:hover
+.index .content-column img
 {
-	background-color: #777;
+	width: 200px;
 }
 
-#Signup .cancel
+.index .content-column .label
 {
-	float: right;
-}
-
-#Signup .loading
-{
-	display: none;
-	text-align: center;
-}
-
-#Signup .loading img
-{
-	width: 32px;
-}
-
-#Signup .thanks
-{
-	display: none;
-	text-align: center;
+	font-family: sans-serif;
 	font-weight: bold;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.index .content-column .label a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.index .content-column .label a:hover
+{
+	text-decoration: underline;
+}
+
+.index .content-column .caption
+{
+	margin: 20px;
+	font-family: serif;
+	font-size: 18px;
 }
