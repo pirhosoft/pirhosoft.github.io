@@ -7,7 +7,7 @@ var pages =
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
-	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.html" ],
+	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
 	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ]
 };
@@ -69,6 +69,7 @@ var facebookComments = "<div class='fb-comments' data-width='100%'></div>";
 function setContent(url, content, md)
 {
 	var page = document.getElementsByClassName("page").item(0);
+	var doComments = url.startsWith("/news/") || url.startsWith("/blog/");
 
 	if (md)
 	{
@@ -79,12 +80,13 @@ function setContent(url, content, md)
 			literalMidWordUnderscores: true
 		});
 
-		content = "<div class='markdown'>" + converter.makeHtml(content) + facebookComments + "</div>";
+		var comments = doComments ? facebookComments : "";
+		content = "<div class='markdown'>" + converter.makeHtml(content) + comments + "</div>";
 	}
 
 	page.innerHTML = content;
 
-	if (md && location.hostname == "pirhosoft.com")
+	if (doComments && location.hostname == "pirhosoft.com")
 	{
 		FB.XFBML.parse();
 	}

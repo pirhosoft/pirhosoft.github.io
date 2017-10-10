@@ -227,6 +227,11 @@ body
 	margin-right: 6px;
 }
 
+iframe
+{
+	max-width: 100%;
+}
+
 .page .title, .markdown h1
 {
 	text-align: center;
@@ -508,4 +513,56 @@ body
 	margin: 20px;
 	font-family: serif;
 	font-size: 18px;
+}
+
+.list-item.game-item
+{
+	flex-direction: column;
+	text-align: center;
+	margin: 80px auto;
+	padding: 0 20px;
+}
+
+.list-item.game-item .list-thumbnail
+{
+	margin: auto;
+	max-width: 800px;
+}
+
+.list-item.game-item .list-thumbnail img
+{
+	max-width: 100%;
+	width: auto;
+	border: none;
+}
+
+.list-item.game-item .summary
+{
+	max-width: 600px;
+	margin: auto;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+.content.game
+{
+	max-width: 1100px;
+	margin: auto;
+}
+
+.content.game .section
+{
+	margin: 0 80px 40px 80px;
+}
+
+.content.game .section-title
+{
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content.game .section-content
+{
+	margin: 20px;
 }

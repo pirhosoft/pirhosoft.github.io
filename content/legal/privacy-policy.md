@@ -1,4 +1,4 @@
-## **Privacy Policy**
+# **Privacy Policy**
 
 Protecting your private information is our priority. This Statement of Privacy applies to http://pirhosoft.com and PiRho Soft, Inc. and governs data collection and usage. For the purposes of this Privacy Policy, unless otherwise noted, all references to PiRho Soft, Inc. include http://pirhosoft.com and PiRho Soft. The PiRho Soft websit is a news and information site. By using the PiRho Soft website, you consent to the data practices described in this statement.
 

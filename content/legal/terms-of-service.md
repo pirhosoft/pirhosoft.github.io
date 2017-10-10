@@ -1,4 +1,4 @@
-## **Terms and Conditions**
+# **Terms and Conditions**
 
 Agreement between User and http://pirhosoft.com
 
