@@ -63,6 +63,8 @@ function getContent(url)
 	return getPageContent(url);
 }
 
+var facebookComments = "<div class='fb-comments' data-href='http://pirhosoft.com<url>' data-width='100%'></div>";
+
 function setContent(url, content, md)
 {
 	var page = document.getElementsByClassName("page").item(0);
@@ -75,10 +77,15 @@ function setContent(url, content, md)
 			literalMidWordUnderscores: true
 		});
 
-		content = converter.makeHtml(content);
+		content = converter.makeHtml(content) + facebookComments.replace("<url>", url);
 	}
 
 	page.innerHTML = content;
+
+	if (md && location.hostname == "pirhosoft.com")
+	{
+		FB.XFBML.parse(document.getElementsByClassName('fb-comments'));
+	}
 
 	if (url == "/blog")
 	{
