@@ -133,12 +133,12 @@ body
 		padding: 0 10px;
 	}
 
-	.content
+	.index.content
 	{
 		margin: 40px 0 !important;
 	}
 
-	.content .content-column
+	.index .content-column
 	{
 		display: block !important;
 		padding: 0px !important;
@@ -227,10 +227,13 @@ body
 	margin-right: 6px;
 }
 
-.page .title
+.page .title, .markdown h1
 {
 	text-align: center;
 	margin-top: 50px;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 48px;
 }
 
 .page .title img
@@ -306,6 +309,113 @@ body
 .page .social-buttons a i
 {
 	margin-right: 8px;
+}
+
+@media all and (max-width: 750px)
+{
+	.listing
+	{
+		text-align: center;
+	}
+		
+	.list-item
+	{
+		flex-direction: column;
+	}
+}
+
+.listing
+{
+	margin: 40px 20px;
+}
+
+.list-item
+{
+	display: flex;
+	margin: 20px auto;
+	max-width: 1100px;
+}
+
+.list-thumbnail
+{
+	display: inline-block;
+}
+
+.list-thumbnail img
+{
+	width: 240px;
+	border: 1px solid black;
+}
+
+.list-content
+{
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+.list-content .name
+{
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.list-content a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.list-content a:hover
+{
+	text-decoration: underline;
+}
+
+.list-content .date
+{
+	font-style: italic;
+}
+
+.list-content .summary
+{
+	padding: 10px 0;
+}
+
+.list-content a.read
+{
+	font-weight: bold;
+}
+
+.markdown
+{
+	margin: 40px auto;
+	max-width: 1100px;
+	padding: 0 20px;
+}
+
+.markdown h1
+{
+	text-align: center;
+}
+
+.markdown img
+{
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.markdown .youtube
+{
+	text-align: center;
+}
+
+.markdown p
+{
+	font-size: 20px;
+	line-height: 1.4em;
 }
 
 .footer

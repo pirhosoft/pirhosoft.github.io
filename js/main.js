@@ -8,18 +8,18 @@ var pages =
 	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.html" ],
-	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.html" ],
-	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.html" ]
+	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
+	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ]
 };
 
 var posts =
 {
-	"2017-10-09": [ "First Post", "the first post whose summary is this" ]
+	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
 };
 
 var articles =
 {
-	"2017-10-09": [ "First Article", "the first article whose summary is this" ]
+	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
 };
 
 function getPostContent(url, list)
@@ -78,7 +78,7 @@ function setContent(url, content, md)
 			literalMidWordUnderscores: true
 		});
 
-		content = converter.makeHtml(content) + facebookComments;
+		content = "<div class='markdown'>" + converter.makeHtml(content) + facebookComments + "</div>";
 	}
 
 	page.innerHTML = content;
@@ -90,12 +90,12 @@ function setContent(url, content, md)
 
 	if (url == "/blog")
 	{
-		var container = document.getElementsByClassName("content").item(0);
+		var container = document.getElementsByClassName("blog").item(0);
 		loadPosts(container);
 	}
 	else if (url == "/news")
 	{
-		var container = document.getElementsByClassName("content").item(0);
+		var container = document.getElementsByClassName("news").item(0);
 		loadArticles(container);
 	}
 }
@@ -157,12 +157,14 @@ function getMonth(month)
 }
 
 var contentTemplate = "\
-<div class='<type>'>\
-	<div class='thumbnail'><img src='<thumbnail>' /></div>\
-	<div class='name'><name></div>\
-	<div class='date'><date></div>\
-	<div class='summary'><summary></div>\
-	<div class='read'><a href='<url>'>Read More...</a></div>\
+<div class='list-item <type>'>\
+	<div class='list-thumbnail'><a href='<url>'><img src='<thumbnail>' /></a></div>\
+	<div class='list-content'>\
+		<div class='name'><a href='<url>'><name></a></div>\
+		<div class='date'><date></div>\
+		<div class='summary'><summary></div>\
+		<a class='read' href='<url>'>Read More...</a>\
+	</div>\
 </div>";
 
 function loadContent(container, root, type, contents)
@@ -184,7 +186,7 @@ function loadContent(container, root, type, contents)
 			.replace("<name>", article[0])
 			.replace("<date>", date)
 			.replace("<summary>", article[1])
-			.replace("<url>", url);
+			.replace(/<url>/g, url);
 	}
 
 	return content;
