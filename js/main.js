@@ -74,6 +74,7 @@ function setContent(url, content, md)
 	{
 		var converter = new showdown.Converter(
 		{
+			extensions: [ 'youtube' ],
 			parseImgDimensions: true,
 			literalMidWordUnderscores: true
 		});
