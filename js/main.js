@@ -7,6 +7,7 @@ var pages =
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
+	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.html" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.html" ],
 	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.html" ]
 };
@@ -197,4 +198,14 @@ function loadPosts(container)
 function loadArticles(container)
 {
 	container.innerHTML = loadContent(container, "/news", "article", articles);
+}
+
+function showSignUp()
+{
+	require(["mojo/signup-forms/Loader"], function(L)
+	{
+		L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"eed938b86f48d48227740122e","lid":"4e8f4d4303"})
+		document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+		document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+	});
 }

@@ -6,6 +6,7 @@ COPY index.html news.html /Y
 COPY index.html press.html /Y
 COPY index.html games\photon-phanatics.html /Y
 COPY index.html games\the-art-of-war.html /Y
+COPY index.html legal\attribution.html /Y
 COPY index.html legal\privacy-policy.html /Y
 COPY index.html legal\terms-of-service.html /Y
 
