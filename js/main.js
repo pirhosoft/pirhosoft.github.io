@@ -5,6 +5,7 @@ var pages =
 	"/games": [ "PiRho Soft Games", "/content/games.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
+	"/downloads": [ "Downloads", "/content/downloads.html" ],
 	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
@@ -141,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 		var domain = window.location.origin;
 		var href = event.target.href || event.target.parentElement.href;
 
-		if (href && href.startsWith(domain))
+		if (href && href.startsWith(domain) && href.indexOf(".zip") < 0)
 		{
 			var path = href.substring(domain.length);
 			setPage(path, true);
