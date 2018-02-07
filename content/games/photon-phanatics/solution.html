@@ -1,0 +1,38 @@
+<script type="text/javascript">	
+	var packs =
+	[
+		{
+			Name: "Turn on the Lights!",
+			Levels: [ "Introduction", "Rotation", "Movement", "" ]
+		}
+	];
+
+	var unknownPack =
+	{
+		Name: "Unknown Pack",
+		Levels: []
+	};
+
+	var packElement = document.getElementsByClassName("pack-name").item(0);
+	var levelElement = document.getElementsByClassName("level-name").item(0);
+	var solutionElement = document.getElementsByClassName("solution-image").item(0);
+
+	var dashIndex = window.location.hash.indexOf('-');
+	var packIndex = window.location.hash.substring(6, dashIndex);
+	var levelIndex = window.location.hash.substring(dashIndex + 1);
+
+	var pack = packIndex < packs.length ? packs[packIndex] : unknownPack;
+	var level = levelIndex < pack.Levels.length ? pack.Levels[levelIndex] : "Unknown Level";
+
+	packElement.textContent = pack.Name;
+	levelElement.textContent = level;
+	solutionElement.src = "/images/games/photon-phanatics/solutions/" + packIndex + "/" + levelIndex + ".png";
+</script>
+<div class="title"><img src="/images/games/photon-phanatics/thumbnail.png" alt="Photon Phanatics" /></div>
+<div class="content">
+	<div class="solution">
+		<div class="pack-name">Pack Name Here</div>
+		<div class="level-name">Level Name Here</div>
+		<img class="solution-image" />
+	</div>
+</div>

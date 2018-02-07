@@ -7,6 +7,8 @@ var pages =
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
 	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
+	"/games/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/games/photon-phanatics/solutions.html" ],
+	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/games/photon-phanatics/solution.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
@@ -102,11 +104,19 @@ function setContent(url, content, md)
 		var container = document.getElementsByClassName("news").item(0);
 		loadArticles(container);
 	}
+
+	var scripts = page.getElementsByTagName("script");
+	for (var i = 0; i < scripts.length; i++)
+		eval(scripts[i].innerHTML)
 }
 
 function setPage(url, push)
 {
-	var data = getContent(url);
+	var hashIndex = url.indexOf('#');
+	var baseUrl = hashIndex > 0 ? url.substring(0, hashIndex) : url;
+	var hash = hashIndex > 0 ? url.substring(hashIndex) : "";
+
+	var data = getContent(baseUrl);
 	var pageRequest = new XMLHttpRequest();
 
 	pageRequest.addEventListener("load", function()
@@ -121,16 +131,16 @@ function setPage(url, push)
 	pageRequest.send();
 
 	if (push)
-		window.history.pushState({ url: data[0] }, "", data[0]);
+		window.history.pushState({ url: data[0] + hash }, "", data[0] + hash);
 
-	window.history.replaceState({ url: data[0] }, "", data[0]);
+	window.history.replaceState({ url: data[0] + hash }, "", data[0] + hash);
 
 	document.title = data[1] || "PiRho Soft";
 }
 
 document.addEventListener("DOMContentLoaded", function(event)
 {
-	setPage(window.location.pathname, false);
+	setPage(window.location.pathname + window.location.hash, false);
 
 	window.addEventListener("popstate", function(event)
 	{
