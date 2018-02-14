@@ -567,6 +567,11 @@ iframe
 	margin: 20px;
 }
 
+.page .tips
+{
+	text-align: justify;
+}
+
 .packs
 {
 	max-width: 740px;
@@ -578,6 +583,7 @@ iframe
 	display: inline-block;
 	width: 360px;
 	margin-left: 8px;
+	vertical-align: top;
 }
 
 .pack .section-title, .solution .pack-name
