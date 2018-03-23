@@ -42,11 +42,11 @@
 	var levelIndex = window.location.hash.substring(dashIndex + 1);
 
 	var pack = packIndex < packs.length ? packs[packIndex] : unknownPack;
-	var level = levelIndex <= pack.Levels.length ? pack.Levels[levelIndex - 1] : "Unknown Level";
+	var level = levelIndex < pack.Levels.length ? pack.Levels[levelIndex] : "Unknown Level";
 
 	packElement.textContent = pack.Name;
 	levelElement.textContent = level;
-	solutionElement.src = "/images/games/photon-phanatics/solutions/" + packIndex + "/" + levelIndex + ".png";
+	solutionElement.src = "/images/games/photon-phanatics/solutions/" + packIndex + "/" + (parseInt(levelIndex) + 1) + ".png";
 </script>
 <div class="title"><img src="/images/games/photon-phanatics/thumbnail.png" alt="Photon Phanatics" /></div>
 <div class="content">
@@ -55,4 +55,5 @@
 		<div class="level-name">Level Name Here</div>
 		<img class="solution-image" />
 	</div>
+	<div class="description"><a href="/games/photon-phanatics/solutions">Other Solutions</a></div>
 </div>

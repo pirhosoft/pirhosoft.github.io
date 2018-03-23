@@ -659,5 +659,6 @@ iframe
 	padding: 10px 0;
 	font-size: 24px;
 	font-family: sans-serif;
+	width: 375px;
 	max-width: 90%;
 }
