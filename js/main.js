@@ -23,16 +23,18 @@ var posts =
 
 var articles =
 {
+	"2018-04-05": [ "Onward and Upward", "First info about our next project. Codename: well... we don't have one yet." ],
+	"2018-03-19": [ "The Art of War Released!", "The Art of War 1.0 is out now on Xbox One and Windows" ],
 	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
 };
 
 function getPostContent(url, list)
 {
 	var date = url.substring(6);
-	if (!posts[date])
+	if (!list[date])
 		return undefined;
 		
-	return [ url, posts[date][0], "/content" + url + ".md" ]
+	return [ url, list[date][0], "/content" + url + ".md" ]
 }
 
 function getPageContent(url)
@@ -58,9 +60,9 @@ function getContent(url)
 	}
 	else if (url.startsWith("/news/"))
 	{
-		var postContent = getPostContent(url, articles);
-		if (postContent)
-			return postContent;
+		var articleContent = getPostContent(url, articles);
+		if (articleContent)
+			return articleContent;
 
 		url = "/news";
 	}
