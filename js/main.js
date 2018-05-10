@@ -23,6 +23,7 @@ var posts =
 
 var articles =
 {
+	"2018-04-30": [ "Project ManIA", "Basic stroy and gameplay details revealed about our next project." ],
 	"2018-04-05": [ "Onward and Upward", "First info about our next project. Codename: well... we don't have one yet." ],
 	"2018-03-19": [ "The Art of War Released!", "The Art of War 1.0 is out now on Xbox One and Windows" ],
 	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
