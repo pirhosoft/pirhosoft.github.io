@@ -3,6 +3,7 @@ var pages =
 	"/": [ "PiRho Soft", "/content/index.html" ],
 	"/news": [ "PiRho Soft News", "/content/news.html" ],
 	"/games": [ "PiRho Soft Games", "/content/games.html" ],
+	"/products": [ "PiRho Soft Products", "/content/products.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
@@ -10,9 +11,13 @@ var pages =
 	"/games/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/games/photon-phanatics/solutions.html" ],
 	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/games/photon-phanatics/solution.html" ],
 	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
+	"/products/monster-rpg-game-kit": [ "Monster RPG Game Kit", "/content/products/monster-rpg-game-kit.html" ],
+	"/products/monster-rpg-game-kit/documentation": [ "Monster RPG Game Kit", "/content/products/monster-rpg-game-kit/documentation.html" ],
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
-	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ]
+	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ],
+	
+	"/products/monster-rpg-game-kit/manual/world-manager": [ "Monster RPG Game Kit - World Manager", "/content/products/monster-rpg-game-kit/manual/world-manager.md" ]
 };
 
 var posts =
