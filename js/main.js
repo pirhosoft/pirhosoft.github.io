@@ -2,22 +2,23 @@ var pages =
 {
 	"/": [ "PiRho Soft", "/content/index.html" ],
 	"/news": [ "PiRho Soft News", "/content/news.html" ],
-	"/games": [ "PiRho Soft Games", "/content/games.html" ],
-	"/products": [ "PiRho Soft Products", "/content/products.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
 	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
-	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
-	"/games/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/games/photon-phanatics/solutions.html" ],
-	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/games/photon-phanatics/solution.html" ],
-	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
-	"/products/monster-rpg-game-kit": [ "Monster RPG Game Kit", "/content/products/monster-rpg-game-kit.html" ],
-	"/products/monster-rpg-game-kit/documentation": [ "Monster RPG Game Kit", "/content/products/monster-rpg-game-kit/documentation.html" ],
+
+	"/projects": [ "PiRho Soft Projects", "/content/projects.html" ],
+	"/projects/photon-phanatics": [ "Photon Phanatics", "/content/projects/photon-phanatics.html" ],
+	"/projects/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/projects/photon-phanatics/solutions.html" ],
+	"/projects/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/projects/photon-phanatics/solution.html" ],
+	"/projects/the-art-of-war": [ "The Art of War", "/content/projects/the-art-of-war.html" ],
+	"/projects/monster-rpg-game-kit": [ "Monster RPG Game Kit", "/content/projects/monster-rpg-game-kit.html" ],
+
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
 	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ],
-	
-	"/products/monster-rpg-game-kit/manual/world-manager": [ "Monster RPG Game Kit - World Manager", "/content/products/monster-rpg-game-kit/manual/world-manager.md" ]
+
+	// redirects
+	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/projects/photon-phanatics/solution.html" ]
 };
 
 var posts =
