@@ -1,0 +1,57 @@
+<div class="sect1">
+<h2 id="reference/zone-data">ZoneData</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.MonsterRpgEngine.ZoneData : <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">ScriptableObject</a>, <a href="/projects/unity-composition/documentation/<mark>/v10/reference/i-variable-listener.html" target="_blank" rel="noopener">IVariableListener</a>, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_176">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors_133">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ZoneData()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1"><a href="manual/zone.html">Zone</a> <em>Zone</em></dt>
+<dt class="hdlist1">int <em>SceneIndex</em></dt>
+<dd>
+<p><mark>#</mark> Public Properties</p>
+</dd>
+<dt class="hdlist1"><a href="#manual/zone-state">ZoneState</a> <em>State</em> <em>(read only)</em></dt>
+<dt class="hdlist1">bool <em>IsActive</em> <em>(read only)</em></dt>
+<dt class="hdlist1">bool <em>IsEnabled</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/world-manager.html">WorldManager</a> <em>World</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/map-properties.html">MapProperties</a> <em>Properties</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/pathfinding.html">Pathfinding</a> <em>Pathfinding</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;int&gt; <em>Connections</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Dictionary-2" target="_blank" rel="noopener">Dictionary</a>&lt;string, string&gt; <em>SpawnPoints</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="manual/world-listener.html">WorldListener</a>&gt; <em>Listeners</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="manual/npc.html">Npc</a>&gt; <em>Npcs</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/mapped-variable-store.html" target="_blank" rel="noopener">MappedVariableStore</a> <em>Variables</em> <em>(read only)</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1"><a href="#manual/spawn-point">SpawnPoint</a> GetSpawnPoint(string name)</dt>
+<dt class="hdlist1">void Load(<a href="#manual/zone-save-data">ZoneSaveData</a> saveData) <em>(virtual)</em></dt>
+<dt class="hdlist1">void Save(<a href="#manual/zone-save-data">ZoneSaveData</a> saveData) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> GetVariable(string name) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/<mark>/v10/reference/set-variable-result.html" target="_blank" rel="noopener">SetVariableResult</a> SetVariable(string name, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dt class="hdlist1">void VariableChanged(int index, <a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dt class="hdlist1">void VariableChanged(<a href="#manual/world-listener-source">WorldListenerSource</a> source, string variable)</dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void AddPropertiesToMap&lt;ZoneDataType&gt;(<a href="/projects/unity-composition/documentation/#/v10/reference/property-map-1.html" target="_blank" rel="noopener">PropertyMap</a>&lt;ZoneDataType&gt; map)</dt>
+<dt class="hdlist1">void SetupVariables() <em>(virtual)</em></dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

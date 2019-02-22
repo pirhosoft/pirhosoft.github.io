@@ -1,0 +1,50 @@
+<div class="sect1">
+<h2 id="reference/ability">Ability</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.MonsterRpgEngine.Ability : <a href="/projects/unity-utilities/documentation/<mark>/v10/reference/resource.html" target="_blank" rel="noopener">Resource</a>, <a href="/projects/unity-utilities/documentation/</mark>/v10/reference/i-reloadable.html" target="_blank" rel="noopener">IReloadable</a>, <a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Ability()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1"><a href="manual/ecosystem.html">Ecosystem</a> <em>Ecosystem</em></dt>
+<dt class="hdlist1">string <em>Name</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-list.html" target="_blank" rel="noopener">VariableList</a> <em>Traits</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/expression.html" target="_blank" rel="noopener">Expression</a> <em>UseInWorldCondition</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-list.html" target="_blank" rel="noopener">InstructionList</a> <em>UseInWorldInstructions</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/expression.html" target="_blank" rel="noopener">Expression</a> <em>UseInBattleCondition</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-list.html" target="_blank" rel="noopener">InstructionList</a> <em>UseInBattleInstructions</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">void OnEnable() <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnDisable() <em>(virtual)</em></dt>
+<dt class="hdlist1">bool IsUsableInWorld(<a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a> variables) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> UseInWorld(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store.html" target="_blank" rel="noopener">InstructionStore</a> variables) <em>(virtual)</em></dt>
+<dt class="hdlist1">bool IsUsableInBattle(<a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a> variables) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> UseInBattle(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store.html" target="_blank" rel="noopener">InstructionStore</a> variables) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="manual/move.html">Move</a> CreateMove(<a href="manual/creature.html">Creature</a> creature) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> GetVariable(string name) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/<mark>/v10/reference/set-variable-result.html" target="_blank" rel="noopener">SetVariableResult</a> SetVariable(string name, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void AddPropertiesToMap&lt;AbilityType&gt;(<a href="/projects/unity-composition/documentation/#/v10/reference/property-map-1.html" target="_blank" rel="noopener">PropertyMap</a>&lt;AbilityType&gt; map)</dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/property-map.html" target="_blank" rel="noopener">PropertyMap</a> GetPropertyMap() <em>(virtual)</em></dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,81 @@
+<div class="sect1">
+<h2 id="reference/selection-control">SelectionControl</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.CompositionEngine.SelectionControl : <a href="manual/interface-control.html">Interface Control</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_143">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors_103">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">SelectionControl()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1">bool <em>VerticalWrapping</em></dt>
+<dt class="hdlist1">bool <em>HorizontalWrapping</em></dt>
+<dd>
+<p><mark>#</mark> Public Properties</p>
+</dd>
+<dt class="hdlist1"><a href="#manual/selection-item">Selection Item</a> <em>FocusedItem</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/i-variable-store">I Variable Store</a> <em>FocusedVariables</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/selection-item">Selection Item</a> <em>SelectedItem</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/i-variable-store">I Variable Store</a> <em>SelectedVariables</em> <em>(read only)</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">void UpdateBindings(<a href="#manual/i-variable-store">I Variable Store</a> variables, string group) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> MakeSelection(<a href="#manual/i-variable-store">I Variable Store</a> variables, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1" target="_blank" rel="noopener">IEnumerable</a>&lt;<a href="#manual/selection-item">Selection Item</a>&gt; items, bool isSelectionRequired)</dt>
+<dt class="hdlist1">void Close()</dt>
+<dt class="hdlist1">void SelectItem(int index)</dt>
+<dt class="hdlist1">void MoveFocus(int index)</dt>
+<dt class="hdlist1">void MoveFocusUp() <em>(virtual)</em></dt>
+<dt class="hdlist1">void MoveFocusDown() <em>(virtual)</em></dt>
+<dt class="hdlist1">void MoveFocusLeft() <em>(virtual)</em></dt>
+<dt class="hdlist1">void MoveFocusRight() <em>(virtual)</em></dt>
+<dt class="hdlist1">bool MoveFocusToStart()</dt>
+<dt class="hdlist1">bool MoveFocusToEnd()</dt>
+<dt class="hdlist1">bool MoveFocusToTop()</dt>
+<dt class="hdlist1">bool MoveFocusToBottom()</dt>
+<dt class="hdlist1">bool MoveFocusToLeft()</dt>
+<dt class="hdlist1">bool MoveFocusToRight()</dt>
+<dt class="hdlist1">bool MoveFocusToLocation(int column, int row)</dt>
+<dt class="hdlist1">bool SetFocusToValidLocation(int startingColumn, int startingRow)</dt>
+<dd>
+<p><mark>#</mark> Protected Fields</p>
+</dd>
+<dt class="hdlist1">int <em>_columnCount</em></dt>
+<dt class="hdlist1">int <em>_rowCount</em></dt>
+<dt class="hdlist1">bool <em>_columnMajor</em></dt>
+<dt class="hdlist1">int <em>_columnIndex</em></dt>
+<dt class="hdlist1">int <em>_rowIndex</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/selection-control-menu-item">Menu Item</a>&gt; <em>_items</em></dt>
+<dt class="hdlist1"><a href="#manual/selection-control-menu-item">Menu Item</a> <em>_focusedItem</em></dt>
+<dt class="hdlist1"><a href="#manual/selection-control-menu-item">Menu Item</a> <em>_selectedItem</em></dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void Teardown() <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Transform.html" target="_blank" rel="noopener">Transform</a> GetItemParent() <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#manual/selection-control-menu-item">Menu Item</a> GetItem(int column, int row)</dt>
+<dt class="hdlist1">void FocusItem(<a href="#manual/selection-control-menu-item">Menu Item</a> item) <em>(virtual)</em></dt>
+<dt class="hdlist1">void BlurItem(<a href="#manual/selection-control-menu-item">Menu Item</a> item) <em>(virtual)</em></dt>
+<dt class="hdlist1">void MoveFocus(int change, bool wrap, int count, int depth, int index <em>(ref)</em>, int column <em>(ref)</em>, int row <em>(ref)</em>)</dt>
+<dt class="hdlist1">void SetFocus(int column, int row, bool force)</dt>
+<dt class="hdlist1">bool SetFocusToValidColumn(int startingColumn, int startingRow)</dt>
+<dt class="hdlist1">bool SetFocusToValidColumnInRow(int startingColumn, int row)</dt>
+<dt class="hdlist1">bool SetFocusToValidRow(int startingColumn, int startingRow)</dt>
+<dt class="hdlist1">bool SetFocusToValidRowInColumn(int column, int startingRow)</dt>
+<dt class="hdlist1">bool IsLocationFocusable(int column, int row)</dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

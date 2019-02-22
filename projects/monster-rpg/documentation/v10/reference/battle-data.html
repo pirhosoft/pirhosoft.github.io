@@ -1,0 +1,58 @@
+<div class="sect1">
+<h2 id="reference/battle-data">BattleData</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.MonsterRpgEngine.BattleData : <a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_28">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors_21">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BattleData()</dt>
+<dd>
+<p><mark>#</mark> Public Properties</p>
+</dd>
+<dt class="hdlist1"><a href="manual/battle.html">Battle</a> <em>Battle</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/battle-trainer-data">BattleTrainerData</a>[] <em>Trainers</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/battle-trainer-data">BattleTrainerData</a> <em>CurrentTrainer</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/battle-creature-data">BattleCreatureData</a> <em>CurrentCreature</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/battle-creature-data">BattleCreatureData</a> <em>CurrentTarget</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/battle-move-data">BattleMoveData</a> <em>CurrentMove</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/inventory-item">InventoryItem</a> <em>CurrentItem</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/i-trainer">ITrainer</a> <em>Trainer</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/species.html">Species</a> <em>Species</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/creature.html">Creature</a> <em>Creature</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/ability.html">Ability</a> <em>Ability</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/move.html">Move</a> <em>Move</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/inventory-item">InventoryItem</a> <em>Item</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/i-trainer">ITrainer</a> <em>TargetTrainer</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/species.html">Species</a> <em>TargetSpecies</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/creature.html">Creature</a> <em>TargetCreature</em> <em>(read only)</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">void Setup(<a href="manual/battle.html">Battle</a> battle, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#manual/i-trainer">ITrainer</a>&gt; trainers) <em>(virtual)</em></dt>
+<dt class="hdlist1">void Teardown() <em>(virtual)</em></dt>
+<dt class="hdlist1">void SetTrainer(<a href="#manual/battle-trainer-data">BattleTrainerData</a> trainer)</dt>
+<dt class="hdlist1">void SetCreature(<a href="#manual/battle-creature-data">BattleCreatureData</a> creature)</dt>
+<dt class="hdlist1">void SetMove(<a href="#manual/battle-move-data">BattleMoveData</a> move, <a href="#manual/battle-creature-data">BattleCreatureData</a> target)</dt>
+<dt class="hdlist1">void SetItem(<a href="#manual/battle-trainer-data">BattleTrainerData</a> trainer, <a href="#manual/inventory-item">InventoryItem</a> item)</dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> GetVariable(string name) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/<mark>/v10/reference/set-variable-result.html" target="_blank" rel="noopener">SetVariableResult</a> SetVariable(string name, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void AddPropertiesToMap&lt;BattleDataType&gt;(<a href="/projects/unity-composition/documentation/#/v10/reference/property-map-1.html" target="_blank" rel="noopener">PropertyMap</a>&lt;BattleDataType&gt; map)</dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/property-map.html" target="_blank" rel="noopener">PropertyMap</a> GetPropertyMap() <em>(virtual)</em></dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

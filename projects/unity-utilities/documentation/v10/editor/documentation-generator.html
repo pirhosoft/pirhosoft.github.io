@@ -1,0 +1,70 @@
+<div class="sect1">
+<h2 id="editor/documentation-generator">DocumentationGenerator</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.UtilityEditor.DocumentationGenerator : <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">ScriptableObject</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_72">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_static_fields_4">Static Fields</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>CategoryNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>CategoryNiceNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>CategoryIdTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeRawNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeNiceNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeIdTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeNamespaceTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>TypeFilenameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>SectionNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>SectionNiceNameTag</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>SectionIdTag</em></dt>
+<dd>
+<p><mark>#</mark> Static Properties</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> RootPath</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_static_methods_10">Static Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> GetCleanName({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Type" target="_blank" rel="noopener">Type</a> type)</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> GetNiceName({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> name)</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> GetId({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> name)</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Boolean" target="_blank" rel="noopener">bool</a> IsTypeIncluded({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Type" target="_blank" rel="noopener">Type</a> type, {Decorator} <a href="editor/documentation-type-category.html">DocumentationTypeCategory</a> includedTypes, {Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList`1">IList<sup></a>&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/System.String">string</sup></a>&gt; includedNamespaces)</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Boolean" target="_blank" rel="noopener">bool</a> IsTypeIncluded({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Type" target="_blank" rel="noopener">Type</a> type, {Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList`1">IList<sup></a>&lt;<a href="https://docs.microsoft.com/en-us/dotnet/api/System.String">string</sup></a>&gt; namespaces)</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Void" target="_blank" rel="noopener">void</a> Initialize()</dt>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Boolean" target="_blank" rel="noopener">bool</a> WriteFile({Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> folder, {Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> filename, {Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> content)</dt>
+<dd>
+<p><mark>#</mark> Constructors</p>
+</dd>
+<dt class="hdlist1">DocumentationGenerator()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.String" target="_blank" rel="noopener">string</a> <em>OutputDirectory</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List`1" target="_blank" rel="noopener">List</a>&lt;<a href="editor/documentation-category.html">DocumentationCategory</a>&gt; <em>Categories</em></dt>
+<dt class="hdlist1"><a href="editor/table-of-contents.html">TableOfContents</a> <em>TableOfContents</em></dt>
+<dt class="hdlist1"><a href="editor/log-descriptions.html">LogDescriptions</a> <em>LogDescriptions</em></dt>
+<dt class="hdlist1"><a href="editor/help-url-validator.html">HelpUrlValidator</a> <em>HelpUrls</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">{Decorator} <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Void" target="_blank" rel="noopener">void</a> SetDefaults()</dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

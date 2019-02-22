@@ -1,0 +1,49 @@
+<div class="sect1">
+<h2 id="reference/encounter">Encounter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.MonsterRpgEngine.Encounter : <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" rel="noopener">MonoBehaviour</a>, <a href="#manual/i-trainer">ITrainer</a>, <a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_60">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors_43">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Encounter()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-caller.html" target="_blank" rel="noopener">InstructionCaller</a> <em>Instructions</em></dt>
+<dt class="hdlist1">float <em>EncounterChance</em></dt>
+<dt class="hdlist1"><a href="#manual/encounter-table">EncounterTable</a> <em>Encounters</em></dt>
+<dd>
+<p><mark>#</mark> Public Properties</p>
+</dd>
+<dt class="hdlist1">bool <em>IsPlayer</em> <em>(read only)</em> <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="manual/battle-ai.html">BattleAi</a> <em>Ai</em> <em>(read only)</em> <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#manual/roster">Roster</a> <em>Roster</em> <em>(read only)</em> <em>(virtual)</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">void Enter() <em>(virtual)</em></dt>
+<dt class="hdlist1">void ResetTraits(string availability) <em>(virtual)</em></dt>
+<dt class="hdlist1">void ResetTraits(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;string&gt; traits) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> GetVariable(string name) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/<mark>/v10/reference/set-variable-result.html" target="_blank" rel="noopener">SetVariableResult</a> SetVariable(string name, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void DoEncounter() <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="manual/creature.html">Creature</a> PickCreature() <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> RunEncounter(<a href="manual/creature.html">Creature</a> creature) <em>(virtual)</em></dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>

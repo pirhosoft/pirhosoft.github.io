@@ -1,0 +1,61 @@
+<div class="sect1">
+<h2 id="reference/player">Player</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.MonsterRpgEngine.Player : <a href="/projects/unity-utilities/documentation/<mark>/v10/reference/singleton-behaviour-1.html" target="_blank" rel="noopener">SingletonBehaviour</a>&lt;<a href="manual/player.html">Player</a>&gt;, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/i-variable-listener.html" target="_blank" rel="noopener">IVariableListener</a>, <a href="/projects/unity-composition/documentation/#/v10/reference/i-variable-store.html" target="_blank" rel="noopener">IVariableStore</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_116">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_constructors_84">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Player()</dt>
+<dd>
+<p><mark>#</mark> Public Fields</p>
+</dd>
+<dt class="hdlist1">string <em>Name</em></dt>
+<dd>
+<p><mark>#</mark> Public Properties</p>
+</dd>
+<dt class="hdlist1"><a href="manual/zone-data.html">ZoneData</a> <em>Zone</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/mover.html">Mover</a> <em>Mover</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/trainer.html">Trainer</a> <em>Trainer</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="manual/player-controller.html">PlayerController</a> <em>Controller</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#manual/i-interactable">IInteractable</a> <em>Interaction</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/mapped-variable-store.html" target="_blank" rel="noopener">MappedVariableStore</a> <em>Variables</em> <em>(read only)</em></dt>
+<dt class="hdlist1">bool <em>CanInteract</em> <em>(read only)</em></dt>
+<dt class="hdlist1">bool <em>IsInteracting</em> <em>(read only)</em></dt>
+<dd>
+<p><mark>#</mark> Public Methods</p>
+</dd>
+<dt class="hdlist1">void Interact()</dt>
+<dt class="hdlist1">void ForceInteract(<a href="manual/interaction.html">Interaction</a> interaction)</dt>
+<dt class="hdlist1">void Load(<a href="#manual/player-save-data">PlayerSaveData</a> saveData) <em>(virtual)</em></dt>
+<dt class="hdlist1">void Save(<a href="#manual/player-save-data">PlayerSaveData</a> saveData) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> GetVariable(string name) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/<mark>/v10/reference/set-variable-result.html" target="_blank" rel="noopener">SetVariableResult</a> SetVariable(string name, <a href="/projects/unity-composition/documentation/</mark>/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dt class="hdlist1">void VariableChanged(int index, <a href="/projects/unity-composition/documentation/#/v10/reference/variable-value.html" target="_blank" rel="noopener">VariableValue</a> value) <em>(virtual)</em></dt>
+<dd>
+<p><mark>#</mark> Protected Methods</p>
+</dd>
+<dt class="hdlist1">void Awake() <em>(virtual)</em></dt>
+<dt class="hdlist1">void Start() <em>(virtual)</em></dt>
+<dt class="hdlist1">void FixedUpdate() <em>(virtual)</em></dt>
+<dt class="hdlist1">void AddPropertiesToMap&lt;PlayerType&gt;(<a href="/projects/unity-composition/documentation/#/v10/reference/property-map-1.html" target="_blank" rel="noopener">PropertyMap</a>&lt;PlayerType&gt; map)</dt>
+<dt class="hdlist1">void SetupVariables(<a href="/projects/unity-composition/documentation/#/v10/reference/variable-list.html" target="_blank" rel="noopener">VariableList</a> savedVariables) <em>(virtual)</em></dt>
+<dt class="hdlist1">void UpdateInteraction()</dt>
+<dt class="hdlist1">void OnSpawn(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> postion) <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnTileEntering(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> position) <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnTileExiting(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> position) <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnTileChanged(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> previous, <a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> current) <em>(virtual)</em></dt>
+<dd>
+<p>&lt;&lt;&lt;</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
