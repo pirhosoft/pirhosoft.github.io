@@ -5,26 +5,25 @@
 <p>PiRhoSoft.CompositionEngine.InstructionCaller</p>
 </div>
 <div class="sect2">
-<h3 id="_description_66">Description</h3>
+<h3 id="_description_80">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_49">Constructors</h3>
+<h3 id="_constructors_61">Constructors</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">InstructionCaller()</dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1"><a href="manual/instruction.html">Instruction</a> <em>Instruction</em></dt>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/instruction-input">Instruction Input</a>&gt; <em>Inputs</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/instruction-output">Instruction Output</a>&gt; <em>Outputs</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction.html">Instruction</a> <em>Instruction</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-input.html">InstructionInput</a>&gt; <em>Inputs</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-output.html">InstructionOutput</a>&gt; <em>Outputs</em> <em>(read only)</em></dt>
 <dt class="hdlist1">bool <em>IsRunning</em> <em>(read only)</em></dt>
-<dt class="hdlist1">bool <em>IsExecutionImmediate</em> <em>(read only)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Execute(<a href="#manual/instruction-context">Instruction Context</a> context, <a href="#manual/i-variable-store">I Variable Store</a> thisStore)</dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Execute(<a href="#reference/instruction-context.html">InstructionContext</a> <em>context</em>, Object <em>thisObject</em>)</dt>
 <dt class="hdlist1">void UpdateVariables()</dt>
 <dd>
 <p>&lt;&lt;&lt;</p>

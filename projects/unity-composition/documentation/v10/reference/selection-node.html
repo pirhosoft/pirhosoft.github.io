@@ -2,38 +2,37 @@
 <h2 id="reference/selection-node">SelectionNode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.SelectionNode : <a href="manual/instruction-graph-node.html">Instruction Graph Node</a></p>
+<p>PiRhoSoft.CompositionEngine.SelectionNode : <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_145">Description</h3>
+<h3 id="_description_163">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_105">Constructors</h3>
+<h3 id="_constructors_118">Constructors</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">SelectionNode()</dt>
 <dd>
 <p><mark>#</mark> Public Fields</p>
 </dd>
-<dt class="hdlist1"><a href="manual/instruction-graph-node.html">Instruction Graph Node</a> <em>OnCanceled</em></dt>
-<dt class="hdlist1"><a href="#manual/interface-reference">Interface Reference</a> <em>Control</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>OnCanceled</em></dt>
+<dt class="hdlist1"><a href="#reference/interface-reference.html">InterfaceReference</a> <em>Control</em></dt>
 <dt class="hdlist1">bool <em>IsSelectionRequired</em></dt>
-<dt class="hdlist1"><a href="#manual/selection-node-item-list">Selection Node Item List</a> <em>Items</em></dt>
+<dt class="hdlist1"><a href="#reference/selection-node-item-list.html">SelectionNodeItemList</a> <em>Items</em></dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1">bool <em>IsExecutionImmediate</em> <em>(read only)</em> <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#manual/instruction-graph-execution-mode">Instruction Graph Execution Mode</a> <em>ExecutionMode</em> <em>(read only)</em> <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>NodeColor</em> <em>(read only)</em> <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void GetConnections(<a href="#manual/instruction-graph-node-node-data">Node Data</a> data) <em>(virtual)</em></dt>
-<dt class="hdlist1">void SetConnection(<a href="#manual/instruction-graph-node-connection-data">Connection Data</a> connection, <a href="manual/instruction-graph-node.html">Instruction Graph Node</a> target) <em>(virtual)</em></dt>
+<dt class="hdlist1">void GetConnections(<a href="#reference/instruction-graph-node-node-data.html">NodeData</a> <em>data</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1">void SetConnection(<a href="#reference/instruction-graph-node-connection-data.html">ConnectionData</a> <em>connection</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>target</em>) <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Protected Methods</p>
 </dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="manual/instruction-graph.html">Instruction Graph</a> graph, <a href="#manual/instruction-store">Instruction Store</a> variables, int iteration) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="#reference/instruction-graph.html">InstructionGraph</a> <em>graph</em>, <a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, int <em>iteration</em>) <em>(virtual)</em></dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

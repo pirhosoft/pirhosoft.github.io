@@ -2,10 +2,10 @@
 <h2 id="reference/instruction-store">InstructionStore</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.InstructionStore : <a href="#manual/i-variable-store">I Variable Store</a></p>
+<p>PiRhoSoft.CompositionEngine.InstructionStore : <a href="#reference/i-variable-store.html">IVariableStore</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_80">Description</h3>
+<h3 id="_description_91">Description</h3>
 
 </div>
 <div class="sect2">
@@ -16,30 +16,35 @@
 <dt class="hdlist1">string <em>SceneStoreName</em></dt>
 <dt class="hdlist1">string <em>InputStoreName</em></dt>
 <dt class="hdlist1">string <em>OutputStoreName</em></dt>
+<dt class="hdlist1">string <em>LocalStoreName</em></dt>
 <dd>
 <p><mark>#</mark> Static Methods</p>
 </dd>
-<dt class="hdlist1">bool IsInput(<a href="#manual/variable-reference">Variable Reference</a> variable)</dt>
-<dt class="hdlist1">bool IsOutput(<a href="#manual/variable-reference">Variable Reference</a> variable)</dt>
+<dt class="hdlist1">bool IsInput(<a href="#reference/variable-reference.html">VariableReference</a> <em>variable</em>)</dt>
+<dt class="hdlist1">bool IsOutput(<a href="#reference/variable-reference.html">VariableReference</a> <em>variable</em>)</dt>
 <dd>
 <p><mark>#</mark> Constructors</p>
 </dd>
-<dt class="hdlist1">InstructionStore(<a href="#manual/instruction-context">Instruction Context</a> context, <a href="#manual/i-variable-store">I Variable Store</a> thisStore)</dt>
+<dt class="hdlist1">InstructionStore(<a href="#reference/instruction-context.html">InstructionContext</a> <em>context</em>, Object <em>thisObject</em>)</dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/instruction-context">Instruction Context</a> <em>Context</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#manual/i-variable-store">I Variable Store</a> <em>This</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#manual/i-variable-store">I Variable Store</a> <em>Locals</em> <em>(read only)</em></dt>
+<dt class="hdlist1">Object <em>This</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-context.html">InstructionContext</a> <em>Context</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-store.html">VariableStore</a> <em>Inputs</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-store.html">VariableStore</a> <em>Outputs</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-store.html">VariableStore</a> <em>Locals</em> <em>(read only)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void SetContext(<a href="#manual/instruction-context">Instruction Context</a> context)</dt>
-<dt class="hdlist1">void ChangeThis(<a href="#manual/i-variable-store">I Variable Store</a> store)</dt>
-<dt class="hdlist1">void WriteInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/instruction-input">Instruction Input</a>&gt; inputs)</dt>
-<dt class="hdlist1">void ReadOutputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/instruction-output">Instruction Output</a>&gt; outputs)</dt>
-<dt class="hdlist1"><a href="#manual/variable-value">Variable Value</a> GetVariable(string name) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#manual/set-variable-result">Set Variable Result</a> SetVariable(string name, <a href="#manual/variable-value">Variable Value</a> value) <em>(virtual)</em></dt>
+<dt class="hdlist1">void SetContext(<a href="#reference/instruction-context.html">InstructionContext</a> <em>context</em>)</dt>
+<dt class="hdlist1">void ChangeThis(Object <em>thisObject</em>)</dt>
+<dt class="hdlist1">void WriteInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-input.html">InstructionInput</a>&gt; <em>inputs</em>)</dt>
+<dt class="hdlist1">void WriteOutputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-output.html">InstructionOutput</a>&gt; <em>outputs</em>)</dt>
+<dt class="hdlist1">void ReadOutputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-output.html">InstructionOutput</a>&gt; <em>outputs</em>)</dt>
+<dt class="hdlist1"><a href="#reference/variable-value.html">VariableValue</a> GetVariable(string <em>name</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> SetVariable(string <em>name</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1" target="_blank" rel="noopener">IEnumerable</a>&lt;string&gt; GetVariableNames() <em>(virtual)</em></dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

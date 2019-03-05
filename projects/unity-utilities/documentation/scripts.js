@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _visibleClass = "visible";
 	var _hljsClass = "hljs";
 
-	var _title = "Monster RPG Game Kit";
+	var _title = "Unity Utilities";
 	var _newestVersion = "v10";
-	var _documentationPath = "/";
+	var _documentationPath = "/projects/unity-utilities/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
 	var _defaultArticle = "overview.html";
 	var _searchIndexUrl = "search-index.json";

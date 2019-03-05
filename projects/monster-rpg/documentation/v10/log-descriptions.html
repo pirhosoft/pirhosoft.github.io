@@ -5,6 +5,19 @@
 <h3 id="_warnings">Warnings</h3>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">BASIV</dt>
+<dd>
+<p>Unable to make ai selection for {0}: the given variables must be a BattleAi</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">BBAEP</dt>
 <dd>
 <p>cannot pause the animator: the animator is already paused</p>
@@ -122,6 +135,19 @@
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">BCDME</dt>
+<dd>
+<p>failed to play effect {0}: the effect could not be found on the {1}</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">BCDMM</dt>
 <dd>
 <p>mount point {0} could not be found for effect {1}</p>
@@ -135,9 +161,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">BPBCNCD</dt>
+<dt class="hdlist1">BCDMS</dt>
 <dd>
-<p>Unable to play clip {0}: the creature display could not be found</p>
+<p>failed to play sound {0}: the sound could not be found on the {1}</p>
 </dd>
 </dl>
 </div>
@@ -148,9 +174,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">BPBENCD</dt>
+<dt class="hdlist1">BCDNNI</dt>
 <dd>
-<p>Unable to play effect {0}: the creature display could not be found</p>
+<p>Unable to get creature display for {0}: the index could not be found</p>
 </dd>
 </dl>
 </div>
@@ -161,9 +187,61 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">BPBSNCD</dt>
+<dt class="hdlist1">BCDNNIF</dt>
 <dd>
-<p>Unable to play sound {0}: the creature display could not be found</p>
+<p>Unable to get creature display for {0}: the interface '{1}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BCUMIM</dt>
+<dd>
+<p>Unable to check usability of move for {0}: the given variables must be a MoveContext</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BOAII</dt>
+<dd>
+<p>Unable to order actions for {0}: the given variables must be a IIndexedVariableStore</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BUCIC</dt>
+<dd>
+<p>Unable to set creature display for {0}: this given variables must be a CreatureContext</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BUMIM</dt>
+<dd>
+<p>Unable to use move for {0}: the given variables must be a MoveContext</p>
 </dd>
 </dl>
 </div>
@@ -189,7 +267,7 @@
 <dl>
 <dt class="hdlist1">ECCIV</dt>
 <dd>
-<p>Unable to initialize creature on CreateCreature node {0}: the node was called without a Creature</p>
+<p>Unable to initialize creature for {0}: the given varibales must be a Creature</p>
 </dd>
 </dl>
 </div>
@@ -215,20 +293,7 @@
 <dl>
 <dt class="hdlist1">ECGCCNF</dt>
 <dd>
-<p>Unable to give creature {0}: the creature could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ECIS</dt>
-<dd>
-<p>The Instruction for Skill '{0}' on Species '{1}' is not able to execute immediately</p>
+<p>Unable to give creature for {0}: the creature could not be found</p>
 </dd>
 </dl>
 </div>
@@ -252,9 +317,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ECNS</dt>
+<dt class="hdlist1">ECPCIC</dt>
 <dd>
-<p>The Instruction for Skill '{0}' on Species '{1}' does not exist</p>
+<p>Unable to process creature for {0}: the given variables must be a Creature</p>
 </dd>
 </dl>
 </div>
@@ -265,48 +330,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ECRCCNF</dt>
+<dt class="hdlist1">ECRCACNF</dt>
 <dd>
-<p>Unable to reset traits on creature: this is not a creature</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ECRCSCNF</dt>
-<dd>
-<p>Unable to release creature {0}: the selected item must be a Creature</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ECRIG</dt>
-<dd>
-<p>The generator Instruction for a CreatureReference on '{0}' is not able to execute immediately</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ECRMMNF</dt>
-<dd>
-<p>Unable to reset move: this is not a move</p>
+<p>Unable to reset availability for {0}: the given variables must be Creature</p>
 </dd>
 </dl>
 </div>
@@ -330,9 +356,35 @@
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">ECRTATNF</dt>
+<dd>
+<p>Unable to reset availability for {0}: the given variables must be a Trainer</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">ECRTTNF</dt>
 <dd>
-<p>Unable to reset trainer: this is not a trainer</p>
+<p>Unable to reset traits for {0}: the given variables must be a Trainer</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ECUIIM</dt>
+<dd>
+<p>Unable to check usability of item for {0}: the given variables must be an Item or an InventoryItem</p>
 </dd>
 </dl>
 </div>
@@ -345,7 +397,7 @@
 <dl>
 <dt class="hdlist1">EGIAI</dt>
 <dd>
-<p>attempted to give a negative amount of item {0} - defaulting to 1</p>
+<p>Attempted to give a negative amount of the item for {0}: defaulting to 1</p>
 </dd>
 </dl>
 </div>
@@ -358,7 +410,20 @@
 <dl>
 <dt class="hdlist1">EGIIM</dt>
 <dd>
-<p>unable to give item: the item was not set</p>
+<p>Unable to give item for {0}: the item could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">EHIAI</dt>
+<dd>
+<p>Attempted to check for a negative amount of item for {0}: defaulting to 1</p>
 </dd>
 </dl>
 </div>
@@ -371,7 +436,33 @@
 <dl>
 <dt class="hdlist1">EHIIM</dt>
 <dd>
-<p>failed to check for item: the item has not been set</p>
+<p>Unable to check for item for {0}: the item could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">EICTIINF</dt>
+<dd>
+<p>Unable to check tossability item for {0}: the given variables must be an InventoryItem</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">EIPIINF</dt>
+<dd>
+<p>Unable to purchase item for {0}: the given variables must be a ShopItem</p>
 </dd>
 </dl>
 </div>
@@ -384,7 +475,7 @@
 <dl>
 <dt class="hdlist1">EIPISINF</dt>
 <dd>
-<p>Unable to purchase item {0}: the selected item must be a ShopItem</p>
+<p>Unable to check item purchasability for {0}: the given variables must be a ShopItem</p>
 </dd>
 </dl>
 </div>
@@ -408,22 +499,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">EITISINF</dt>
+<dt class="hdlist1">EITIINF</dt>
 <dd>
-<p>Unable to toss item {0}: the selected item must be an InventoryItem</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">EIUIIN</dt>
-<dd>
-<p>Unable to use item: item must not be null</p>
+<p>Unable to toss item for {0}: the given variables must be an InventoryItem</p>
 </dd>
 </dl>
 </div>
@@ -436,7 +514,7 @@
 <dl>
 <dt class="hdlist1">EIUIINF</dt>
 <dd>
-<p>Unable to use item {0}: the item could not be found</p>
+<p>Unable to use item for {0}: the given variables must be an Item or an Inventory Item</p>
 </dd>
 </dl>
 </div>
@@ -450,6 +528,58 @@
 <dt class="hdlist1">EMDA</dt>
 <dd>
 <p>The Ability for Move '{0}' has been deleted</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ERLCMC</dt>
+<dd>
+<p>Unable to release creature for {0}: the given variables must be a Creature</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ERMAMM</dt>
+<dd>
+<p>Unable to reset availability for {0}: the given variables must be Move</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ERMMM</dt>
+<dd>
+<p>Unable to reset traits for {0}: the given variables must be Move</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ERSCMC</dt>
+<dd>
+<p>Unable to reset traits for {0}: the given variables must be Creature</p>
 </dd>
 </dl>
 </div>
@@ -475,7 +605,7 @@
 <dl>
 <dt class="hdlist1">ETAIV</dt>
 <dd>
-<p>Unable to teach ability: TeachAbility '{0}' was called without a Creature</p>
+<p>Unable to teach ability for {0}: the given variables must be a Creature</p>
 </dd>
 </dl>
 </div>
@@ -488,7 +618,7 @@
 <dl>
 <dt class="hdlist1">ETANA</dt>
 <dd>
-<p>Unable to teach ability: Ability must not be null</p>
+<p>Unable to teach ability for {0}: the ability could not be found</p>
 </dd>
 </dl>
 </div>
@@ -514,7 +644,7 @@
 <dl>
 <dt class="hdlist1">ETSIV</dt>
 <dd>
-<p>Unable to teach skill: TeachSkillNode '{0}' was called without a Creature</p>
+<p>Unable to teach skill for {0}: the given variables must be a Creature</p>
 </dd>
 </dl>
 </div>
@@ -527,7 +657,7 @@
 <dl>
 <dt class="hdlist1">ETSNS</dt>
 <dd>
-<p>Unable to teach skill: The Creature '{0}' had no skills to learn</p>
+<p>Unable to teach skill for {0}: The Creature '{1}' had no skills to learn</p>
 </dd>
 </dl>
 </div>
@@ -551,48 +681,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">WOMDCCNF</dt>
-<dd>
-<p>Unable to disable controller: this is not a controller</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WOMECCNF</dt>
-<dd>
-<p>Unable to disable controller {0}: this is not a controller</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1">WOMFCCNF</dt>
 <dd>
-<p>Unable to disable controller: this is not a controller</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WOMOTCNF</dt>
-<dd>
-<p>failed to occupy tiles: this is not a StaticCollider</p>
+<p>Unable to freeze controller for {0}: the given variables must be a Controller</p>
 </dd>
 </dl>
 </div>
@@ -605,7 +696,7 @@
 <dl>
 <dt class="hdlist1">WOMTCCNF</dt>
 <dd>
-<p>Unable to thaw controller: this is not a Controller</p>
+<p>Unable to thaw controller for {0}: the given variables must be a Controller</p>
 </dd>
 </dl>
 </div>
@@ -618,7 +709,20 @@
 <dl>
 <dt class="hdlist1">WOMWMMNF</dt>
 <dd>
-<p>failed to warp mover: this is not a Mover</p>
+<p>Unable to warp mover for {0}: the given variables must be a Mover</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WOTMC</dt>
+<dd>
+<p>Unable to occupy tiles for {0}: the given variables must be a StaticCollider</p>
 </dd>
 </dl>
 </div>
@@ -644,7 +748,7 @@
 <dl>
 <dt class="hdlist1">WSSAMMNF</dt>
 <dd>
-<p>Unable to find target mover to move toward</p>
+<p>Unable to approach mover for {0}: the target mover '{1}' could not be found</p>
 </dd>
 </dl>
 </div>
@@ -657,7 +761,7 @@
 <dl>
 <dt class="hdlist1">WSSANMNF</dt>
 <dd>
-<p>Unable to find target mover {0} to move toward</p>
+<p>Unable to make mover approach the targe for {0}: the given variables must be a Mover</p>
 </dd>
 </dl>
 </div>
@@ -670,7 +774,7 @@
 <dl>
 <dt class="hdlist1">WSSANNP</dt>
 <dd>
-<p>Unable to make {0} approach the target. Use Pathfinding is specified but the map does not have a pathfinding behaviour</p>
+<p>Unable to make mover approach the target for {0}: UsePathfinding is specified but the map does not have a pathfinding component</p>
 </dd>
 </dl>
 </div>
@@ -683,7 +787,7 @@
 <dl>
 <dt class="hdlist1">WSSFDMNF</dt>
 <dd>
-<p>Unable to find Mover {0} to make face a direction</p>
+<p>Unable to face direction for {0}: the given variables must be a Mover</p>
 </dd>
 </dl>
 </div>
@@ -696,7 +800,7 @@
 <dl>
 <dt class="hdlist1">WSSFMMNF</dt>
 <dd>
-<p>failed to face mover: this is not a Mover</p>
+<p>Unable to face mover for {0}: the given variables must be a Mover</p>
 </dd>
 </dl>
 </div>
@@ -709,7 +813,7 @@
 <dl>
 <dt class="hdlist1">WSSFMMTNF</dt>
 <dd>
-<p>Unable to find Mover {0} to face</p>
+<p>Unable to face mover for {0}: the target '{1}' could not be found</p>
 </dd>
 </dl>
 </div>
@@ -749,6 +853,32 @@
 <dt class="hdlist1">WSSPNRI</dt>
 <dd>
 <p>Unable to wait for mover to move through the path: the path&#8217;s repeat count was infinite</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WUTMC</dt>
+<dd>
+<p>Unable to unoccupy tiles for {0}: the given variables must be StaticCollider</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WWLGLI</dt>
+<dd>
+<p>Unable to run WorldListenerGraph '{0}': the given variables must be a WorldListener</p>
 </dd>
 </dl>
 </div>
@@ -801,9 +931,35 @@
 <h3 id="_errors">Errors</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">BBGBM</dt>
+<dt class="hdlist1">BBGIUS</dt>
 <dd>
-<p>failed to run battle: the battle has not been set</p>
+<p>Failed to run Battle '{0}': the UiScene '{1}' could not be loaded</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BBGMI</dt>
+<dd>
+<p>Failed to run Battle '{0}': the UiScene '{1}' does not contain a BattleInterface</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">BBGTI</dt>
+<dd>
+<p>Failed to run Battle '{0}': trainer {1} is not an ITrainer</p>
 </dd>
 </dl>
 </div>
@@ -816,33 +972,7 @@
 <dl>
 <dt class="hdlist1">BBGTM</dt>
 <dd>
-<p>failed to run battle: trainer {0} has not been set</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">BBIUS</dt>
-<dd>
-<p>Failed to run Battle '{0}': the UiScene '{0}' could not be loaded</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">BBMI</dt>
-<dd>
-<p>Failed to run Battle '{0}': the UiScene '{0}' does not contain a BattleInterface</p>
+<p>Failed to run Battle '{0}': trainer {1} has not been set</p>
 </dd>
 </dl>
 </div>
@@ -869,58 +999,6 @@
 <dt class="hdlist1">BCDMCA</dt>
 <dd>
 <p>The CreatureAnimator has not been set for this display</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WTMIR</dt>
-<dd>
-<p>Failed to remove TransitionRenderer: this TransitionRenderer has not been added</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WTMIUA</dt>
-<dd>
-<p>Failed to add TransitionRenderer: this TransitionRenderer of type Ui has already been added</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WTMIWA</dt>
-<dd>
-<p>Failed to add TransitionRenderer: only 1 TransitionRenderer of type World can exist at a time</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">WTMS</dt>
-<dd>
-<p>Failed to load Transition: shader {0} not found</p>
 </dd>
 </dl>
 </div>

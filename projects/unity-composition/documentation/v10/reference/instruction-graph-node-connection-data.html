@@ -5,30 +5,33 @@
 <p>PiRhoSoft.CompositionEngine.ConnectionData</p>
 </div>
 <div class="sect2">
-<h3 id="_description_27">Description</h3>
+<h3 id="_description_34">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_22">Constructors</h3>
+<h3 id="_constructors_29">Constructors</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ConnectionData(string field, string key, int index, <a href="manual/instruction-graph-node.html">Instruction Graph Node</a> from, <a href="manual/instruction-graph-node.html">Instruction Graph Node</a> to)</dt>
+<dt class="hdlist1">ConnectionData(string <em>field</em>, string <em>key</em>, int <em>index</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>from</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>to</em>, int <em>fromIndex</em>)</dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
 <dt class="hdlist1">string <em>Field</em> <em>(read only)</em></dt>
-<dt class="hdlist1">string <em>Key</em> <em>(read only)</em></dt>
-<dt class="hdlist1">int <em>Index</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="manual/instruction-graph-node.html">Instruction Graph Node</a> <em>From</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="manual/instruction-graph-node.html">Instruction Graph Node</a> <em>To</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#manual/instruction-graph-node-node-data">Node Data</a> <em>Target</em> <em>(read only)</em></dt>
+<dt class="hdlist1">string <em>FieldKey</em> <em>(read only)</em></dt>
+<dt class="hdlist1">int <em>FieldIndex</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>From</em> <em>(read only)</em></dt>
+<dt class="hdlist1">int <em>FromIndex</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>To</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node-node-data.html">NodeData</a> <em>Target</em> <em>(read only)</em></dt>
 <dt class="hdlist1">string <em>Name</em> <em>(read only)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void SetTarget(<a href="#manual/instruction-graph-node-node-data">Node Data</a> target)</dt>
-<dt class="hdlist1">void ChangeTarget(<a href="#manual/instruction-graph-node-node-data">Node Data</a> target)</dt>
-<dt class="hdlist1">void ApplyConnection(Object obj, <a href="manual/instruction-graph-node.html">Instruction Graph Node</a> target)</dt>
+<dt class="hdlist1">bool Equals(Object <em>obj</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1">int GetHashCode() <em>(virtual)</em></dt>
+<dt class="hdlist1">void SetTarget(<a href="#reference/instruction-graph-node-node-data.html">NodeData</a> <em>target</em>)</dt>
+<dt class="hdlist1">void ChangeTarget(<a href="#reference/instruction-graph-node-node-data.html">NodeData</a> <em>target</em>)</dt>
+<dt class="hdlist1">void ApplyConnection(Object <em>obj</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>target</em>)</dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

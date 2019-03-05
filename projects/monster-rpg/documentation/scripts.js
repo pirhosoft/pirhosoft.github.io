@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	var _title = "Monster RPG Game Kit";
 	var _newestVersion = "v10";
-	var _documentationPath = "/";
+	var _documentationPath = "/projects/monster-rpg/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
 	var _defaultArticle = "overview.html";
 	var _searchIndexUrl = "search-index.json";

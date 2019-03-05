@@ -2,38 +2,38 @@
 <h2 id="reference/variable-list">VariableList</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.VariableList : <a href="#manual/i-variable-list">I Variable List</a></p>
+<p>PiRhoSoft.CompositionEngine.VariableList : <a href="#reference/i-variable-list.html">IVariableList</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_170">Description</h3>
+<h3 id="_description_194">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_125">Constructors</h3>
+<h3 id="_constructors_142">Constructors</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">VariableList()</dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/variable-schema">Variable Schema</a> <em>Schema</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#manual/i-variable-store">I Variable Store</a> <em>Owner</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-schema.html">VariableSchema</a> <em>Schema</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/i-variable-store.html">IVariableStore</a> <em>Owner</em> <em>(read only)</em></dt>
 <dt class="hdlist1">bool <em>NeedsUpdate</em> <em>(read only)</em></dt>
 <dt class="hdlist1">int <em>VariableCount</em> <em>(read only)</em> <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void LoadFrom(<a href="#manual/variable-list">Variable List</a> variables, string availability)</dt>
-<dt class="hdlist1">void SaveTo(<a href="#manual/variable-list">Variable List</a> variables, string availability)</dt>
-<dt class="hdlist1">void Setup(<a href="#manual/variable-schema">Variable Schema</a> schema, <a href="#manual/i-variable-store">I Variable Store</a> owner)</dt>
+<dt class="hdlist1">void LoadFrom(<a href="#reference/variable-list.html">VariableList</a> <em>variables</em>, string <em>availability</em>)</dt>
+<dt class="hdlist1">void SaveTo(<a href="#reference/variable-list.html">VariableList</a> <em>variables</em>, string <em>availability</em>)</dt>
+<dt class="hdlist1">void Setup(<a href="#reference/variable-schema.html">VariableSchema</a> <em>schema</em>, <a href="#reference/i-variable-store.html">IVariableStore</a> <em>owner</em>)</dt>
 <dt class="hdlist1">void Update()</dt>
-<dt class="hdlist1">void Reset(int index)</dt>
-<dt class="hdlist1">void Reset(string availability)</dt>
-<dt class="hdlist1">void Reset(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;string&gt; variables)</dt>
+<dt class="hdlist1">void Reset(int <em>index</em>)</dt>
+<dt class="hdlist1">void Reset(string <em>availability</em>)</dt>
+<dt class="hdlist1">void Reset(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;string&gt; <em>variables</em>)</dt>
 <dt class="hdlist1">void Clear()</dt>
-<dt class="hdlist1">string GetVariableName(int index) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#manual/variable-value">Variable Value</a> GetVariableValue(int index) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#manual/set-variable-result">Set Variable Result</a> SetVariableValue(int index, <a href="#manual/variable-value">Variable Value</a> value) <em>(virtual)</em></dt>
+<dt class="hdlist1">string GetVariableName(int <em>index</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-value.html">VariableValue</a> GetVariableValue(int <em>index</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> SetVariableValue(int <em>index</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>) <em>(virtual)</em></dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

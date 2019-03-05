@@ -2,35 +2,42 @@
 <h2 id="reference/battle-graph">BattleGraph</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.MonsterRpgEngine.BattleGraph : <a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph.html" target="_blank" rel="noopener">InstructionGraph</a></p>
+<p>PiRhoSoft.MonsterRpgEngine.BattleGraph : <a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph" target="_blank" rel="noopener">InstructionGraph</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_29">Description</h3>
+<h3 id="_description_26">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_22">Constructors</h3>
+<h3 id="_constructors_23">Constructors</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">BattleGraph()</dt>
 <dd>
 <p><mark>#</mark> Public Fields</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/battle-variable-source">BattleVariableSource</a> <em>Battle</em></dt>
-<dt class="hdlist1"><a href="#manual/trainer-reference-list">TrainerReferenceList</a> <em>Trainers</em></dt>
-<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node.html" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Enter</em></dt>
-<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node.html" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Start</em></dt>
-<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node.html" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Finish</em></dt>
-<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node.html" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Exit</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Enter</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Start</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Process</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Finish</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-composition/documentation/#/v10/reference/instruction-graph-node" target="_blank" rel="noopener">InstructionGraphNode</a> <em>Exit</em></dt>
+<dt class="hdlist1"><a href="/projects/unity-utilities/documentation/#/v10/reference/scene-reference" target="_blank" rel="noopener">SceneReference</a> <em>UiScene</em></dt>
+<dt class="hdlist1"><a href="#reference/trainer-reference-list.html">TrainerReferenceList</a> <em>Trainers</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1">List<sup></a>&lt;<a href="/projects/unity-composition/documentation/#/v10/reference/variable-definition.html">VariableDefinition</sup></a>&gt; inputs) <em>(virtual)</em></dt>
+<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1">List<sup></a>&lt;<a href="/projects/unity-composition/documentation/#/v10/reference/variable-definition">VariableDefinition</sup></a>&gt; <em>inputs</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Setup(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store" target="_blank" rel="noopener">InstructionStore</a> <em>variables</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/i-trainer.html">ITrainer</a>&gt; <em>trainers</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Teardown() <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Protected Methods</p>
 </dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store.html" target="_blank" rel="noopener">InstructionStore</a> variables) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store.html" target="_blank" rel="noopener">InstructionStore</a> variables, <a href="manual/battle.html">Battle</a> battle, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#manual/i-trainer">ITrainer</a>&gt; trainers) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store" target="_blank" rel="noopener">InstructionStore</a> <em>variables</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="/projects/unity-composition/documentation/#/v10/reference/instruction-store" target="_blank" rel="noopener">InstructionStore</a> <em>variables</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/i-trainer.html">ITrainer</a>&gt; <em>trainers</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnEnable() <em>(virtual)</em></dt>
+<dt class="hdlist1">void OnDisable() <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> LoadScenes()</dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> UnloadScenes()</dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

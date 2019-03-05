@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _visibleClass = "visible";
 	var _hljsClass = "hljs";
 
-	var _title = "Monster RPG Game Kit";
+	var _title = "Unity Composition";
 	var _newestVersion = "v10";
-	var _documentationPath = "/";
+	var _documentationPath = "/projects/unity-composition/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
 	var _defaultArticle = "overview.html";
 	var _searchIndexUrl = "search-index.json";
@@ -507,6 +507,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 		return name
 			.substring(0, name.length - 5)
 			.replace(/\//g, " > ")
+			.replace(/[-][0-9]+/g, "")
 			.replace(/[0-9]-+/g, "")
 			.replace(/^[a-z]/g, function (match) { return match.toUpperCase(); })
 			.replace(/[- ]([a-z])/g, function (match, capture) { return " " + capture.toUpperCase(); });

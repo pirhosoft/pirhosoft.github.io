@@ -2,29 +2,35 @@
 <h2 id="reference/expression-command">ExpressionCommand</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.ExpressionCommand : <a href="#manual/command">Command</a></p>
+<p>PiRhoSoft.CompositionEngine.ExpressionCommand : <a href="#reference/command.html">Command</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_44">Description</h3>
+<h3 id="_description_56">Description</h3>
 
 </div>
 <div class="sect2">
 <h3 id="_static_fields_4">Static Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="#manual/expression-command-parameter-store">Parameter Store</a> <em>Store</em></dt>
+<dt class="hdlist1">int <em>InitialStoreCount</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.Stack-1" target="_blank" rel="noopener">Stack</a>&lt;<a href="#reference/expression-command-parameter-store.html">ParameterStore</a>&gt; <em>Stores</em></dt>
+<dd>
+<p><mark>#</mark> Static Methods</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/expression-command-parameter-store.html">ParameterStore</a> ReserveStore()</dt>
+<dt class="hdlist1">void ReleaseStore(<a href="#reference/expression-command-parameter-store.html">ParameterStore</a> <em>store</em>)</dt>
 <dd>
 <p><mark>#</mark> Constructors</p>
 </dd>
-<dt class="hdlist1">ExpressionCommand(<a href="#manual/expression">Expression</a> expression)</dt>
+<dt class="hdlist1">ExpressionCommand(<a href="#reference/expression.html">Expression</a> <em>expression</em>)</dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/expression">Expression</a> <em>Expression</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/expression.html">Expression</a> <em>Expression</em> <em>(read only)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/variable-value">Variable Value</a> Evaluate(<a href="#manual/i-variable-store">I Variable Store</a> variables, string name, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/operation">Operation</a>&gt; parameters) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="#reference/variable-value.html">VariableValue</a> Evaluate(<a href="#reference/i-variable-store.html">IVariableStore</a> <em>variables</em>, string <em>name</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/operation.html">Operation</a>&gt; <em>parameters</em>) <em>(virtual)</em></dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

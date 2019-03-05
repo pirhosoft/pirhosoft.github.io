@@ -5,11 +5,11 @@
 <p>PiRhoSoft.MonsterRpgEngine.Mover : <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" rel="noopener">MonoBehaviour</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_97">Description</h3>
+<h3 id="_description_92">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_static_fields_5">Static Fields</h3>
+<h3 id="_static_fields_4">Static Fields</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Vector2.html" target="_blank" rel="noopener">Vector2</a> <em>PositionOffset</em></dt>
@@ -20,7 +20,7 @@
 <dd>
 <p><mark>#</mark> Public Fields</p>
 </dd>
-<dt class="hdlist1"><a href="#manual/collision-layer">CollisionLayer</a> <em>MovementLayer</em></dt>
+<dt class="hdlist1"><a href="#reference/collision-layer.html">CollisionLayer</a> <em>MovementLayer</em></dt>
 <dt class="hdlist1">int <em>DirectionDelayFrames</em></dt>
 <dt class="hdlist1">float <em>MoveSpeed</em></dt>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Renderer.html" target="_blank" rel="noopener">Renderer</a> <em>Shadow</em></dt>
@@ -28,14 +28,14 @@
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/UnityAction.html">UnityAction<sup></a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html">Vector2Int</sup></a>&gt; <em>OnTileEntering</em></dt>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/UnityAction.html">UnityAction<sup></a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html">Vector2Int</sup></a>&gt; <em>OnTileExiting</em></dt>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/UnityAction.html">UnityAction<sup></a>&lt;<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html">Vector2Int</sup></a>&gt; <em>OnWarp</em></dt>
-<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/UnityAction.html" target="_blank" rel="noopener">UnityAction</a>&lt;<a href="#manual/movement-direction">MovementDirection</a>, <a href="#manual/movement-direction">MovementDirection</a>&gt; <em>OnDirectionChanged</em></dt>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/UnityAction.html" target="_blank" rel="noopener">UnityAction</a>&lt;<a href="#reference/movement-direction.html">MovementDirection</a>, <a href="#reference/movement-direction.html">MovementDirection</a>&gt; <em>OnDirectionChanged</em></dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> <em>TargetGridPosition</em> <em>(read only)</em></dt>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> <em>PreviousGridPosition</em> <em>(read only)</em></dt>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> <em>CurrentGridPosition</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#manual/movement-direction">MovementDirection</a> <em>MovementDirection</em> <em>(read only)</em></dt>
+<dt class="hdlist1"><a href="#reference/movement-direction.html">MovementDirection</a> <em>MovementDirection</em> <em>(read only)</em></dt>
 <dt class="hdlist1">bool <em>Moving</em> <em>(read only)</em></dt>
 <dt class="hdlist1">bool <em>DidWarp</em> <em>(read only)</em></dt>
 <dt class="hdlist1">bool <em>CanInteract</em> <em>(read only)</em></dt>
@@ -45,12 +45,12 @@
 <p><mark>#</mark> Public Methods</p>
 </dd>
 <dt class="hdlist1">void SkipNextUpdate()</dt>
-<dt class="hdlist1">void FaceDirection(<a href="#manual/movement-direction">MovementDirection</a> direction)</dt>
-<dt class="hdlist1">void UpdateMove(float horizontal, float vertical)</dt>
+<dt class="hdlist1">void FaceDirection(<a href="#reference/movement-direction.html">MovementDirection</a> <em>direction</em>)</dt>
+<dt class="hdlist1">void UpdateMove(float <em>horizontal</em>, float <em>vertical</em>)</dt>
 <dt class="hdlist1">void OccupyCurrentTiles()</dt>
 <dt class="hdlist1">void UnoccupyCurrentTiles()</dt>
-<dt class="hdlist1">void WarpToPosition(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> position, <a href="#manual/movement-direction">MovementDirection</a> direction, <a href="#manual/collision-layer">CollisionLayer</a> layer)</dt>
-<dt class="hdlist1">void Move(<a href="#manual/movement-direction">MovementDirection</a> direction)</dt>
+<dt class="hdlist1">void WarpToPosition(<a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> <em>position</em>, <a href="#reference/movement-direction.html">MovementDirection</a> <em>direction</em>, <a href="#reference/collision-layer.html">CollisionLayer</a> <em>layer</em>)</dt>
+<dt class="hdlist1">void Move(<a href="#reference/movement-direction.html">MovementDirection</a> <em>direction</em>)</dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>

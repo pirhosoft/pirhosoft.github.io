@@ -5,9 +5,9 @@
 <h3 id="_warnings">Warnings</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CAPAAN</dt>
+<dt class="hdlist1">CAINIIN</dt>
 <dd>
-<p>Unable to play animation on {0}: animation must not be null</p>
+<p>Unable to activate interface for {0}: the interface '{1}' does not exist</p>
 </dd>
 </dl>
 </div>
@@ -18,9 +18,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CAPANA</dt>
+<dt class="hdlist1">CAPAIP</dt>
 <dd>
-<p>Unable to find animator {0}: the animator could not be found</p>
+<p>Unable to play animation for {0}: the given variables must me an AnimationPlayer</p>
 </dd>
 </dl>
 </div>
@@ -33,7 +33,7 @@
 <dl>
 <dt class="hdlist1">CAPANF</dt>
 <dd>
-<p>Unable to play animation on {0}: animation could not be found</p>
+<p>Unable to play animation for {0}: the animation could not be found</p>
 </dd>
 </dl>
 </div>
@@ -46,7 +46,7 @@
 <dl>
 <dt class="hdlist1">CAPASANF</dt>
 <dd>
-<p>Unable to find animator {0}: the animator could not be found</p>
+<p>Unable to play animation state on {0}: the given variables must be an Animator</p>
 </dd>
 </dl>
 </div>
@@ -59,7 +59,7 @@
 <dl>
 <dt class="hdlist1">CAPASSNF</dt>
 <dd>
-<p>Unable to play animation state {0}: the state could not be found</p>
+<p>Unable to play animation state on {0}: the state could not be found</p>
 </dd>
 </dl>
 </div>
@@ -109,9 +109,113 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CCNMV</dt>
+<dt class="hdlist1">CCNIT</dt>
 <dd>
-<p>unable to find variable {0} for instruction graph node</p>
+<p>variable {0} for instruction graph node {1} must be an object or store</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CCNMT</dt>
+<dd>
+<p>unable to find variable {0} for instruction graph node {1}</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CCONMO</dt>
+<dd>
+<p>Unable to create object for {0}: the object could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CCONMP</dt>
+<dd>
+<p>Unable to assign parent object for {0}: the specified object '{1}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CDCNMC</dt>
+<dd>
+<p>Unable to disable component for {0}: the given variables must be a MonoBehaviour</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CDGONMO</dt>
+<dd>
+<p>Unable to disable object for {0}: the given variables must be a GameObject</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CDINIIN</dt>
+<dd>
+<p>Unable to activate interface for {0}: the interface '{1}' does not exist</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CECNMC</dt>
+<dd>
+<p>Unable to enable component for {0}: the given variables must be a MonoBehaviour</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CEGONMO</dt>
+<dd>
+<p>Unable to enable object for {0}: the given variables must be a GameObject</p>
 </dd>
 </dl>
 </div>
@@ -135,9 +239,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">COMCOONF</dt>
+<dt class="hdlist1">CIRICT</dt>
 <dd>
-<p>Unable to create object {0}: the object could not be found</p>
+<p>Unable to find interface control for {0}: the interface control '{1}' is not a {2}</p>
 </dd>
 </dl>
 </div>
@@ -148,9 +252,48 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">COMDONF</dt>
+<dt class="hdlist1">CIRIIT</dt>
 <dd>
-<p>Unable to disable object {0}: the object could not be found</p>
+<p>Unable to find interface for {0}: the interface '{1}' is not a {1}</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CIRMC</dt>
+<dd>
+<p>Unable to find interface control for {0}: the interface '{1}' does not have a control named '{2}'</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CIRMI</dt>
+<dd>
+<p>Unable to find interface for {0}: the interface '{1}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CJEIL</dt>
+<dd>
+<p>Cancelling JoinEnumerator after 1000 unyielding iterations</p>
 </dd>
 </dl>
 </div>
@@ -163,7 +306,7 @@
 <dl>
 <dt class="hdlist1">COMDOONF</dt>
 <dd>
-<p>Unable to destroy object {0}: the object could not be found</p>
+<p>Unable to destroy object for {0}: the given variables must be a Unity Object</p>
 </dd>
 </dl>
 </div>
@@ -174,72 +317,7 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">COMEONF</dt>
-<dd>
-<p>Unable to enable object {0}: the object could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIRMCN</dt>
-<dd>
-<p>Unable to find interface control: the interface {0} does not have a control named {1}</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIRMICT</dt>
-<dd>
-<p>Unable to find interface control {0}: the interface control is not a {1}</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIRMIIT</dt>
-<dd>
-<p>Unable to find interface {0}: the interface is not a {1}</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIRMIN</dt>
-<dd>
-<p>Unable to find interface {0}: the interface could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ISCIE</dt>
+<dt class="hdlist1">CSCIE</dt>
 <dd>
 <p>Failed to expand item {0}: the variable '{1}' is not an IIndexedVariableStore</p>
 </dd>
@@ -252,9 +330,74 @@
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">CTMIA</dt>
+<dd>
+<p>this TransitionRenderer has already been added</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CTMIR</dt>
+<dd>
+<p>this TransitionRenderer has not been added</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">WASAPANF</dt>
 <dd>
-<p>Unable to find animator {0}: the animator could not be found</p>
+<p>Unable to set animation parameter for {0}: the given variables must be an Animator</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WASAPPNF</dt>
+<dd>
+<p>Unable to set animation parameter for {0}: the parameter could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WASAPVNF</dt>
+<dd>
+<p>Unable to set animation parameter for {0}: the value could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">WPTTM</dt>
+<dd>
+<p>Unable to play transition for {0}: the transition could not be found</p>
 </dd>
 </dl>
 </div>
@@ -266,6 +409,84 @@
 </div>
 <div class="sect2">
 <h3 id="_errors">Errors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBBIA</dt>
+<dd>
+<p>Failed to update bar binding: the amount variable '{0}' is not an Integer or Number</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBBIT</dt>
+<dd>
+<p>Failed to update bar binding: the total variable '{0}' is not an Integer or Number</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBBMA</dt>
+<dd>
+<p>Failed to update bar binding: the amount variable '{0}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBBMT</dt>
+<dd>
+<p>Failed to update bar binding: the total variable '{0}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBCIB</dt>
+<dd>
+<p>Failed to update binding: the variable '{0}' is not an IVariableStore</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CBCMB</dt>
+<dd>
+<p>Failed to update binding: the variable '{0}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">CCEE</dt>
@@ -294,22 +515,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CCMPF</dt>
-<dd>
-<p>Failed to process Instruction '{0}': the Instruction yielded a value other than null or IEnumerator</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1">CCNMF</dt>
 <dd>
-<p>failed to set target: unable to find field {0}</p>
+<p>failed to set target: unable to find field {0} for instruction graph node {1}</p>
 </dd>
 </dl>
 </div>
@@ -322,7 +530,7 @@
 <dl>
 <dt class="hdlist1">CCNMI</dt>
 <dd>
-<p>failed to set target: index {0} is out of range</p>
+<p>failed to set target: index {0} is out of range for instruction graph node {1}</p>
 </dd>
 </dl>
 </div>
@@ -335,7 +543,7 @@
 <dl>
 <dt class="hdlist1">CCNMK</dt>
 <dd>
-<p>failed to set target: unable to find key {0}</p>
+<p>failed to set target: unable to find key {0} for instruction graph node {1}</p>
 </dd>
 </dl>
 </div>
@@ -450,6 +658,58 @@
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">CIBIV</dt>
+<dd>
+<p>Failed to update image binding: the variable '{0}' is not a Sprite and does not have a Sprite</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CIBMV</dt>
+<dd>
+<p>Failed to update image binding: the variable '{0}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CIMIA</dt>
+<dd>
+<p>Failed to add Interface: an Interface named {0} has already been added</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CIMIR</dt>
+<dd>
+<p>Failed to remove Interface: an Interface named {0} has not been added</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">CISIOT</dt>
 <dd>
 <p>failed to store output {0}: the variable '{1}' has an incompatible type</p>
@@ -502,9 +762,48 @@
 </div>
 <div class="dlist">
 <dl>
+<dt class="hdlist1">CSCII</dt>
+<dd>
+<p>Failed to create item {0}: the variable '{1}' is not an IVariableStore</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CSCMI</dt>
+<dd>
+<p>Failed to create item {0}: the variable '{1}' could not be found</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">CSQIS</dt>
 <dd>
-<p>failed to run sequence: node {0} has not been connected</p>
+<p>Unable to run sequence for {0}: index {1} has no been connection</p>
+</dd>
+</dl>
+</div>
+<div class="openblock">
+<div class="content">
+
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CTMS</dt>
+<dd>
+<p>Failed to load Transition: shader {0} not found</p>
 </dd>
 </dl>
 </div>
@@ -567,9 +866,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">IBBIA</dt>
+<dt class="hdlist1">ISCMC</dt>
 <dd>
-<p>Failed to update bar binding: the amount variable '{0}' is not an Integer or Number</p>
+<p>Failed to create item {0}: SelectionControl '{1}' does not have a child with the specified name</p>
 </dd>
 </dl>
 </div>
@@ -580,126 +879,9 @@
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">IBBIT</dt>
+<dt class="hdlist1">ISCMT</dt>
 <dd>
-<p>Failed to update bar binding: the total variable '{0}' is not an Integer or Number</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IBBMA</dt>
-<dd>
-<p>Failed to update bar binding: the amount variable '{0}' could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IBBMT</dt>
-<dd>
-<p>Failed to update bar binding: the total variable '{0}' could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IBCMB</dt>
-<dd>
-<p>Failed to update binding: the variable '{0}' could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IBMIB</dt>
-<dd>
-<p>Failed to update binding: the variable '{0}' is not an IVariableStore</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIBIV</dt>
-<dd>
-<p>Failed to update image binding: the variable '{0}' is not a Sprite and does not have a Sprite</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIBMV</dt>
-<dd>
-<p>Failed to update image binding: the variable '{0}' could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIMIA</dt>
-<dd>
-<p>Failed to add Interface: an Interface named {0} has already been added</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">IIMIR</dt>
-<dd>
-<p>Failed to remove Interface: an Interface named {0} has not been added</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ISCMI</dt>
-<dd>
-<p>Failed to create item {0}: the variable '{1}' could not be found</p>
+<p>Failed to create item {0}: the object template has not been assigned</p>
 </dd>
 </dl>
 </div>

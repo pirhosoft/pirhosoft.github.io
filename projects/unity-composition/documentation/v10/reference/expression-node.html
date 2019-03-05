@@ -2,36 +2,35 @@
 <h2 id="reference/expression-node">ExpressionNode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.ExpressionNode : <a href="manual/instruction-graph-node.html">Instruction Graph Node</a></p>
+<p>PiRhoSoft.CompositionEngine.ExpressionNode : <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_48">Description</h3>
+<h3 id="_description_60">Description</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_constructors_38">Constructors</h3>
+<h3 id="_constructors_49">Constructors</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">ExpressionNode()</dt>
 <dd>
 <p><mark>#</mark> Public Fields</p>
 </dd>
-<dt class="hdlist1"><a href="manual/instruction-graph-node.html">Instruction Graph Node</a> <em>Next</em></dt>
-<dt class="hdlist1"><a href="#manual/expression">Expression</a> <em>Expression</em></dt>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Next</em></dt>
+<dt class="hdlist1"><a href="#reference/expression.html">Expression</a> <em>Expression</em></dt>
 <dd>
 <p><mark>#</mark> Public Properties</p>
 </dd>
-<dt class="hdlist1">bool <em>IsExecutionImmediate</em> <em>(read only)</em> <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#manual/instruction-graph-execution-mode">Instruction Graph Execution Mode</a> <em>ExecutionMode</em> <em>(read only)</em> <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>NodeColor</em> <em>(read only)</em> <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Public Methods</p>
 </dd>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/variable-definition">Variable Definition</a>&gt; inputs) <em>(virtual)</em></dt>
-<dt class="hdlist1">void GetOutputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#manual/variable-definition">Variable Definition</a>&gt; outputs) <em>(virtual)</em></dt>
+<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>) <em>(virtual)</em></dt>
+<dt class="hdlist1">void GetOutputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>outputs</em>) <em>(virtual)</em></dt>
 <dd>
 <p><mark>#</mark> Protected Methods</p>
 </dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="manual/instruction-graph.html">Instruction Graph</a> graph, <a href="#manual/instruction-store">Instruction Store</a> variables, int iteration) <em>(virtual)</em></dt>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="#reference/instruction-graph.html">InstructionGraph</a> <em>graph</em>, <a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, int <em>iteration</em>) <em>(virtual)</em></dt>
 <dd>
 <p>&lt;&lt;&lt;</p>
 </dd>
