@@ -1,16 +1,45 @@
 <div class="sect1">
 <h2 id="manual/instruction-node">Instruction Node</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>An Instruction Node is an <a href="#manual/instruction-graph-node.html">Instruction Graph Node</a> that executes a different <a href="#manual/instruction-graph.html">Instruction Graph</a>. Intruction Nodes can pass in a new <em>Context</em> object to <em>Instruction</em> and optionally <em>WaitForCompletion</em> of the called <a href="#manual/instruction-graph.html">Instruction Graph</a> before moving on to the next node. Create an Instruction Node in the <span class="menuseq"><b class="menu">Create</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Composition</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Instruction</b></span> menu of the Instruction Graph Window.</p>
+</div>
+<div class="paragraph">
+<p>See the <em>"Take Turn"</em> node on the "BoardLoop" <a href="#instruction-graph.html">Instruction Graph</a> in the BoardGame project for an example usage.</p>
+</div>
 <div class="sect2">
-<h3 id="_fields_21">Fields</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="#manual/instruction-caller.html">Instruction Caller</a> <em>Instruction</em></dt>
-<dt class="hdlist1">bool <em>Wait For Completion</em></dt>
-<dd>
-<p><a href="reference/instruction-node.html">Reference</a></p>
-</dd>
-</dl>
+<h3 id="_fields_34">Fields</h3>
+<div class="paragraph">
+<p><span class="image"><img src="v10/images/manual/instruction-node.png" alt="instruction node"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instruction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="manual/instruction-graph.html">Instruction Graph</a> to execute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Context</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A <a href="#reference/variable-value-source.html">VariableValueSource</a> to the context object to be passed to <em>Instruction</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wait For Completion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to wait until <em>Instruction</em> is finished running before moving on to the next node</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="#reference/instruction-node.html">Reference</a></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

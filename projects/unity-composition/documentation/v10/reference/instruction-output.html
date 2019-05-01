@@ -5,25 +5,30 @@
 <p>PiRhoSoft.CompositionEngine.InstructionOutput</p>
 </div>
 <div class="sect2">
-<h3 id="_description_89">Description</h3>
-
+<h3 id="_description_88">Description</h3>
+<div class="paragraph">
+<p>Used by <a href="#reference/instruction-caller.html">InstructionCaller</a> to store the data for an output <a href="#reference/variable.html">Variable</a>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_67">Constructors</h3>
+<h3 id="_public_fields_46">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">InstructionOutput()</dt>
+<dt class="hdlist1">string <em>Name</em></dt>
 <dd>
-<p><mark>#</mark> Public Fields</p>
+<p>The name used to access the value on the <a href="#reference/instruction-store.html"><em>Output</em> store</a> from a <a href="#reference/variable-reference.html">VariableReference</a> or <a href="#reference/expression.html">Expression</a>.</p>
 </dd>
 <dt class="hdlist1"><a href="#reference/instruction-output-type.html">InstructionOutputType</a> <em>Type</em></dt>
-<dt class="hdlist1"><a href="#reference/variable-definition.html">VariableDefinition</a> <em>Definition</em></dt>
+<dd>
+<p>Specifies how the value of the output is handled.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Reference</em></dt>
 <dd>
-<p>&lt;&lt;&lt;</p>
+<p>If <em>Type</em> is <code>Reference</code>, holds the <a href="#reference/variable-reference.html">VariableReference</a> that specifies where the output value should be stored after execution of the instruction finishes.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

@@ -1,0 +1,41 @@
+<div class="sect1">
+<h2 id="reference/mapped-variable-attribute">MappedVariableAttribute</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.CompositionEngine.MappedVariableAttribute : Attribute</p>
+</div>
+<div class="sect2">
+<h3 id="_description_113">Description</h3>
+<div class="paragraph">
+<p>An <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/" target="_blank" rel="noopener">attribute</a> to apply to properties and fields to expose them to the <a href="#topics/variables.html">variables</a> system using <a href="#reference/mapped-variable-store.html">MappedVariableStore</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_constructors_16">Constructors</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">MappedVariableAttribute(bool <em>readable</em>, bool <em>writable</em>)</dt>
+<dd>
+<p>Sets the allowed access for the property or field the attribute is applied to. If the default constructor is used instead, <em>readable</em> and <em>writable</em> are both <code>true</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_fields_57">Public Fields</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">bool <em>Readable</em></dt>
+<dd>
+<p>Set this to <code>true</code> to allow the property or field value to be retrieved when accessed through a <a href="#reference/mapped-variable-store.html">MappedVariableStore</a>.</p>
+</dd>
+<dt class="hdlist1">bool <em>Writable</em></dt>
+<dd>
+<p>Set this to <code>true</code> to allow the property or field value to be set when accessed through a <a href="#reference/mapped-variable-store.html">MappedVariableStore</a>.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>

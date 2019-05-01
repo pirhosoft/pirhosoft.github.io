@@ -32,7 +32,7 @@ nav
 
 nav .logo
 {
-	display: block;
+	display: none; /* block; */
 	height: 100px;
 	box-sizing: border-box;
 	padding: 10px;
@@ -101,6 +101,11 @@ nav li
 	padding: 10px 20px;
 	cursor: default;
 	font-size: 20px;
+}
+
+.menu-header.menu-intro
+{
+	cursor: pointer;
 }
 
 nav a.menu-section

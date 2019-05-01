@@ -5,37 +5,30 @@
 <p>PiRhoSoft.CompositionEngine.ConditionalNode : <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_33">Description</h3>
-
+<h3 id="_description_30">Description</h3>
+<div class="paragraph">
+<p>An <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> that continues to another <a href="#reference/instruction-graph-node.html">node</a> based on the result of a conditional <a href="#reference/expression.html">Expression</a>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_28">Constructors</h3>
+<h3 id="_public_fields_14">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ConditionalNode()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>OnTrue</em></dt>
+<dd>
+<p>If <em>Condition</em> evaluates to true, this node will run.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>OnFalse</em></dt>
+<dd>
+<p>If <em>Condition</em> evaluates to false, this node will run.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/expression.html">Expression</a> <em>Condition</em></dt>
 <dd>
-<p><mark>#</mark> Public Properties</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>NodeColor</em> <em>(read only)</em> <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="#reference/instruction-graph.html">InstructionGraph</a> <em>graph</em>, <a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, int <em>iteration</em>) <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>The expression to execute to determine which node should be run. The expression should return a bool, otherwise an error will be logged.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

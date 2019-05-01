@@ -5,39 +5,71 @@
 <p>PiRhoSoft.CompositionEngine.InterfaceControl : <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" rel="noopener">MonoBehaviour</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_95">Description</h3>
-
+<h3 id="_description_96">Description</h3>
+<div class="paragraph">
+<p>Add this <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" rel="noopener">behaviour</a> to provide support for enabling and disabling the object from an <a href="#reference/instruction-graph.html">InstructionGraph</a> using the <a href="#reference/show-control-node.html">ShowControlNode</a> and <a href="#reference/hide-control-node.html">ControlNode</a>. An InterfaceControl will always start inactive.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_70">Constructors</h3>
+<h3 id="_public_fields_49">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">InterfaceControl()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1"><a href="#reference/dependent-object-list.html">DependentObjectList</a> <em>DependentObjects</em></dt>
 <dd>
-<p><mark>#</mark> Public Properties</p>
-</dd>
-<dt class="hdlist1"><a href="#reference/i-variable-store.html">IVariableStore</a> <em>Variables</em> <em>(read only)</em></dt>
-<dt class="hdlist1">bool <em>IsActive</em> <em>(read only)</em></dt>
-<dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void Activate()</dt>
-<dt class="hdlist1">void Deactivate()</dt>
-<dt class="hdlist1">void UpdateBindings(<a href="#reference/i-variable-store.html">IVariableStore</a> <em>variables</em>, string <em>group</em>, <a href="#reference/binding-animation-status.html">BindingAnimationStatus</a> <em>status</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
-<dt class="hdlist1">void Teardown() <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>A list of <a href="https://docs.unity3d.com/ScriptReference/GameObjects.html" target="_blank" rel="noopener">GameObjects</a> whose enabled state should always match the enabled state of this object.</p>
 </dd>
 </dl>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_public_properties_17">Public Properties</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">bool <em>IsActive</em> <em>(read only)</em></dt>
+<dd>
+<p><code>true</code> if the control is currently enabled, <code>false</code> otherwise.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_methods_18">Public Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">void Activate()</dt>
+<dd>
+<p>Enables the control (and <em>DependentObjects</em>) if it is not already enabled. <em>Setup</em> will be called only if the control is not already enabled.</p>
+</dd>
+<dt class="hdlist1">void Deactivate()</dt>
+<dd>
+<p>Disables the control (and <em>DependentObjects</em>) regardless of how many times <em>Activate</em> was called. <em>Teardown</em> will be called only if the control is not already disabled.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_protected_methods_7">Protected Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">void Awake() <em>(virtual)</em></dt>
+<dd>
+<p>Disables the control on load.</p>
+</dd>
+<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
+<dd>
+<p>Implement this method in a subclass to perform setup when the object becomes enabled. The base implementation does nothing.</p>
+</dd>
+<dt class="hdlist1">void Teardown() <em>(virtual)</em></dt>
+<dd>
+<p>Implement this method in a subclass to perform clean up when the object becomes disabled. The base implementation does nothing.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Unresolved directive in reference.adoc - include::reference/int-rect-variable-handler.adoc[]</p>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

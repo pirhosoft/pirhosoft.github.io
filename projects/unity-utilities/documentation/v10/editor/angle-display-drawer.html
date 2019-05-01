@@ -1,0 +1,42 @@
+<div class="sect1">
+<h2 id="editor/angle-display-drawer">AngleDisplayDrawer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.UtilityEditor.AngleDisplayDrawer : <a href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html" target="_blank" rel="noopener">PropertyDrawer</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_56">Description</h3>
+<div class="paragraph">
+<p>Draws an editor for a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a>. Use the <a href="#engine/angle-display-attribute.html">AngleDisplayAttribute</a> to automatically use this drawer or the static methods to draw a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> manually (i.e from a <a href="https://docs.unity3d.com/ScriptReference/PropertyDrawer.html" target="_blank" rel="noopener">drawer</a>, <a href="editor/control-drawer-1.html">control</a>, or <a href="https://docs.unity3d.com/ScriptReference/Editor.html" target="_blank" rel="noopener">editor</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_static_methods_5">Static Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">float GetHeight(<a href="https://docs.unity3d.com/ScriptReference/GUIContent.html" target="_blank" rel="noopener">GUIContent</a> <em>label</em>, <a href="#Engine/angle-display-type.html">AngleDisplayType</a> <em>type</em>)</dt>
+<dd>
+<p>Returns the height the drawer needs to display a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> with the specified label and type.</p>
+</dd>
+<dt class="hdlist1">void Draw(<a href="https://docs.unity3d.com/ScriptReference/GUIContent.html" target="_blank" rel="noopener">GUIContent</a> <em>label</em>, <a href="https://docs.unity3d.com/ScriptReference/SerializedProperty.html" target="_blank" rel="noopener">SerializedProperty</a> <em>property</em>, <a href="#Engine/angle-display-type.html">AngleDisplayType</a> <em>type</em>)</dt>
+<dd>
+<p>Draws the editor for a property referencing a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> field using the specified label and type with <a href="https://docs.unity3d.com/Manual/gui-Layout.html" target="_blank" rel="noopener">automatic layout</a>.</p>
+</dd>
+<dt class="hdlist1">void Draw(<a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a> <em>position</em>, <a href="https://docs.unity3d.com/ScriptReference/GUIContent.html" target="_blank" rel="noopener">GUIContent</a> <em>label</em>, <a href="https://docs.unity3d.com/ScriptReference/SerializedProperty.html" target="_blank" rel="noopener">SerializedProperty</a> <em>property</em>, <a href="#Engine/angle-display-type.html">AngleDisplayType</a> <em>type</em>)</dt>
+<dd>
+<p>Draws the editor for a property referencing a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> field using the specified label and type at the specified position and size.</p>
+</dd>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> Draw(<a href="https://docs.unity3d.com/ScriptReference/GUIContent.html" target="_blank" rel="noopener">GUIContent</a> <em>label</em>, <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> <em>quaternion</em>, <a href="#Engine/angle-display-type.html">AngleDisplayType</a> <em>type</em>)</dt>
+<dd>
+<p>Draws the editor for a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> using the specified label and type with <a href="https://docs.unity3d.com/Manual/gui-Layout.html" target="_blank" rel="noopener">automatic layout</a>. Changes are reflected in the return value.</p>
+</dd>
+<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> Draw(<a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a> <em>position</em>, <a href="https://docs.unity3d.com/ScriptReference/GUIContent.html" target="_blank" rel="noopener">GUIContent</a> <em>label</em>, <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> <em>quaternion</em>, <a href="#Engine/angle-display-type.html">AngleDisplayType</a> <em>type</em>)</dt>
+<dd>
+<p>Draws the editor for a <a href="https://docs.unity3d.com/ScriptReference/Quaternion.html" target="_blank" rel="noopener">Quaternion</a> using the specified label and type at the specified position and size. Changes are reflected in the return value.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>

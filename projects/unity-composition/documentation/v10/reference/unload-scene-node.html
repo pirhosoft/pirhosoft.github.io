@@ -1,0 +1,52 @@
+<div class="sect1">
+<h2 id="reference/unload-scene-node">UnloadSceneNode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.CompositionEngine.UnloadSceneNode : <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_198">Description</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_public_fields_106">Public Fields</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Next</em></dt>
+<dd>
+<p>The <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> to run when this node completes.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/unload-scene-node-scene-source.html">SceneSource</a> <em>Source</em></dt>
+<dd>
+<p>Specifies how the scene to unload is retrieved.</p>
+</dd>
+<dt class="hdlist1"><a href="/projects/unity-utilities/documentation/#/v10/reference/scene-reference" target="_blank" rel="noopener">SceneReference</a> <em>Scene</em></dt>
+<dd>
+<p>If <em>Source</em> is <code>Value</code>, holds the scene to unload.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>SceneVariable</em></dt>
+<dd>
+<p>If <em>Source</em> is <code>Variable</code>, references the scene to unload. If the resolved value is an <code>Int</code>, the scene will be uloaded by index. If it is a <code>String</code>, it will be unloaded by name.</p>
+</dd>
+<dt class="hdlist1">string <em>SceneName</em></dt>
+<dd>
+<p>If <em>Source</em> is <code>Name</code>, the name of the scene to unload.</p>
+</dd>
+<dt class="hdlist1">int <em>SceneIndex</em></dt>
+<dd>
+<p>If <em>Source</em> is <code>Index</code>, the build index of the scene to unload.</p>
+</dd>
+<dt class="hdlist1">bool <em>WaitForCompletion</em></dt>
+<dd>
+<p>If this is <code>true</code>, this node will not complete until the scene has completed unloading. Otherwise, this node will complete immediately and the <a href="#reference/instruction-graph.html">InstructionGraph</a> will continue.</p>
+</dd>
+<dt class="hdlist1">bool <em>CleanupAssets</em></dt>
+<dd>
+<p>If this is <code>true</code> (the default), <a href="https://docs.unity3d.com/ScriptReference/Resources.UnloadUnusedAssets.html" target="_blank" rel="noopener">Resources.UnloadUnusedAssets</a> will be called after the scene has been unloaded.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>

@@ -5,40 +5,68 @@
 <p>PiRhoSoft.CompositionEngine.VariableList : <a href="#reference/i-variable-list.html">IVariableList</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_194">Description</h3>
-
+<h3 id="_description_211">Description</h3>
+<div class="paragraph">
+<p>An implementation of <a href="#reference/i-variable-list.html">IVariableList</a> that has no constraints on the <a href="#reference/variable-value.html">ValueValues</a> it can hold.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_142">Constructors</h3>
+<h3 id="_constructors_21">Constructors</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">VariableList()</dt>
+<dt class="hdlist1">VariableList(int <em>count</em>)</dt>
 <dd>
-<p><mark>#</mark> Public Properties</p>
-</dd>
-<dt class="hdlist1"><a href="#reference/variable-schema.html">VariableSchema</a> <em>Schema</em> <em>(read only)</em></dt>
-<dt class="hdlist1"><a href="#reference/i-variable-store.html">IVariableStore</a> <em>Owner</em> <em>(read only)</em></dt>
-<dt class="hdlist1">bool <em>NeedsUpdate</em> <em>(read only)</em></dt>
-<dt class="hdlist1">int <em>VariableCount</em> <em>(read only)</em> <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void LoadFrom(<a href="#reference/variable-list.html">VariableList</a> <em>variables</em>, string <em>availability</em>)</dt>
-<dt class="hdlist1">void SaveTo(<a href="#reference/variable-list.html">VariableList</a> <em>variables</em>, string <em>availability</em>)</dt>
-<dt class="hdlist1">void Setup(<a href="#reference/variable-schema.html">VariableSchema</a> <em>schema</em>, <a href="#reference/i-variable-store.html">IVariableStore</a> <em>owner</em>)</dt>
-<dt class="hdlist1">void Update()</dt>
-<dt class="hdlist1">void Reset(int <em>index</em>)</dt>
-<dt class="hdlist1">void Reset(string <em>availability</em>)</dt>
-<dt class="hdlist1">void Reset(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;string&gt; <em>variables</em>)</dt>
-<dt class="hdlist1">void Clear()</dt>
-<dt class="hdlist1">string GetVariableName(int <em>index</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#reference/variable-value.html">VariableValue</a> GetVariableValue(int <em>index</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> SetVariableValue(int <em>index</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>) <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>Adds <em>count</em> <a href="#reference/variable-type.html"><code>Empty</code></a> <a href="#reference/variable-value.html">ValueValues</a> to the list.</p>
 </dd>
 </dl>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_public_properties_39">Public Properties</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-value.html">VariableValue</a>&gt; <em>Values</em> <em>(read only)</em></dt>
+<dd>
+<p>The <a href="#reference/variable-value.html">VariableValues</a> in the list.</p>
+</dd>
+<dt class="hdlist1">int <em>Count</em> <em>(read only)</em></dt>
+<dd>
+<p>The number of <a href="#reference/variable-value.html">VariableValues</a> in the list.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_methods_38">Public Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#reference/variable-value.html">VariableValue</a> GetVariable(int <em>index</em>)</dt>
+<dd>
+<p>Returns the <a href="#reference/variable-value.html">VariableValue</a> at index <em>index</em> in the list. If <em>index</em> is not between 0 and <em>Count</em>, <a href="#reference/variable-value.html">VariableValue.<em>Empty</em></a> will be returned.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> AddVariable(<a href="#reference/variable-value.html">VariableValue</a> <em>value</em>)</dt>
+<dd>
+<p>Adds <em>value</em> to the list. This will always succeed and return <a href="#reference/set-variable-result.html"><code>Success</code></a>.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> RemoveVariable(int <em>index</em>)</dt>
+<dd>
+<p>Removes the <a href="#reference/variable-value.html">VariableValue</a> at index <em>index</em> from the list.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> SetVariable(int <em>index</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>)</dt>
+<dd>
+<p>Changes the <a href="#reference/variable-value.html">VariableValue</a> at index <em>index</em> to <em>value</em>.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Unresolved directive in reference.adoc - include::reference/variable-listener.adoc[]</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Unresolved directive in reference.adoc - include::reference/variable-map.adoc[]</p>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

@@ -2,37 +2,25 @@
 <h2 id="reference/variable-source-1">VariableSource</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>PiRhoSoft.CompositionEngine.VariableSource&lt;<em>T</em>&gt;</p>
+<p>PiRhoSoft.CompositionEngine.VariableSource&lt;<em>T</em>&gt; : <a href="#reference/variable-source.html">VariableSource</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_199">Description</h3>
-
+<h3 id="_description_221">Description</h3>
+<div class="paragraph">
+<p>An implementation of <a href="#reference/variable-source.html">VariableSource</a> that exposes the value to use when <em>Type</em> is set to <em>Value</em>. Because Unity cannot serialize fields of generic types this class is defined as abstract, therefore, concrete types for each value type must be implemented. These concrete types are included for <a href="#reference/bool-variable-source.html">Bool</a>, <a href="#reference/int-variable-source.html">Int</a>, <a href="#reference/float-variable-source.html">Float</a>, <a href="#reference/int2-variable-source.html">Int2</a>, <a href="#reference/int3-variable-source.html">Int3</a>, <a href="#reference/int-rect-variable-source.html">IntRect</a>, <a href="#reference/int-bounds-variable-source.html">IntBounds</a>, <a href="#reference/vector2-variable-source.html">Vector2</a>, <a href="#reference/vector3-variable-source.html">Vector3</a>, <a href="#reference/vector4-variable-source.html">Vector4</a>, <a href="#reference/quaternion-variable-source.html">Quaternion</a>, <a href="#reference/rect-variable-source.html">Rect</a>, <a href="#reference/bounds-variable-source.html">Bounds</a>, <a href="#reference/color-variable-source.html">Color</a>, <a href="#reference/string-variable-source.html">String</a>, <a href="#reference/object-variable-source.html">Object</a>, <a href="#reference/game-object-variable-source.html">GameObject</a>, <a href="#reference/store-variable-source.html">Store</a>, and <a href="#reference/list-variable-source.html">List</a>. Additionally, <a href="#reference/variable-value-source.html">VariableValueSource</a> allows selection of any value type.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_public_fields_6">Public Fields</h3>
+<h3 id="_public_fields_118">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><a href="#reference/variable-source-type.html">VariableSourceType</a> <em>Type</em></dt>
-<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Reference</em></dt>
 <dt class="hdlist1">T <em>Value</em></dt>
 <dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>)</dt>
-<dt class="hdlist1">bool TryGetValue(<a href="#reference/i-variable-store.html">IVariableStore</a> <em>variables</em>, <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> <em>context</em>, <a href="#reference/t&amp;.html">T</a> <em>value</em> <em>(out)</em>)</dt>
-<dd>
-<p><mark>#</mark> Protected Constructors</p>
-</dd>
-<dt class="hdlist1">VariableSource()</dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1">bool TryGetValue(<a href="#reference/variable-value.html">VariableValue</a> <em>variable</em>, <a href="#reference/t&amp;.html">T</a> <em>Value</em> <em>(out)</em>) <em>(abstract)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>If <em>Type</em> is set to <em>Value</em>, this holds the value the owner should use for this variable.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

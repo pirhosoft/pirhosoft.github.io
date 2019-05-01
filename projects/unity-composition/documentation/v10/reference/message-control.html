@@ -5,36 +5,55 @@
 <p>PiRhoSoft.CompositionEngine.MessageControl : <a href="#reference/interface-control.html">InterfaceControl</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_119">Description</h3>
-
+<h3 id="_description_123">Description</h3>
+<div class="paragraph">
+<p>Displays text on a <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TextMeshPro</a> component. Use this <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html" target="_blank" rel="noopener">MonoBehaviour</a> directly to hide the control programmatically (or with a <a href="#reference/message-node.html">[reference/message-node.html]</a>. To add support for dismissing this <a href="#reference/interface-control.html">InterfaceControl</a> with a button press, use <a href="#reference/input-message.html">InputMessage</a>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_88">Constructors</h3>
+<h3 id="_public_fields_65">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">MessageControl()</dt>
+<dt class="hdlist1"><a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> <em>DisplayText</em></dt>
 <dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
-<dt class="hdlist1">TextMeshProUGUI <em>DisplayText</em></dt>
-<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> <em>ContinueIndicator</em></dt>
-<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> <em>FinishedIndicator</em></dt>
-<dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Show(<a href="#reference/i-variable-store.html">IVariableStore</a> <em>variables</em>, string <em>text</em>, <a href="#reference/message-interaction-type.html">MessageInteractionType</a> <em>interaction</em>, bool <em>isLast</em>)</dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(string <em>text</em>, <a href="#reference/message-interaction-type.html">MessageInteractionType</a> <em>interaction</em>, bool <em>isLast</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
-<dt class="hdlist1">void Teardown() <em>(virtual)</em></dt>
-<dt class="hdlist1">void SetInteraction(<a href="#reference/message-control-display.html">MessageControlDisplay</a> <em>display</em>, <a href="#reference/message-interaction-type.html">MessageInteractionType</a> <em>interaction</em>, bool <em>isLast</em>)</dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>The <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TextMeshPro</a> component that the text will be displayed on. This component will be enabled and disabled along with this MessageControl.</p>
 </dd>
 </dl>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_public_properties_26">Public Properties</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">bool <em>IsRunning</em> <em>(read only)</em></dt>
+<dd>
+<p>Returns <code>true</code> when this MessageControl is displaying text.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_methods_29">Public Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">void Show(string <em>text</em>)</dt>
+<dd>
+<p>Activates the MessageControl if necessary, sets <em>text</em> on <em>DisplayText</em>, and enables <em>DisplayText</em>. If this is called a second time before it is hidden, the text will simply be replaced and the control will continue to function as normal.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_protected_methods_11">Protected Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run() <em>(virtual)</em></dt>
+<dd>
+<p>Implement this method in a subclass to add support for custom input handling. This base implementation has no functionality.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

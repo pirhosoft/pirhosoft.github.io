@@ -5,29 +5,30 @@
 <p>PiRhoSoft.CompositionEngine.ScopedGraph : <a href="#reference/instruction-graph.html">InstructionGraph</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_158">Description</h3>
-
+<h3 id="_description_161">Description</h3>
+<div class="paragraph">
+<p>An <a href="#reference/instruction-graph.html">InstructionGraph</a> with an entry branch, a main branch, and an exit branch. These branches will run in sequence but for organization purposes it is useful to think of <em>Enter</em> as a setup branch and <em>Exit</em> a cleanup branch that reverses any changes made in <em>Enter</em>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_113">Constructors</h3>
+<h3 id="_public_fields_84">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ScopedGraph()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Enter</em></dt>
+<dd>
+<p>The branch that will run when the <a href="#reference/instruction-graph.html">InstructionGraph</a> is first run.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Process</em></dt>
+<dd>
+<p>The branch that will run after <em>Enter</em> has completed.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Exit</em></dt>
 <dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>) <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>The branch that will run after <em>Process</em> has completed.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

@@ -6,31 +6,21 @@
 </div>
 <div class="sect2">
 <h3 id="_description_142">Description</h3>
-
+<div class="paragraph">
+<p>Dissolve is an implementation of a <a href="#reference/transition.html">Transition</a> that makes the image more and more pixelated over time. The <a href="https://docs.unity3d.com/Manual/MaterialsAccessingViaScript.html" target="_blank" rel="noopener">material property</a> <code>_Amount</code> will be set to a number between 1 and _MaxAmount_, with the number incrementing (or decrementing if the <a href="#reference/transition-phase.html">phase</a> is <code>In</code>) every frame.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_101">Constructors</h3>
+<h3 id="_public_fields_74">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Pixelate()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1">int <em>MaxAmount</em></dt>
 <dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void Begin(<a href="#reference/transition-phase.html">TransitionPhase</a> <em>phase</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1">void Process(float <em>time</em>, <a href="#reference/transition-phase.html">TransitionPhase</a> <em>phase</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1">void Update() <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>The number of pixels for the dimension of the pixelation when the <a href="#reference/transition.html">Transition</a> is at its extreme.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

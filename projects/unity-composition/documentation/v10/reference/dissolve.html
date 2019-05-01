@@ -5,36 +5,38 @@
 <p>PiRhoSoft.CompositionEngine.Dissolve : <a href="#reference/cutoff.html">Cutoff</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_47">Description</h3>
-
+<h3 id="_description_41">Description</h3>
+<div class="paragraph">
+<p>Dissolve is an implementation of a <a href="#reference/cutoff.html">Cutoff</a> <a href="#reference/transition.html">Transition</a>. See the <a href="#manual/dissolve.html">manual page</a> for details.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_41">Constructors</h3>
+<h3 id="_public_fields_20">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Dissolve()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>Color</em></dt>
+<dd>
+<p>The <a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> to dissolve the screen to.</p>
+</dd>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Texture2D.html" target="_blank" rel="noopener">Texture2D</a> <em>Texture</em></dt>
+<dd>
+<p>The input <a href="https://docs.unity3d.com/ScriptReference/Texture.html" target="_blank" rel="noopener">Texture</a> that gives the pattern of the dissolve. If this is not specified, a texture filled with perlin noise will be generated and used.</p>
+</dd>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Vector2Int.html" target="_blank" rel="noopener">Vector2Int</a> <em>TextureSize</em></dt>
+<dd>
+<p>If <em>Texture</em> is null, the size of the <a href="https://docs.unity3d.com/ScriptReference/Texture.html" target="_blank" rel="noopener">Texture</a> to generate.</p>
+</dd>
 <dt class="hdlist1">float <em>NoiseScale</em></dt>
 <dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void Begin(<a href="#reference/transition-phase.html">TransitionPhase</a> <em>phase</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1">void End() <em>(virtual)</em></dt>
-<dt class="hdlist1">void Process(float <em>time</em>, <a href="#reference/transition-phase.html">TransitionPhase</a> <em>phase</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>If <em>Texture</em> is null, the scale value of the perlin noise generated as the <a href="https://docs.unity3d.com/ScriptReference/Texture.html" target="_blank" rel="noopener">Texture</a>.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Unresolved directive in reference.adoc - include::reference/empty-variable-handler.adoc[]</p>
+</div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

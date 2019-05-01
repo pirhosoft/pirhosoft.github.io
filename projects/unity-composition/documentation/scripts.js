@@ -118,6 +118,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	function GetArticleUrl(link)
 	{
+		if (link.hash)
+			return link.hash.substring(1);
+
 		var href = link.href || link.parentElement.href;
 
 		if (href && href.startsWith(_rootUrl) && href.endsWith(".html"))

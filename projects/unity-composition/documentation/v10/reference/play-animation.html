@@ -6,36 +6,33 @@
 </div>
 <div class="sect2">
 <h3 id="_description_143">Description</h3>
-
+<div class="paragraph">
+<p>Plays an <a href="https://docs.unity3d.com/ScriptReference/AnimationClip.html" target="_blank" rel="noopener">AnimationClip</a> on an <a href="#reference/animation-player.html">AnimationPlayer</a>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_constructors_102">Constructors</h3>
+<h3 id="_public_fields_75">Public Fields</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">PlayAnimation()</dt>
-<dd>
-<p><mark>#</mark> Public Fields</p>
-</dd>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Next</em></dt>
+<dd>
+<p>The <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> to run when this node completes.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>AnimationPlayer</em></dt>
+<dd>
+<p>The <a href="#reference/animation-player.html">AnimationPlayer</a> to play <em>Animation</em> on.</p>
+</dd>
 <dt class="hdlist1"><a href="#reference/animation-clip-variable-source.html">AnimationClipVariableSource</a> <em>Animation</em></dt>
+<dd>
+<p>The <a href="https://docs.unity3d.com/ScriptReference/AnimationClip.html" target="_blank" rel="noopener">AnimationClip</a> to play on <em>AnimationPlayer</em>.</p>
+</dd>
 <dt class="hdlist1">bool <em>WaitForCompletion</em></dt>
 <dd>
-<p><mark>#</mark> Public Properties</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>NodeColor</em> <em>(read only)</em> <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Public Methods</p>
-</dd>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1" target="_blank" rel="noopener">List</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run_(<a href="#reference/instruction-graph.html">InstructionGraph</a> <em>graph</em>, <a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, int <em>iteration</em>) <em>(virtual)</em></dt>
-<dd>
-<p>&lt;&lt;&lt;</p>
+<p>If this is <code>true</code>, this node will not complete until <em>Animation</em> has completed. Otherwise, this node will complete immediately and the <a href="#reference/instruction-graph.html">InstructionGraph</a> will continue.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

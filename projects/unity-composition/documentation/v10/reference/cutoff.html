@@ -5,34 +5,42 @@
 <p>PiRhoSoft.CompositionEngine.Cutoff : <a href="#reference/transition.html">Transition</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_41">Description</h3>
-
+<h3 id="_description_36">Description</h3>
+<div class="paragraph">
+<p>Cutoff is an abstract implementation of a <a href="#manual/transition.html">Transition</a> that provides a custom <a href="https://docs.unity3d.com/ScriptReference/Shader.html" target="_blank" rel="noopener">Shader</a> with an interface to fade, distort, and dissolve the screen image over time using an input texture. See the <a href="#manual/cutoff.html">manual</a> for more information or <a href="#reference/fade.html">Fade</a>, <a href="#reference/disolve.html">Dissolve</a>, or <a href="#reference/distort.html">Distort</a> for an example implementation.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods">Public Methods</h3>
+<h3 id="_protected_methods_3">Protected Methods</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">void Process(float <em>time</em>, <a href="#reference/transition-phase.html">TransitionPhase</a> <em>phase</em>) <em>(virtual)</em></dt>
-<dt class="hdlist1">void Render(<a href="#reference/transition-renderer.html">TransitionRenderer</a> <em>renderer</em>, <a href="https://docs.unity3d.com/ScriptReference/RenderTexture.html" target="_blank" rel="noopener">RenderTexture</a> <em>source</em>, <a href="https://docs.unity3d.com/ScriptReference/RenderTexture.html" target="_blank" rel="noopener">RenderTexture</a> <em>destination</em>) <em>(virtual)</em></dt>
-<dd>
-<p><mark>#</mark> Protected Constructors</p>
-</dd>
-<dt class="hdlist1">Cutoff()</dt>
-<dd>
-<p><mark>#</mark> Protected Methods</p>
-</dd>
 <dt class="hdlist1">void SetTexture(<a href="https://docs.unity3d.com/ScriptReference/Texture2D.html" target="_blank" rel="noopener">Texture2D</a> <em>texture</em>)</dt>
-<dt class="hdlist1">void SetColor(<a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>color</em>)</dt>
-<dt class="hdlist1">void SetCutoff(float <em>cutoff</em>)</dt>
-<dt class="hdlist1">void SetFade(float <em>fade</em>)</dt>
-<dt class="hdlist1">void SetDistort(bool <em>distort</em>)</dt>
-<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
-<dt class="hdlist1">void Update() <em>(virtual)</em></dt>
 <dd>
-<p>&lt;&lt;&lt;</p>
+<p>Sets the _TransitionTexture property of the material which is used to lookup the animation properties according to the description in the <a href="#manual/cutoff.html">manual</a>.</p>
+</dd>
+<dt class="hdlist1">void SetColor(<a href="https://docs.unity3d.com/ScriptReference/Color.html" target="_blank" rel="noopener">Color</a> <em>color</em>)</dt>
+<dd>
+<p>Sets the _Color property of the material.</p>
+</dd>
+<dt class="hdlist1">void SetCutoff(float <em>cutoff</em>)</dt>
+<dd>
+<p>Sets the _Cutoff property of the material which specifies the portion of the texture that is used as the mask based on the current elapsed time.</p>
+</dd>
+<dt class="hdlist1">void SetFade(float <em>fade</em>)</dt>
+<dd>
+<p>Sets the _Fade property of the material which specifies the interpolated position between the color from the input texture and the value set to _Color.</p>
+</dd>
+<dt class="hdlist1">void SetDistort(bool <em>distort</em>)</dt>
+<dd>
+<p>Sets the _Distort property which indicates whether or not the material should distort the input texture based on the R and G channels in _TransitionTexture.</p>
+</dd>
+<dt class="hdlist1">void Setup() <em>(virtual)</em></dt>
+<dd>
+<p>Override this in subclasses to set additional material properties. The base implementation sets <em>TransitionTexture to <a href="https://docs.unity3d.com/ScriptReference/Texture2D-blackTexture.html">Texture2D.blackTexture</a>, _color to black, and _Distort to false. _Cutoff and _Fade are set in <a href="#reference/transition.html">_Process</em></a> to the percentage of <a href="#reference/transition.html"><em>Duration</em></a> that has elapsed.</p>
 </dd>
 </dl>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>

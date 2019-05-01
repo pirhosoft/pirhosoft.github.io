@@ -1,0 +1,58 @@
+<div class="sect1">
+<h2 id="reference/create-game-object-node">CreateGameObjectNode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PiRhoSoft.CompositionEngine.CreateGameObjectNode : <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a></p>
+</div>
+<div class="sect2">
+<h3 id="_description_33">Description</h3>
+<div class="paragraph">
+<p>Creates a <a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> from a <a href="https://docs.unity3d.com/Manual/Prefabs.html" target="_blank" rel="noopener">prefab</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_public_fields_15">Public Fields</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Next</em></dt>
+<dd>
+<p>The node to run after the object is created.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/game-object-variable-source.html">GameObjectVariableSource</a> <em>Prefab</em></dt>
+<dd>
+<p>The prefab to use as a template for the game object that will be created. This can be specified as a reference to an object in the editor or a variable reference that has the value of an object.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/string-variable-source.html">StringVariableSource</a> <em>ObjectName</em></dt>
+<dd>
+<p>The name to assign to the newly created object.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>ObjectVariable</em></dt>
+<dd>
+<p>The variable to assign the newly created object to.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/create-game-object-node-object-positioning.html">ObjectPositioning</a> <em>Positioning</em></dt>
+<dd>
+<p>The way the value of <em>Position</em> and <em>Rotation</em> should be interpreted.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Object</em></dt>
+<dd>
+<p>When <em>Positioning</em> is <code>Relative</code>, specifies the object the created object should be positioned relative to.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Parent</em></dt>
+<dd>
+<p>When <em>Positioning</em> is <code>Child</code>, specifies the object the created object should be added to as a child.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/vector3-variable-source.html">Vector3VariableSource</a> <em>Position</em></dt>
+<dd>
+<p>The position at which to place the newly created object.</p>
+</dd>
+<dt class="hdlist1"><a href="#reference/vector3-variable-source.html">Vector3VariableSource</a> <em>Rotation</em></dt>
+<dd>
+<p>The rotation to set the newly created object to.</p>
+</dd>
+</dl>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
