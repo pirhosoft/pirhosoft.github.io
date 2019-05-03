@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _newestVersion = "v10";
 	var _documentationPath = "/projects/unity-composition/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
-	var _defaultArticle = "overview.html";
+	var _defaultArticle = "introduction.html";
 	var _searchIndexUrl = "search-index.json";
 	var _tableOfContentsUrl = "table-of-contents.html";
 
@@ -49,30 +49,43 @@ document.addEventListener("DOMContentLoaded", function(event)
 	{
 		v10:
 		{
-			"overview.html": "https://www.youtube.com/channel/UCRiSxdervZlO_RnMOa-PMhw",
-			"tutorial/1-introduction.html": "https://www.youtube.com/playlist?list=PL3n_h8eLvFjCoVtxlVamxS_zvSayeHYuP",
-			"tutorial/2-setup.html": "https://youtu.be/4xOs599U6OQ"
+			//"overview.html": "https://www.youtube.com/channel/UCRiSxdervZlO_RnMOa-PMhw",
+			//"tutorial/1-introduction.html": "https://www.youtube.com/playlist?list=PL3n_h8eLvFjCoVtxlVamxS_zvSayeHYuP",
+			//"tutorial/2-setup.html": "https://youtu.be/4xOs599U6OQ"
 		}
 	};
 
 	var _pdfNames =
 	{
-		tutorial: "tutorial.pdf",
 		manual: "manual.pdf",
 		reference: "reference.pdf",
-		documents: "documents.pdf"
+		"topics/graphs": "graphs.pdf",
+		"topics/variables": "variables.pdf",
+		"topics/bindings": "bindings.pdf"
 	};
 
 	var _discordUrl = "https://discord.gg/9FAhush";
 
 	var _nextArticle =
 	{
-		"tutorial/1-introduction.html": "tutorial/2-setup.html",
-		"tutorial/2-setup.html": "tutorial/3-world.html",
-		"tutorial/3-world.html": "tutorial/4-ecosystem.html",
-		"tutorial/4-ecosystem.html": "tutorial/5-battle.html",
-		"tutorial/5-battle.html": "tutorial/6-finishing-up.html",
-		"tutorial/6-finishing-up.html": "tutorial/7-next-steps.html"
+		"topics/graphs-1.html": "topics/graphs-2.html",
+		"topics/graphs-2.html": "topics/graphs-3.html",
+		"topics/graphs-3.html": "topics/graphs-4.html",
+		"topics/graphs-4.html": "topics/graphs-5.html",
+		"topics/graphs-5.html": "topics/graphs-6.html",
+		"topics/graphs-6.html": "topics/graphs-7.html",
+		"topics/graphs-7.html": "topics/graphs-8.html",
+		"topics/variables-1.html": "topics/variables-2.html",
+		"topics/variables-2.html": "topics/variables-3.html",
+		"topics/variables-3.html": "topics/variables-4.html",
+		"topics/variables-4.html": "topics/variables-5.html",
+		"topics/variables-5.html": "topics/variables-6.html",
+		"topics/variables-6.html": "topics/variables-7.html",
+		"topics/variables-7.html": "topics/variables-8.html",
+		"topics/bindings-1.html": "topics/bindings-2.html",
+		"topics/bindings-2.html": "topics/bindings-3.html",
+		"topics/bindings-3.html": "topics/bindings-4.html",
+		"topics/bindings-4.html": "topics/bindings-5.html",
 	}
 
 	function IsSmallScreen()
@@ -492,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 		ToggleClass(_videoLink, _linkDisabledClass, !videoUrl);
 		_videoLink.href = videoUrl;
 
-		var pdfUrl = GetPdfUrl(_currentVersion, _currentSection);
+		var pdfUrl = GetPdfUrl(_currentVersion, _currentSection, _currentArticle);
 		ToggleClass(_pdfLink, _linkDisabledClass, !pdfUrl);
 		_pdfLink.href = pdfUrl;
 
@@ -522,9 +535,17 @@ document.addEventListener("DOMContentLoaded", function(event)
 		return versionUrls ? versionUrls[article] : null;
 	}
 
-	function GetPdfUrl(version, section)
+	function GetPdfUrl(version, section, article)
 	{
 		var name = _pdfNames[section];
+
+		if (!name)
+		{
+			var dash = article.indexOf('-');
+			var group = article.substring(0, dash);
+			name = _pdfNames[group];
+		}
+
 		return name ? _documentationPath + version + "/" + name : null;
 	}
 

@@ -1,8 +1,6 @@
 <div class="sect1">
-<h2 id="topics/variables-6">Variables</h2>
+<h2 id="topics/variables-6">Writing Custom Commands</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_writing_custom_commands">Writing Custom Commands</h3>
 <div class="paragraph">
 <p>Calculations can be defined in a Command as a way to share expressions among different objects or keep complex calculations isolated from the places they are used. This can improve organization and make it easier to manage different pieces of game logic. Commands are created in the <a href="https://docs.unity3d.com/Manual/ProjectView.html" target="_blank" rel="noopener">project window</a> using the <em>Create</em> menu and found under <span class="menuseq"><b class="menu">PiRho Soft</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Command</b></span>. A Command should always be placed in a <em>Resources</em> folder so it can be <a href="https://docs.unity3d.com/Manual/LoadingResourcesatRuntime.html" target="_blank" rel="noopener">loaded at runtime</a> by the <a href="#manual/composition-manager.html">CompositionManager</a> (this will happen automatically).</p>
 </div>
@@ -25,6 +23,5 @@ weapon.attack * power * (isCritical ? 2 : 1)</pre>
 <p>This command would then be called with <code>local.damage = ComputeDamage(global.player.strength, global.target.defense, global.player.weapon)</code></p>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>

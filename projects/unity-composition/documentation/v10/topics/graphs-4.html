@@ -1,8 +1,6 @@
 <div class="sect1">
-<h2 id="topics/graphs-4">Graphs</h2>
+<h2 id="topics/graphs-4">Instruction Store</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_instruction_store">Instruction Store</h3>
 <div class="paragraph">
 <p>Every graph is created with an <a href="#reference/instruction-store.html">Instruction Store</a>. The instruction store provides access to all the <a href="#referenece/variable-value.html">variables</a> that nodes in the graph can access through <a href="#reference/variable-reference.html">variable references</a> and <a href="#reference/expressions.html">expressions</a> (see <a href="#topics/variables-4.html">Accessing Variables</a> for more info). The graph&#8217;s instruction store provides access to the following variables by string name:</p>
 </div>
@@ -40,34 +38,41 @@
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="_contextinputsoutputs">Context/Inputs/Outputs</h4>
+<div class="sect2">
+<h3 id="_contextinputsoutputs">Context/Inputs/Outputs</h3>
 <div class="paragraph">
 <p>In addition to the values above, each instruction store has a context object that is passed in by the script that ran the instruction. Select a graph in the Project window or click on the graph&#8217;s start node to select it in the Inpector. Here a graph&#8217;s context object, inputs, and outputs can be viewed. The context object is accessed by the string enterred as the <em>ContextName</em> property. By default the context object can be of any type stored in a <a href="#reference/variable-value.html">variable value</a>. With the <em>ContextDefinition</em> property this value can be defined as a certain type and constrained to any desired parameters. When run, the graph will assert that the given context object is of the correct type and constrained correctly. If it is an object type, it will be automatically cast to the defined type.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="v10/images/topics/context-example.png" alt="context example"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="v10/images/topics/graphs/context-example.png" alt="Context Example">
+</div>
 </div>
 <div class="paragraph">
 <p>Graphs may have input values that are passed in by the calling object and output values that are subsequently returned to the calling object, similar to parameters and return values of methods in script. Inputs and Outputs are automatically retrieved from each node in the graph that potentially needs them. Consider the following <a href="#manual/expression-node.html">Expression Node</a>:</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="v10/images/topics/input-output-example.png" alt="input output example"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="v10/images/topics/graphs/input-output-example.png" alt="Input Output Example">
+</div>
 </div>
 <div class="paragraph">
 <p>The variable <em>Foo</em> will be automatically added to the graph&#8217;s output list and the variable <em>Bar</em> will be auto added to its inputs. However since an expression contains no type information, like the context, these variables may have types and constraints defined for them on the graph&#8217;s list of inputs and outputs.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="v10/images/topics/input-output-definition-example.png" alt="input output definition example"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="v10/images/topics/graphs/input-output-definition-example.png" alt="Input Output Definition Example">
+</div>
 </div>
 <div class="paragraph">
 <p>They will also automatically appear in the inspector of an <a href="#reference/instruction-caller.html">InstructionCaller</a> (see <a href="topics/graphs-6.html">Running Graphs From Script</a>) that will run this graph. The instruction caller is where the actual values of what is passed into the graph are defined.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="v10/images/topics/instruction-caller-example.png" alt="instruction caller example"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="v10/images/topics/graphs/instruction-caller-example.png" alt="Instruction Caller Example">
+</div>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>
 </div>

@@ -7,7 +7,7 @@
 <div class="sect2">
 <h3 id="_description_220">Description</h3>
 <div class="paragraph">
-<p>A wrapper type for fields that allows a variable to be set in the editor to a specific value or set as a <a href="#reference/variable-reference.html">VariableReference</a>.</p>
+<p>A wrapper type for fields that allows a value to be set directly or set to a <a href="#reference/variable-reference.html">VariableReference</a>. <a href="#reference/variable-source-1.html">VariableSource&lt;_T_</a>&gt; provides a generic implementation that is sufficient for all use cases.</p>
 </div>
 </div>
 <div class="sect2">
@@ -16,7 +16,7 @@
 <dl>
 <dt class="hdlist1"><a href="#reference/variable-source-type.html">VariableSourceType</a> <em>Type</em></dt>
 <dd>
-<p>Whether this source has a value or <a href="#reference/variable-reference.html">reference</a>. If this is set to <em>Value</em> the subclass (such as <a href="#reference/variable-source-1.html">VariableSource&lt;T</a>&gt;) will include the value field of the correct type.</p>
+<p>Whether this source has a value or <a href="#reference/variable-reference.html">VariableReference</a>. If this is set to <em>Value</em> the subclass will include the value field of the correct type.</p>
 </dd>
 <dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Reference</em></dt>
 <dd>
@@ -26,12 +26,23 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods_47">Public Methods</h3>
+<h3 id="_public_methods_48">Public Methods</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>) <em>(abstract)</em></dt>
+<dt class="hdlist1">void GetInputs(<a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/variable-definition.html">VariableDefinition</a>&gt; <em>inputs</em>)</dt>
 <dd>
-<p>If <em>Type</em> is set to <em>Reference</em> and <em>Reference</em> accesses the <a href="#reference/instruction-store.html">input store</a>, subclasses will add the definition for <em>Reference</em> to the <em>inputs</em> list.</p>
+<p>If <em>Type</em> is set to <em>Reference</em> and <em>Reference</em> accesses <a href="#reference/instruction-store.html">InstructionStore.<em>Inputs</em></a>, adds the definition for <em>Reference</em> to <em>inputs</em>.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_protected_methods_19">Protected Methods</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="#reference/value-definition.html">ValueDefinition</a> GetInputDefinition() <em>(abstract)</em></dt>
+<dd>
+<p>Implement this in a subclass to return a definiton for the represented type.</p>
 </dd>
 </dl>
 </div>

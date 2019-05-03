@@ -1,8 +1,6 @@
 <div class="sect1">
-<h2 id="topics/graphs-7">Graphs</h2>
+<h2 id="topics/graphs-7">Creating Custom Graphs</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_creating_custom_graphs">Creating Custom Graphs</h3>
 <div class="paragraph">
 <p>To create a custom graph, derive from <a href="#reference/instruction-graph.html">InstructionGraph</a> and implement the abstract method <code>Run(InstructionStore variables)</code>. The following is an example of a graph that has three different entry points and runs them sequentially:</p>
 </div>
@@ -41,6 +39,5 @@
 <p>Ultimately, graphs are just a <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">Asset</a> so they can store data and implement any functionality desired. Execution will end when the <code>Run()</code> function finishes.</p>
 </div>
 <div style="page-break-after: always;"></div>
-</div>
 </div>
 </div>

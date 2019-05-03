@@ -34,7 +34,7 @@ namespace PiRhoSoft.CompositionExample
 </div>
 </div>
 <div class="paragraph">
-<p><a href="#reference/variable-binding.html">Bindings</a>, such as <a href="#reference/bar-binding.html">BarBinding</a>, use the <em>Increment</em> and <em>Decrement</em> methods to indicate when an animation has started and finished respectively.</p>
+<p><a href="#reference/variable-binding.html">VariableBindings</a>, such as <a href="#reference/bar-binding.html">BarBinding</a>, use the <em>Increment</em> and <em>Decrement</em> methods to indicate when an animation has started and finished respectively.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -65,7 +65,7 @@ namespace PiRhoSoft.CompositionExample
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods_2">Public Methods</h3>
+<h3 id="_public_methods_3">Public Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">void Reset()</dt>
@@ -78,11 +78,11 @@ namespace PiRhoSoft.CompositionExample
 </dd>
 <dt class="hdlist1">void Increment()</dt>
 <dd>
-<p>Call this method from a <a href="#reference/variable-binding.html">binding</a> implementation to indicate the binding is starting an animation. This can be called multiple times if the binding is performing multiple animations. Each call to <em>Increment</em> should have a corresponding call to <em>Decrement</em> when the animation completes.</p>
+<p>Call this method from a <a href="#reference/variable-binding.html">VariableBinding</a> implementation to indicate the binding is starting an animation. This can be called multiple times if the binding is performing multiple animations. Each call to <em>Increment</em> should have a corresponding call to <em>Decrement</em> when the animation completes.</p>
 </dd>
 <dt class="hdlist1">void Decrement()</dt>
 <dd>
-<p>Call this method from a <a href="#reference/variable-binding.html">binding</a> implementation to indicate the binding has finished an animation. This should be called one time for each time <em>Increment</em> is called.</p>
+<p>Call this method from a <a href="#reference/variable-binding.html">VariableBinding</a> implementation to indicate the binding has finished an animation. This should be called one time for each time <em>Increment</em> is called.</p>
 </dd>
 </dl>
 </div>
