@@ -5,9 +5,9 @@
 <p>PiRhoSoft.CompositionEngine.InstructionStore : <a href="#reference/i-variable-store.html">IVariableStore</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_91">Description</h3>
+<h3 id="_description_89">Description</h3>
 <div class="paragraph">
-<p>The <a href="#reference/i-variable-store.html">IVariableStore</a> used with <a href="#reference/instruction-graph.html">InstructionGraphs</a> to provide a robust interface for accessing and isolating variables for use by <a href="#reference/instruction-graph-node.html">nodes</a>. When using an <a href="#reference/instruction-caller.html">InstructionCaller</a> all management of the store will be handled automatically including creation of the store, reading input variables, and writing output variables.</p>
+<p>The <a href="#reference/i-variable-store.html">IVariableStore</a> used with <a href="#reference/instruction-graph.html">InstructionGraphs</a> to provide a robust interface for accessing and isolating variables for use by <a href="#reference/instruction-graph-node.html">InstructionGraphNodes</a>. When using an <a href="#reference/instruction-caller.html">InstructionCaller</a> all management of the store will be handled automatically including creation of the store, reading input variables, and writing output variables.</p>
 </div>
 </div>
 <div class="sect2">
@@ -30,7 +30,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_static_methods_4">Static Methods</h3>
+<h3 id="_static_methods_5">Static Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">bool IsInput(<a href="#reference/variable-reference.html">VariableReference</a> <em>variable</em>)</dt>
@@ -64,7 +64,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_properties_16">Public Properties</h3>
+<h3 id="_public_properties_14">Public Properties</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">string <em>ContextName</em> <em>(read only)</em></dt>
@@ -115,7 +115,7 @@ It is not required to use <em>LocalStoreName</em> when accessing the local store
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods_17">Public Methods</h3>
+<h3 id="_public_methods_19">Public Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">void WriteInputs(<a href="#reference/instruction-caller.html">InstructionCaller</a> <em>instruction</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IList-1" target="_blank" rel="noopener">IList</a>&lt;<a href="#reference/instruction-input.html">InstructionInput</a>&gt; <em>inputs</em>, <a href="#reference/i-variable-store.html">IVariableStore</a> <em>caller</em>)</dt>

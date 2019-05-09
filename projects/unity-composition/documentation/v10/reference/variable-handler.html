@@ -11,7 +11,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_static_methods_9">Static Methods</h3>
+<h3 id="_static_methods_11">Static Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">string ToString(<a href="#reference/variable-value.html">VariableValue</a> <em>value</em>)</dt>
@@ -110,7 +110,7 @@
 <dd>
 <p>Returns a value contained in <em>owner</em> based on the value of <em>lookup</em>. If <em>lookup</em> is not found, <a href="#reference/variable-value.html">VariableValue.Empty</a> will be returned.</p>
 </dd>
-<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> Apply(<a href="#reference/variable-value&amp;.html">VariableValue</a> <em>owner</em> <em>(ref)</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>lookup</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>)</dt>
+<dt class="hdlist1"><a href="#reference/set-variable-result.html">SetVariableResult</a> Apply(<a href="#reference/variable-value.html">VariableValue</a> <em>owner</em> <em>(ref)</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>lookup</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>value</em>)</dt>
 <dd>
 <p>Sets a value contained in <em>owner</em> based on <em>lookup</em> to <em>value</em>. <em>owner</em> will be updated to the new value. If <em>owner</em> is not holding a reference as determined by <a href="#reference/variable-value.html">VariableValue.IsReference</a> it must be reassigned to the container it is being held in. The return value indicates success or the reason for failure.</p>
 </dd>
@@ -118,9 +118,9 @@
 <dd>
 <p>Returns the value of <em>owner</em> converted to type <em>type</em>. For object values, this is used to lookup sibling components.</p>
 </dd>
-<dt class="hdlist1">bool Test(<a href="#reference/variable-value.html">VariableValue</a> <em>owner</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>test</em>)</dt>
+<dt class="hdlist1">bool Test(<a href="#reference/variable-value.html">VariableValue</a> <em>owner</em>, string <em>type</em>)</dt>
 <dd>
-<p>Determines if <em>owner</em> is holding the type indicated by <em>test</em>.</p>
+<p>Determines if a <em>Cast</em> to <em>type</em> would be successful.</p>
 </dd>
 </dl>
 </div>

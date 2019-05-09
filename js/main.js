@@ -156,8 +156,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 	{
 		var domain = window.location.origin;
 		var href = event.target.href || event.target.parentElement.href;
+		var direct = event.target.dataset.direct != undefined;
 
-		if (href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+		if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0)
 		{
 			var path = href.substring(domain.length);
 			setPage(path, true);

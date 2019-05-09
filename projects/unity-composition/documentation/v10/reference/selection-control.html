@@ -7,11 +7,11 @@
 <div class="sect2">
 <h3 id="_description_162">Description</h3>
 <div class="paragraph">
-<p>A <a href="#reference/interface-control.html">InterfaceControl</a> used with a <a href="#reference/menu.html">Menu</a> to allow a <a href="#reference/menu-item.html">MenuItem</a> to be selected.</p>
+<p>Add this to a <a href="#reference/menu.html">Menu</a> with a <a href="#reference/menu-input.html">MenuInput</a> to allow a <a href="#reference/menu-item.html">MenuItem</a> to be selected.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_properties_28">Public Properties</h3>
+<h3 id="_public_properties_27">Public Properties</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">bool <em>IsRunning</em> <em>(read only)</em></dt>
@@ -62,7 +62,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods_33">Public Methods</h3>
+<h3 id="_public_methods_35">Public Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">void Show(<a href="#reference/i-variable-store.html">IVariableStore</a> <em>variables</em>, <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1" target="_blank" rel="noopener">IEnumerable</a>&lt;<a href="#reference/menu-item-template.html">MenuItemTemplate</a>&gt; <em>items</em>, bool <em>isSelectionRequired</em>, bool <em>resetIndex</em>)</dt>
@@ -81,7 +81,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protected_methods_13">Protected Methods</h3>
+<h3 id="_protected_methods_11">Protected Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="https://docs.unity3d.com/ScriptReference/Transform.html" target="_blank" rel="noopener">Transform</a> GetItemParent() <em>(virtual)</em></dt>
@@ -101,6 +101,9 @@
 <p>Implement this in subclasses to perform custom handling for waiting for a selection. The default implementation will do nothing but yield until the control closes.</p>
 </dd>
 </dl>
+</div>
+<div class="paragraph">
+<p><a href="#manual/selection-control.html">Manual</a></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

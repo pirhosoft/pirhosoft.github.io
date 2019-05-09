@@ -366,6 +366,15 @@ If a variable reference is entered with incorrect syntax, the text box will be c
 <img src="v10/images/topics/variables/variables-4-scene.png" alt="Scene Store">
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_accessing_built_in_properties">Accessing Built in Properties</h3>
+<div class="paragraph">
+<p>The properties of <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Objects</a> that are not variable stores can be accessed if the <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object`s</a> class has a ClassMap defined. ClassMaps for <a href="https://docs.unity3d.com/ScriptReference/Transform.html" target="_blank" rel="noopener">Transform</a> and <a href="https://docs.unity3d.com/ScriptReference/Camera.html" target="_blank" rel="noopener">Camera</a> are built in and custom class maps can be defined as described <a href="#topics/variables-8.doc">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The exposed properties can be accessed just like any variable in a store. For example, the position of a <a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> named <code>Player</code> could be retrieved with the <a href="#topics/variables-4.html">VariableReference</a> <code>scene.Player as Transform.position</code>.</p>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
