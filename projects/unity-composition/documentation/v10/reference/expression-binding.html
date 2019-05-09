@@ -5,13 +5,13 @@
 <p>PiRhoSoft.CompositionEngine.ExpressionBinding : <a href="#reference/string-binding.html">StringBinding</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_48">Description</h3>
+<h3 id="_description_47">Description</h3>
 <div class="paragraph">
-<p>Sets the text of a <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TextMeshPro</a> component to the result of the evaluation of an <a href="#reference/expression.html">Expression</a>.</p>
+<p>Add this to a <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TextMeshPro</a> to set the text to the result of an <a href="#reference/expression.html">Expression</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_fields_25">Public Fields</h3>
+<h3 id="_public_fields_21">Public Fields</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="#reference/binding-formatter.html">BindingFormatter</a> <em>Formatting</em></dt>
@@ -20,9 +20,12 @@
 </dd>
 <dt class="hdlist1"><a href="#reference/expression.html">Expression</a> <em>Expression</em></dt>
 <dd>
-<p>The <em>Expression</em> to evaluate when the binding is updated.</p>
+<p>The <em>Expression</em> to evaluate when the binding is updated. The result will be applied to the sibling <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TextMeshPro</a> component. If the result is an <code>Int</code> or <code>Float</code> it will be formatted according to <em>Formatting</em>. If it is a <code>string</code>, it will be used directly. If it is any other type, ToString() will be used.</p>
 </dd>
 </dl>
+</div>
+<div class="paragraph">
+<p><a href="#manual/expression-binding.html">Manual</a></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

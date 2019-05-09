@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _newestVersion = "v10";
 	var _documentationPath = "/projects/unity-composition/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
-	var _defaultArticle = "introduction.html";
+	var _defaultArticle = "overview/introduction.html";
 	var _searchIndexUrl = "search-index.json";
 	var _tableOfContentsUrl = "table-of-contents.html";
 
@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _titleText = document.getElementById("title-text");
 	var _articleContent = document.getElementById("article-content");
 	var _menuSections = document.getElementsByClassName("menu-section");
+	var _searchRoots = document.getElementsByClassName("search-root");
+	var _menuRootLinks = document.getElementsByClassName("menu-root-link");
 	var _menuLinks = document.getElementsByClassName("menu-link");
 
 	var _titleSeparator = "<i class='fas fa-chevron-right'></i>"
@@ -59,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 	{
 		manual: "manual.pdf",
 		reference: "reference.pdf",
+		overview: "overview.pdf",
 		"topics/graphs": "graphs.pdf",
 		"topics/variables": "variables.pdf",
 		"topics/bindings": "bindings.pdf"
@@ -117,11 +120,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 	function GetArticleSection(article)
 	{
 		return article.substring(0, article.indexOf('/'));
-	}
-
-	function GetSectionName(section)
-	{
-		return section.dataset.section;
 	}
 
 	function GetSectionMenu(section)
@@ -294,8 +292,8 @@ document.addEventListener("DOMContentLoaded", function(event)
 		{
 			RemoveClass(_tableOfContents, _searchingClass);
 			
-			for (var i = 0; i <_menuSections.length; i++)
-				delete _menuSections[i].dataset.searchCount;
+			for (var i = 0; i <_searchRoots.length; i++)
+				delete _searchRoots[i].firstElementChild.dataset.searchCount;
 		}
 		else
 		{
@@ -309,22 +307,21 @@ document.addEventListener("DOMContentLoaded", function(event)
 				var link = _menuLinks[i];
 				var found = IsInResults(link.href, results);
 
-				ToggleClass(link.parentNode, _linkNotFoundClass, !found);
-
 				if (found)
 				{
-					var section = link.closest(".submenu").previousElementSibling;
+					var section = link.closest(".search-root").firstElementChild;
 					var count = sections[section.dataset.section] = sections[section.dataset.section] || { Count: 0 };
-
 					count.Count++;
 				}
 			}
 			
-			for (var i = 0; i <_menuSections.length; i++)
+			for (var i = 0; i <_searchRoots.length; i++)
 			{
-				var section = _menuSections[i];
+				var root = _searchRoots[i];
+				var section = root.firstElementChild;
 				var count = sections[section.dataset.section];
 
+				ToggleClass(root, _linkNotFoundClass, !count || count.Count == 0);
 				section.dataset.searchCount = count ? count.Count : 0;
 			}
 		}
@@ -571,11 +568,12 @@ document.addEventListener("DOMContentLoaded", function(event)
 		{
 			var link = _menuLinks[i];
 			var active = link.href.endsWith(_currentArticle);
+			var parent = link.parentNode.parentNode.previousElementSibling;
 
 			ToggleClass(link, _linkActiveClass, active);
 
-			if (active)
-				AddClass(link.parentNode.parentNode.previousElementSibling, _linkActiveClass)
+			if (active && parent)
+				AddClass(parent, _linkActiveClass)
 		}
 	}
 

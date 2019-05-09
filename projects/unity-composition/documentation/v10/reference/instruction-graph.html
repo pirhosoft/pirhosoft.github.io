@@ -5,9 +5,9 @@
 <p>PiRhoSoft.CompositionEngine.InstructionGraph : <a href="#reference/instruction.html">Instruction</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_81">Description</h3>
+<h3 id="_description_79">Description</h3>
 <div class="paragraph">
-<p>The main piece of the composition system, implementing all the functionality necessary to manage and execute a set of <a href="#reference/instruction-graph-node.html">nodes</a>. See the <a href="#manual/instruction-graph.html">graph manual page</a> and <a href="#topics/graphs.html">graph topic</a> for more information.</p>
+<p>The main piece of the composition system, implementing all the functionality necessary to manage and execute a set of <a href="#reference/instruction-graph-node.html">InstructionGraphNodes</a>. Read the <a href="#topics/graphs-1.html">graph topic</a> for a more thorough breakdown of creating and using graphs.</p>
 </div>
 </div>
 <div class="sect2">
@@ -76,7 +76,7 @@ This setting is saved with <a href="https://docs.unity3d.com/ScriptReference/Edi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_methods_15">Public Methods</h3>
+<h3 id="_public_methods_17">Public Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">void GoTo(<a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>node</em>, string <em>name</em>)</dt>
@@ -101,6 +101,10 @@ This setting is saved with <a href="https://docs.unity3d.com/ScriptReference/Edi
 <dd>
 <p>Call this from a <a href="#reference/instruction-graph-node.html">node</a> to tell the graph to return to the closest <a href="#reference/instruction-graph-node.html">node</a> in the call stack that is an <a href="#reference/i-loop-node.html">ILoopNode</a>. The <a href="#reference/break-node.html">BreakNode</a> calls this.</p>
 </dd>
+<dt class="hdlist1">void BreakAll()</dt>
+<dd>
+<p>Call this from a <a href="#reference/instruction-graph-node.html">node</a> to tell the graph to stop running is current branch.</p>
+</dd>
 </dl>
 </div>
 </li>
@@ -108,7 +112,7 @@ This setting is saved with <a href="https://docs.unity3d.com/ScriptReference/Edi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protected_methods_6">Protected Methods</h3>
+<h3 id="_protected_methods_5">Protected Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>root</em>, string <em>source</em>)</dt>
@@ -174,6 +178,9 @@ This setting is saved with <a href="https://docs.unity3d.com/ScriptReference/Edi
 <p>void SetConnection(<a href="#reference/instruction-graph-node-connection-data.html">ConnectionData</a> <em>connection</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>target</em>) <em>(virtual)</em>::</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><a href="#manual/instruction-graph.html">Manual</a></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

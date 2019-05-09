@@ -1,6 +1,8 @@
 <div class="sect1">
 <h2 id="topics/variables-5">Writing Expressions</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_math">Math</h3>
 <div class="paragraph">
 <p>Expressions have a wide application of uses but at their simplest are an extension of Variable References allowing math operations to be performed on variables. For example if a <a href="#topics/graphs-3.html">Graph Node</a> is expecting an attack value and a player exists with an attack stat, the damage from a critical hit could be given in the form of the expression <code>global.player.attack * 2</code>. The full suite of math operations is available:</p>
 </div>
@@ -49,6 +51,9 @@
 <div class="paragraph">
 <p>These math operations are computed in the expected order based on the standard order of operations (exponents first, then multiplication and division, and last addition and subtraction). Additionaly, operations can be grouped with parentheses to force a certain execution order.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_logic">Logic</h3>
 <div class="paragraph">
 <p>Some expressions, for example <em>Condition</em> on a <a href="#manual/conditional-node.html">Conditional Node</a>, expect the result to have type <code>Bool</code>. For this, a set of comparison and logic operators is available:</p>
 </div>
@@ -118,15 +123,27 @@ Logic operations are executed before comparison operations, which are executed b
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conditionals">Conditionals</h3>
 <div class="paragraph">
 <p>To perform simple conditional checks inside an expression, use the ternary syntax of <code>condition ? statement if true : statement if false</code>. For example, to compute a damage value based on whether or not the attack is a critical hit, the expression could be <code>local.isCritical ? global.player.attack * 2 : global.player.attack</code> or alternatively and equally as valid <code>global.player.attack * (local.isCritical ? 2 : 1)</code>.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_existence_test">Existence Test</h3>
 <div class="paragraph">
 <p>To check if a variable exists, the <code>null</code> constant can be used: <code>local.somethingExists = local.something != null</code></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_asssignment">Asssignment</h3>
 <div class="paragraph">
 <p>In addition to accessing variables, expressions can set variables. This is done with the <code>=</code> operator. For example to store a computed damage value instead of returning it like the above example, write the expression <code>local.damage = global.player.attack * 2</code>. The damage value can be then later accessed by other Expressions and Variable References as <code>local.damage</code>. Each of the math and logic operations also exist as an assignment to more simply modify a value. These are: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code>, <code>&amp;=</code>, and <code>|=</code>. For example, the <code>player&#8217;s `attack</code>, can be permanently buffed with the statement <code>global.player.attack *= 2</code>. Shortcuts for adding and subtracting one from a variable are available with the <code>` and `--` operators. Place the operator before a value to include the increment or decrement in the result. For example, if `local.number` has the value `4`, the expression `local.result = local.number</code> will assign <code>5</code> to both <code>local.result</code> and <code>local.number</code> whereas the expression <code>local.result = local.number++</code> will assign <code>4</code> to <code>local.result</code> and <code>5</code> to <code>local.number</code>.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_commands">Commands</h3>
 <div class="paragraph">
 <p>Expressions can also use commands for getting the results of a more complex operation. The syntax for calling a command consists of the command name, followed by <code>'('</code> followed by any number of values (called parameters) to send to the command, followed by <code>')'</code>. A parameter can be a literal value, a variable reference, or an entire statement. The built in commands are:</p>
 </div>
@@ -364,6 +381,9 @@ When using a schema for creating a <code>Store</code>, the schema must be in a <
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_constants">Constants</h3>
 <div class="paragraph">
 <p>Several constant values are available as well and can be accessed directly by name:</p>
 </div>
@@ -393,6 +413,9 @@ When using a schema for creating a <code>Store</code>, the schema must be in a <
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="_multiple_statements">Multiple Statements</h3>
 <div class="paragraph">
 <p>Expressions can consist of multiple statements with the final statement computing the expression&#8217;s result. For example, a more complex damage calculation might look like this:</p>
 </div>
@@ -415,6 +438,43 @@ If an expression is entered with incorrect syntax, the text box will be colored 
 </tr>
 </table>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_list_management">List Management</h3>
+<div class="paragraph">
+<p>Several operators have special handling for <code>List</code> variables. These are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Operator</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>+=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds the item to the right if the operator to the end of the list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-=</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes the item to the right of the operator from the list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>++</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds an empty item to the end of the list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes the item at the end of the list</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
+</div>
 </div>
 </div>

@@ -7,16 +7,16 @@
 <div class="sect2">
 <h3 id="_description_199">Description</h3>
 <div class="paragraph">
-<p>Updates the <a href="#reference/variable-binding.html">VariableBindings</a> on a <a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> and its descendants.</p>
+<p>Add this to an <a href="#reference/instruction-graph.html">InstructionGraph</a> to update the <a href="#reference/variable-binding.html">VariableBindings</a> on a <a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObject</a> and its descendants.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_fields_107">Public Fields</h3>
+<h3 id="_public_fields_100">Public Fields</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>Next</em></dt>
 <dd>
-<p>The <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> to run when this node completes.</p>
+<p>The <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> to run when this node finishes.</p>
 </dd>
 <dt class="hdlist1"><a href="#reference/variable-reference.html">VariableReference</a> <em>Object</em></dt>
 <dd>
@@ -28,9 +28,12 @@
 </dd>
 <dt class="hdlist1">bool <em>WaitForCompletion</em></dt>
 <dd>
-<p>If this is <code>true</code>, this node will not complete until any animated bindings have finished animating. Otherwise, this node will complete immediately and the <a href="#reference/instruction-graph.html">InstructionGraph</a> will continue.</p>
+<p>If this is <code>true</code>, this node will not complete until any animated bindings have finished animating. Otherwise, this node will complete immediately.</p>
 </dd>
 </dl>
+</div>
+<div class="paragraph">
+<p><a href="#manual/update-binding-node.html">Manual</a></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

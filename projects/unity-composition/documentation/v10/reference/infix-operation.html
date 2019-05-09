@@ -5,18 +5,18 @@
 <p>PiRhoSoft.CompositionEngine.InfixOperation : <a href="#reference/operation.html">Operation</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_74">Description</h3>
+<h3 id="_description_73">Description</h3>
 <div class="paragraph">
-<p>The base class for all <a href="#reference/operation.html">Operations</a> that have a left and right side.</p>
+<p>Derive from this class to implement an <a href="#reference/operation.html">Operations</a> that has a left and right side.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_properties_12">Public Properties</h3>
+<h3 id="_public_properties_10">Public Properties</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="#reference/operator-precedence.html">OperatorPrecedence</a> <em>Precedence</em> <em>(read only)</em> <em>(abstract)</em></dt>
 <dd>
-<p>The precedence of the operation relative to other operations.</p>
+<p>The <a href="#reference/operator-precedence.html">OperatorPrecedence</a> of the operation relative to other operations.</p>
 </dd>
 </dl>
 </div>
@@ -27,26 +27,26 @@
 <dl>
 <dt class="hdlist1"><a href="#reference/operation.html">Operation</a> <em>Left</em></dt>
 <dd>
-<p>The operation that makes up the left hand side.</p>
+<p>The <a href="#reference/operation.html">Operation</a> that makes up the left hand side.</p>
 </dd>
 <dt class="hdlist1">string <em>Symbol</em></dt>
 <dd>
-<p>The symbol for this operation.</p>
+<p>The symbol identifying this <a href="#reference/operation.html">Operation</a>.</p>
 </dd>
 <dt class="hdlist1"><a href="#reference/operation.html">Operation</a> <em>Right</em></dt>
 <dd>
-<p>The operation that makes up the right hand side.</p>
+<p>The <a href="#reference/operation.html">Operation</a> that makes up the right hand side.</p>
 </dd>
 </dl>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_protected_methods_4">Protected Methods</h3>
+<h3 id="_protected_methods_3">Protected Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><a href="#reference/expression-evaluation-exception.html">ExpressionEvaluationException</a> TypeMismatch(<a href="#reference/variable-type.html">VariableType</a> <em>left</em>, <a href="#reference/variable-type.html">VariableType</a> <em>right</em>)</dt>
 <dd>
-<p>Creates an exception indicating the operation cannot operate on values with types <em>left</em> and <em>right</em>.</p>
+<p>Creates an exception to be thrown by the caller indicating the <a href="#reference/operation.html">Operation</a> cannot operate on values with types <em>left</em> and <em>right</em>.</p>
 </dd>
 </dl>
 </div>
