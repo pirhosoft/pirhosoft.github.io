@@ -101,12 +101,6 @@ body
 		display: block !important;
 		padding: 10px 0 20px 0;
 	}
-	
-	.title img
-	{
-		width: 80%;
-		height: auto !important;
-	}
 }
 
 @media all and (max-width: 590px)
@@ -240,7 +234,8 @@ iframe
 
 .page .title img
 {
-	height: 190px;
+	width: 80%;
+	max-width: 850px;
 }
 
 .page .description
@@ -249,7 +244,7 @@ iframe
 	max-width: 800px;
 	margin: 30px auto;
 	font-family: serif;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 }
 
@@ -388,6 +383,11 @@ iframe
 .list-content .summary
 {
 	padding: 10px 0;
+}
+
+.list-content .summary a
+{
+	font-weight: bold;
 }
 
 .list-content a.read
@@ -552,6 +552,12 @@ iframe
 	margin: auto;
 }
 
+.content.project .button-bar
+{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
 .content.project .section
 {
 	margin: 0 80px 40px 80px;
@@ -564,9 +570,22 @@ iframe
 	font-weight: bold;
 }
 
+.content.project .section-sub-title
+{
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 20px 10px 20px;
+}
+
+.content.project .section-sub-title-item
+{
+	margin: 0 40px 0 40px;
+}
+
 .content.project .section-content
 {
-	margin: 20px;
+	margin: 0 80px 40px 80px;
 }
 
 .page .tips
