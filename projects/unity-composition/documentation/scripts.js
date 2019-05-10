@@ -47,15 +47,8 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _searchIndex = null;
 	var _searchTimeout = null;
 
-	var _videoUrls =
-	{
-		v10:
-		{
-			//"overview.html": "https://www.youtube.com/channel/UCRiSxdervZlO_RnMOa-PMhw",
-			//"tutorial/1-introduction.html": "https://www.youtube.com/playlist?list=PL3n_h8eLvFjCoVtxlVamxS_zvSayeHYuP",
-			//"tutorial/2-setup.html": "https://youtu.be/4xOs599U6OQ"
-		}
-	};
+	var _videoUrl = "https://www.youtube.com/playlist?list=PL3n_h8eLvFjDl8xa0_Pal5XdlKgXv1sCg";
+	var _discordUrl = "https://discord.gg/aRznrUb";
 
 	var _pdfNames =
 	{
@@ -64,10 +57,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 		overview: "overview.pdf",
 		"topics/graphs": "graphs.pdf",
 		"topics/variables": "variables.pdf",
-		"topics/bindings": "bindings.pdf"
+		"topics/bindings": "bindings.pdf",
+		"topics/interface": "interface.pdf"
 	};
-
-	var _discordUrl = "https://discord.gg/9FAhush";
 
 	var _nextArticle =
 	{
@@ -89,6 +81,9 @@ document.addEventListener("DOMContentLoaded", function(event)
 		"topics/bindings-2.html": "topics/bindings-3.html",
 		"topics/bindings-3.html": "topics/bindings-4.html",
 		"topics/bindings-4.html": "topics/bindings-5.html",
+		"topics/interface-1.html": "topics/interface-2.html",
+		"topics/interface-2.html": "topics/interface-3.html",
+		"topics/interface-3.html": "topics/interface-4.html"
 	}
 
 	function IsSmallScreen()
@@ -528,8 +523,12 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	function GetVideoUrl(version, article)
 	{
-		var versionUrls = _videoUrls[version];
-		return versionUrls ? versionUrls[article] : null;
+		return _videoUrl;
+	}
+
+	function GetDiscordUrl(section)
+	{
+		return _discordUrl;
 	}
 
 	function GetPdfUrl(version, section, article)
@@ -544,11 +543,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 		}
 
 		return name ? _documentationPath + version + "/" + name : null;
-	}
-
-	function GetDiscordUrl(section)
-	{
-		return _discordUrl;
 	}
 
 	function GetNextUrl(article)
