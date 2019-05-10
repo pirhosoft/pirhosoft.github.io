@@ -1,6 +1,14 @@
 <div class="sect1">
 <h2 id="overview/log-descriptions">Log Descriptions</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The following lists all the warning and error messages that may be printed to the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">Console</a> during development. Each message has an associated id that corresponds to an entry in this list for easy searchability. For example the following image shows an error with id <code>CEEE</code>. Searching this page will take you to the entry which will explain in more detail what the message means and potential ways to fix it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="v10/images/overview/error.png" alt="Console Error">
+</div>
+</div>
 <div class="sect2">
 <h3 id="_warnings">Warnings</h3>
 <div class="dlist">
@@ -13,7 +21,19 @@
 </div>
 <div class="openblock">
 <div class="content">
-
+<div class="ulist">
+<ul>
+<li>
+<p>{0} The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/animation-player.html">AnimationPlayer</a> that triggered the warning.</p>
+</li>
+<li>
+<p>{1} The name of the <a href="https://docs.unity3d.com/Manual/AnimationClips.html" target="_blank" rel="noopener">AnimationClip</a> that</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When using an <a href="#manual/animation-player.html">AnimationPlayer</a>, possibly through a <a href="#manual/play-animation-node.html">PlayAnimationNode</a>, continuation (of the graph or caller) can be delayed until the animation completes. This is incompatible with an <a href="https://docs.unity3d.com/Manual/AnimationClips.html" target="_blank" rel="noopener">AnimationClip</a> that is set to loop since a looping animation will never complete.</p>
+</div>
 </div>
 </div>
 <div class="dlist">
@@ -26,46 +46,19 @@
 </div>
 <div class="openblock">
 <div class="content">
-
+<div class="ulist">
+<ul>
+<li>
+<p>{0} The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/audio-player.html">AudioPlayer</a> that triggered the warning.</p>
+</li>
+<li>
+<p>{1} The name of the <a href="https://docs.unity3d.com/Manual/class-AudioClip.html.html" target="_blank" rel="noopener">AudioClip</a> that</p>
+</li>
+</ul>
 </div>
+<div class="paragraph">
+<p>When using an <a href="#manual/audio-player.html">AudioPlayer</a>, possibly through a <a href="#manual/play-sound-node.html">PlaySoundNode</a>, continuation (of the graph or caller) can be delayed until the sound completes. This is incompatible with an <a href="https://docs.unity3d.com/Manual/class-AudioClip.html.html" target="_blank" rel="noopener">AudioClip</a> that is set to loop since a looping sound will never complete.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CAPSIP</dt>
-<dd>
-<p>Unable to play sound for {0}: the given variables must me an AudioPlayer</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CAPSIV</dt>
-<dd>
-<p>Unable to set volume for {0}: the volume could not be found - defaulting to 1</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CAPSSNF</dt>
-<dd>
-<p>Unable to play sound for {0}: the audio clip could not be found</p>
-</dd>
-</dl>
-</div>
-<div class="openblock">
-<div class="content">
-
 </div>
 </div>
 <div class="dlist">
@@ -78,7 +71,16 @@
 </div>
 <div class="openblock">
 <div class="content">
-
+<div class="ulist">
+<ul>
+<li>
+<p>{0} The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/bar-binding.html">BarBinding</a> that triggered the warning.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#manual/bar-binding.html">BarBindings</a> can only operate successfully on <a href="https://docs.unity3d.com/ScriptReference/UI.Image.html" target="_blank" rel="noopener">Images</a> with <em>fillMethod</em> <code>Filled</code>.</p>
+</div>
 </div>
 </div>
 <div class="dlist">
@@ -91,7 +93,22 @@
 </div>
 <div class="openblock">
 <div class="content">
-
+<div class="ulist">
+<ul>
+<li>
+<p>{0} Either <code>AmountVariable</code> or <code>TotalVariable</code> indicating the property with the invalid type</p>
+</li>
+<li>
+<p>{1} The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/bar-binding.html">BarBinding</a> that triggered the warning.</p>
+</li>
+<li>
+<p>{2} The <a href="#reference/variable-reference.html">VariableReference</a> containing the value with the invalid type</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="#manual/bar-binding.html">BarBindings</a> can bind to int and float variables only.</p>
+</div>
 </div>
 </div>
 <div class="dlist">
@@ -104,7 +121,22 @@
 </div>
 <div class="openblock">
 <div class="content">
-
+<div class="ulist">
+<ul>
+<li>
+<p>{0} Either <code>AmountVariable</code> or <code>TotalVariable</code> indicating the property that could not be resolved</p>
+</li>
+<li>
+<p>{1} The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/bar-binding.html">BarBinding</a> that triggered the warning.</p>
+</li>
+<li>
+<p>{2} The <a href="#reference/variable-reference.html">VariableReference</a> that could not be resolved</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Lookup of a <a href="#reference/variable-reference.html">VariableReference</a> on a <a href="#manual/bar-binding.html">BarBinding</a> failed.</p>
+</div>
 </div>
 </div>
 <div class="dlist">
