@@ -20,9 +20,10 @@ nav
 	left: -280px;
 	width: 280px;
 	z-index: 3;
-	overflow: auto;
 	background-color: #F8F8F8;
 	transition: left 0.2s;
+	display: flex;
+	flex-direction: column;
 }
 
 .menu-open nav
@@ -33,11 +34,6 @@ nav
 nav .logo
 {
 	display: block;
-}
-
-nav .logo img
-{
-	height: 100%;
 }
 
 nav a
@@ -63,7 +59,7 @@ nav .version select
 
 nav .search
 {
-	margin: 12px;
+	margin: 0 12px 12px 12px;
 }
 
 nav .search input
@@ -74,6 +70,7 @@ nav .search input
 nav #table-of-contents
 {
 	margin-top: -6px;
+	overflow-y: auto;
 }
 
 nav #table-of-contents > ul > li
@@ -143,7 +140,7 @@ nav .submenu a:hover, nav .menu-root-link a:hover
 	text-decoration: underline;
 }
 
-nav .searching .search-root.not-found
+nav .searching .not-found
 {
 	display: none;
 }

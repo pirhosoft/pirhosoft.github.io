@@ -220,6 +220,7 @@ article .conum
 }
 
 article .colist td { padding-left: 10px; }
+article .colist td:first-child { vertical-align: top; }
 article .conum + b { display: none; }
 article .conum:after { content: attr(data-value); }
 
