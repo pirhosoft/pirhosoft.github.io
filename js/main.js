@@ -154,16 +154,32 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	window.addEventListener("click", function(event)
 	{
-		var domain = window.location.origin;
-		var href = event.target.href || event.target.parentElement.href;
-		var direct = event.target.dataset.direct != undefined;
-
-		if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+		if (event.target.classList.contains("screenshot"))
 		{
-			var path = href.substring(domain.length);
-			setPage(path, true);
-			event.preventDefault();
-			event.stopPropagation();
+			var screenshotBackground = document.getElementById("screenshot-background");
+			var screenshotImg = document.getElementById("screenshot-img");
+
+			screenshotBackground.classList.add("enabled");
+			screenshotImg.src = event.target.src;
+		}
+		else if (event.target.classList.contains("screenshot-overlay"))
+		{
+			var screenshotBackground = document.getElementById("screenshot-background");
+			screenshotBackground.classList.remove("enabled");
+		}
+		else
+		{
+			var domain = window.location.origin;
+			var href = event.target.href || event.target.parentElement.href;
+			var direct = event.target.dataset.direct != undefined;
+
+			if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+			{
+				var path = href.substring(domain.length);
+				setPage(path, true);
+				event.preventDefault();
+				event.stopPropagation();
+			}
 		}
 	});
 });

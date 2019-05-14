@@ -588,6 +588,65 @@ iframe
 	margin: 0 80px 40px 80px;
 }
 
+.content.project .screenshots-title
+{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.content.project .screenshot-grid
+{
+	text-align: center;
+}
+
+.content.project .screenshot
+{
+	max-width: 400px;
+	margin: 20px;
+}
+
+@media all and (max-width: 600px)
+{
+	.content.project .screenshot
+	{
+		max-width: 100%;
+		margin: 20px 0 20px 0;
+	}	
+}
+
+#screenshot-background
+{
+	display: none;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0.0, 0.0, 0.0, 0.75);
+}
+
+#screenshot-background.enabled
+{
+	display: block;
+}
+
+#screenshot-background .screenshot-overlay
+{
+	height: 100%;
+}
+
+.screenshot-overlay #screenshot-img
+{
+	max-width: 90%;
+	max-height: 90%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .page .tips
 {
 	text-align: justify;
