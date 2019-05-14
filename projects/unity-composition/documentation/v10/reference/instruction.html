@@ -5,13 +5,13 @@
 <p>PiRhoSoft.CompositionEngine.Instruction : <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">ScriptableObject</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_77">Description</h3>
+<h3 id="_description_81">Description</h3>
 <div class="paragraph">
 <p>Implements the core functionality for an <a href="#reference/instruction-graph.html">InstructionGraph</a> or any other asset to allow it to be run by the <a href="#reference/composition-manager.html">CompositionManager</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_fields_36">Public Fields</h3>
+<h3 id="_public_fields_37">Public Fields</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">string <em>ContextName</em></dt>
@@ -52,6 +52,10 @@
 <h3 id="_public_methods_15">Public Methods</h3>
 <div class="dlist">
 <dl>
+<dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Execute(<a href="#reference/variable-value.html">VariableValue</a> <em>context</em>)</dt>
+<dd>
+<p>Executes the instruction. When inside an existing <a href="https://docs.unity3d.com/Manual/Coroutines.html" target="_blank" rel="noopener">coroutine</a> this can be called directly as part of a <code>yield return</code> statement. When outside a coroutine, the <a href="#reference/composition-manager.html">CompositionManager.<em>RunInstruction</em></a> methods should be used.</p>
+</dd>
 <dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Execute(<a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>)</dt>
 <dd>
 <p>Executes the instruction. When inside an existing <a href="https://docs.unity3d.com/Manual/Coroutines.html" target="_blank" rel="noopener">coroutine</a> this can be called directly as part of a <code>yield return</code> statement. When outside a coroutine, the <a href="#reference/composition-manager.html">CompositionManager.<em>RunInstruction</em></a> methods should be used.</p>

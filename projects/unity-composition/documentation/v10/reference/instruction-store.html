@@ -5,7 +5,7 @@
 <p>PiRhoSoft.CompositionEngine.InstructionStore : <a href="#reference/i-variable-store.html">IVariableStore</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_89">Description</h3>
+<h3 id="_description_93">Description</h3>
 <div class="paragraph">
 <p>The <a href="#reference/i-variable-store.html">IVariableStore</a> used with <a href="#reference/instruction-graph.html">InstructionGraphs</a> to provide a robust interface for accessing and isolating variables for use by <a href="#reference/instruction-graph-node.html">InstructionGraphNodes</a>. When using an <a href="#reference/instruction-caller.html">InstructionCaller</a> all management of the store will be handled automatically including creation of the store, reading input variables, and writing output variables.</p>
 </div>
@@ -30,7 +30,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_static_methods_5">Static Methods</h3>
+<h3 id="_static_methods_7">Static Methods</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">bool IsInput(<a href="#reference/variable-reference.html">VariableReference</a> <em>variable</em>)</dt>
@@ -48,17 +48,6 @@
 <dt class="hdlist1">bool IsOutput(<a href="#reference/instruction-output.html">InstructionOutput</a> <em>output</em>)</dt>
 <dd>
 <p>Determines if <em>inputs</em> writes to the <em>Output</em> store. This can be used from overridden implementations of <em>GetOutputs</em> in rare cases where the default implementation isn&#8217;t sufficient.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_constructors_10">Constructors</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">InstructionStore(<a href="#reference/instruction.html">Instruction</a> <em>instruction</em>, <a href="#reference/variable-value.html">VariableValue</a> <em>context</em>)</dt>
-<dd>
-<p>Creates an InstructionStore that will be used with <em>instruction</em>, validates <em>context</em> with <a href="#reference/instruction.html"><em>instruction</em>.<em>ContextDefinition</em></a> and sets it to <em>Context</em>. <em>context</em> is not required (it can be <a href="#reference/varibale-value.html">VariableValue.<em>Empty</em></a>) but usually holds the object that execution of <em>instruction</em> is initiated from.</p>
 </dd>
 </dl>
 </div>
@@ -100,18 +89,6 @@ It is not required to use <em>LocalStoreName</em> when accessing the local store
 </td>
 </tr>
 </table>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="#reference/variable-store.html">VariableStore</a> <em>Global</em> <em>(read only)</em></dt>
-<dd>
-<p>The variable store, accessed with <em>GlobalStoreName</em>, that shares variables between all <a href="#reference/instruction-graph.html">InstructionGraphs</a>, <a href="#reference/instruction-graph-node.html">InstructionGraphNodes</a>, and <a href="#reference/variable-binding.html">VariableBindings</a>. Variables can be added or changed on this store at any time and those changes will be available to any other location that has access to the global store. From code, the global store is available at <a href="#reference/composition-manager.html">CompositionManager.Instance.<em>GlobalStore</em></a>.</p>
-</dd>
-<dt class="hdlist1"><a href="#reference/scene-variable-store.html">SceneVariableStore</a> <em>Scene</em> <em>(read only)</em></dt>
-<dd>
-<p>The variable store, accessed with <em>SceneStoreName</em>, that provides access to <a href="https://docs.unity3d.com/ScriptReference/GameObject.html" target="_blank" rel="noopener">GameObjects</a> in any currently loaded scene by name. From code, the scene store is available at <a href="#reference/composition-manager.html">CompositionManager.Instance.<em>SceneStore</em></a>.</p>
-</dd>
-</dl>
 </div>
 </div>
 <div class="sect2">

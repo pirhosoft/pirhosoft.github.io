@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _searchIndex = null;
 	var _searchTimeout = null;
 
-	var _videoUrl = "https://www.youtube.com/playlist?list=PL3n_h8eLvFjDl8xa0_Pal5XdlKgXv1sCg";
+	var _videoUrl = null;// "https://www.youtube.com/playlist?list=PL3n_h8eLvFjDl8xa0_Pal5XdlKgXv1sCg";
 	var _discordUrl = "https://discord.gg/aRznrUb";
 
 	var _pdfNames =
@@ -308,6 +308,8 @@ document.addEventListener("DOMContentLoaded", function(event)
 					var count = sections[section.dataset.section] = sections[section.dataset.section] || { Count: 0 };
 					count.Count++;
 				}
+
+				ToggleClass(link.parentElement, _linkNotFoundClass, !found);
 			}
 			
 			for (var i = 0; i <_searchRoots.length; i++)

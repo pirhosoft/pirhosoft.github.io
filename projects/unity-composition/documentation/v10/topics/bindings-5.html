@@ -16,8 +16,7 @@
 		{
 			if (GameObject)
 			{
-				var value = Variable.GetValue(variables);
-				value.TryGetBool(out bool active);
+				Resolve(variables, Variable, out bool active);
 				GameObject.SetActive(active);
 			}
 		}
@@ -43,9 +42,7 @@
 
 		protected override void UpdateBinding(IVariableStore variables, BindingAnimationStatus status)
 		{
-			var value = Variable.GetValue(variables);
-
-			if (value.TryGetInt(out var target))
+			if (Resolve(variables, Variable, out int target))
 			{
 				StopAllCoroutines();
 				StartCoroutine(AnimateText(target, status));

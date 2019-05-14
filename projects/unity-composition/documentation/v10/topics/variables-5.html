@@ -123,6 +123,18 @@ Logic operations are executed before comparison operations, which are executed b
 </tr>
 </table>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>&amp;&amp;</code> and <code>||</code> perform short circuiting, meaning if the result can be determined from the left hand side, the right hand side will not be executed. This can be useful in conjunction with the Type Testing feature listed below.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_conditionals">Conditionals</h3>
@@ -131,9 +143,9 @@ Logic operations are executed before comparison operations, which are executed b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_existence_test">Existence Test</h3>
+<h3 id="_type_testing">Type Testing</h3>
 <div class="paragraph">
-<p>To check if a variable exists, the <code>null</code> constant can be used: <code>local.somethingExists = local.something != null</code></p>
+<p>The type of a variable can be tested using the <code>is</code> statement. For example, to test if the variable <code>local.isCritical</code> is a <code>Bool</code> use <code>local.isCritical is Bool</code>. A variable can also be checked for existence using the <code>Empty</code> type. The full list of types can be seen <a href="#topics/variables-2.html">here</a>.</p>
 </div>
 </div>
 <div class="sect2">

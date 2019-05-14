@@ -5,13 +5,13 @@
 <p>PiRhoSoft.CompositionEngine.InstructionGraphNode : <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">ScriptableObject</a></p>
 </div>
 <div class="sect2">
-<h3 id="_description_80">Description</h3>
+<h3 id="_description_84">Description</h3>
 <div class="paragraph">
 <p>Derive from this class to implement a custom node for use in an <a href="#reference/instruction-graph.html">InstructionGraph</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_public_fields_37">Public Fields</h3>
+<h3 id="_public_fields_38">Public Fields</h3>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">string <em>Name</em></dt>
@@ -53,7 +53,7 @@
 <div class="sect3">
 <h4 id="_resolve">Resolve</h4>
 <div class="paragraph">
-<p>This collection of methods will lookup the value referenced by a <a href="#reference/variable-reference.html">VariableReference</a> or <a href="#reference/variable-source.html">VariableSource</a>. The resolved value is set to the ouput parameter <em>result</em> and the return value will indicate whether the value was resolved successfully. The <em>variables</em> parameter should be the <em>variables</em> parameter passed to the <em>Run</em> method.</p>
+<p>This collection of methods will lookup the value referenced by a <a href="#reference/variable-reference.html">VariableReference</a> or <a href="#reference/variable-source.html">VariableSource</a>. The resolved value is set to the ouput parameter <em>result</em> and the return value will indicate whether the value was resolved successfully. The <em>variables</em> parameter should be the <em>variables</em> parameter passed to the <em>Run</em> method. If the resolution fails, either due to the variable not being found or it being an invalid type, a warning will be printed to the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">Console</a>.</p>
 </div>
 <div class="ulist">
 <ul>
