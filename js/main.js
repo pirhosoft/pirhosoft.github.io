@@ -1,18 +1,23 @@
 var pages =
 {
 	"/": [ "PiRho Soft", "/content/index.html" ],
-	"/news": [ "PiRho Soft News", "/content/news.html" ],
-	"/games": [ "PiRho Soft Games", "/content/games.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
-	"/press": [ "PiRho Soft Press", "/content/press.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
-	"/games/photon-phanatics": [ "Photon Phanatics", "/content/games/photon-phanatics.html" ],
-	"/games/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/games/photon-phanatics/solutions.html" ],
-	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/games/photon-phanatics/solution.html" ],
-	"/games/the-art-of-war": [ "The Art of War", "/content/games/the-art-of-war.html" ],
+
+	"/projects": [ "PiRho Soft Projects", "/content/projects.html" ],
+	"/projects/photon-phanatics": [ "Photon Phanatics", "/content/projects/photon-phanatics.html" ],
+	"/projects/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/projects/photon-phanatics/solutions.html" ],
+	"/projects/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/projects/photon-phanatics/solution.html" ],
+	"/projects/the-art-of-war": [ "The Art of War", "/content/projects/the-art-of-war.html" ],
+	"/projects/unity-utilities": [ "Unity Utilities", "/content/projects/unity-utilities.html" ],
+	"/projects/unity-composition": [ "Unity Composition", "/content/projects/unity-composition.html" ],
+
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
-	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ]
+	"/legal/terms-of-service": [ "PiRho Soft Terms of Service", "/content/legal/terms-of-service.md" ],
+
+	// redirects
+	"/games/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/projects/photon-phanatics/solution.html" ]
 };
 
 var posts =
@@ -23,10 +28,6 @@ var posts =
 
 var articles =
 {
-	"2018-04-30": [ "Project ManIA", "Basic stroy and gameplay details revealed about our next project." ],
-	"2018-04-05": [ "Onward and Upward", "First info about our next project. Codename: well... we don't have one yet." ],
-	"2018-03-19": [ "The Art of War Released!", "The Art of War 1.0 is out now on Xbox One and Windows" ],
-	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
 };
 
 function getPostContent(url, list)
@@ -153,15 +154,32 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	window.addEventListener("click", function(event)
 	{
-		var domain = window.location.origin;
-		var href = event.target.href || event.target.parentElement.href;
-
-		if (href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+		if (event.target.classList.contains("screenshot"))
 		{
-			var path = href.substring(domain.length);
-			setPage(path, true);
-			event.preventDefault();
-			event.stopPropagation();
+			var screenshotBackground = document.getElementById("screenshot-background");
+			var screenshotImg = document.getElementById("screenshot-img");
+
+			screenshotBackground.classList.add("enabled");
+			screenshotImg.src = event.target.src;
+		}
+		else if (event.target.classList.contains("screenshot-overlay"))
+		{
+			var screenshotBackground = document.getElementById("screenshot-background");
+			screenshotBackground.classList.remove("enabled");
+		}
+		else
+		{
+			var domain = window.location.origin;
+			var href = event.target.href || event.target.parentElement.href;
+			var direct = event.target.dataset.direct != undefined;
+
+			if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+			{
+				var path = href.substring(domain.length);
+				setPage(path, true);
+				event.preventDefault();
+				event.stopPropagation();
+			}
 		}
 	});
 });
@@ -218,14 +236,4 @@ function loadPosts(container)
 function loadArticles(container)
 {
 	container.innerHTML = loadContent(container, "/news", "article", articles);
-}
-
-function showSignUp()
-{
-	require(["mojo/signup-forms/Loader"], function(L)
-	{
-		L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"eed938b86f48d48227740122e","lid":"4e8f4d4303"})
-		document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-		document.cookie = 'MCPopupSubscribed=;path=/;expires=Thu, 01 Jan 1970 00:00:00 UTC;';
-	});
 }
