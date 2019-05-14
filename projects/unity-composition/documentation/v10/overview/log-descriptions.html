@@ -2,11 +2,20 @@
 <h2 id="overview/log-descriptions">Log Descriptions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following lists all the warning and error messages that may be printed to the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">Console</a> by the Composition Framework. Each message has an associated id that corresponds to an entry in this list for easy searchability. For example the following image shows an error with id <code>CEEE</code>. Searching this page will take you to the entry which will explain in more detail what the message means and potential ways to fix it.</p>
+<p>The following lists all the warning and error messages that may be printed to the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">Console</a> by the Composition Framework. Each message has an associated id that corresponds to an entry in this list for easy searchability. For example the following image shows an error with id <code>CEEE</code>. Searching this page for an id will take you to the entry which will explain in more detail what the message means, the effect on execution, and potential ways to fix it.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="v10/images/overview/error.png" alt="Console Error">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_general_tips">General Tips</h3>
+<div class="paragraph">
+<p>When dealing with <a href="#topics/variables-4.html">VariableReference</a> errors, the <a href="#topics/graphs-5.html">Watch Window</a> can be extremely useful. Global variables can be investigated at any time and variables on a specific <a href="#topics/graphs-1.html">InstructionGraph</a> can be investigated by <a href="#topics/graphs-5.html">setting a breakpoint</a> on a node.</p>
+</div>
+<div class="paragraph">
+<p><a href="#topics/variables-5.html">Expression</a> errors can be harder to track down. If the text box containing the <a href="#topics/variables-5.html">Expression</a> is red, the issue is with the actual structure of the <a href="#topics/variables-5.html">Expression</a> and details will be displayed. In this case the error state will update as the <a href="#topics/variables-5.html">Expression</a> is modified so it is easy to see when the issue has been resolved. If the <a href="#topics/variables-5.html">Expression</a> is valid and an error is printed at runtime, the issue is usually related to a <a href="#topics/variables-4.html">VariableReference</a> and the above tip for using the <a href="#topics/graphs-5.html">Watch Window</a> applies.</p>
 </div>
 </div>
 <div class="sect2">
@@ -24,11 +33,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/animation-player.html">AnimationPlayer</a> that triggered the warning.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/animation-player.html">AnimationPlayer</a> that triggered the warning.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="https://docs.unity3d.com/Manual/AnimationClips.html" target="_blank" rel="noopener">AnimationClip</a> that is being played.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/Manual/AnimationClips.html" target="_blank" rel="noopener">AnimationClip</a> that is being played.</p></td>
 </tr>
 </tbody>
 </table>
@@ -58,11 +67,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/audio-player.html">AudioPlayer</a> that triggered the warning.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/audio-player.html">AudioPlayer</a> that triggered the warning.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="https://docs.unity3d.com/Manual/class-AudioClip.html.html" target="_blank" rel="noopener">AudioClip</a> that is being played.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/Manual/class-AudioClip.html.html" target="_blank" rel="noopener">AudioClip</a> that is being played.</p></td>
 </tr>
 </tbody>
 </table>
@@ -76,14 +85,14 @@
 <dd>
 <p>Either tell the <a href="#manual/audio-player.html">AudioPlayer</a> to play the sound without looping (call <em>PlaySound</em> instead of <em>PlaySoundAndWait</em> or clear the <em>WaitForCompletion</em> flag if using a <a href="#manual/play-sound-node.html">PlaySoundNode</a>) or change the <a href="https://docs.unity3d.com/Manual/AudioClips.html" target="_blank" rel="noopener">AudioClip</a> to one that doesn&#8217;t loop.</p>
 </dd>
-<dt class="hdlist1">CBBBWT</dt>
-<dd>
-<p>Bar Binding '{0}' has an Image with a type that is not 'Filled'</p>
-</dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
+</div>
+<div class="sect3">
+<h4 id="_cbbbwt">CBBBWT</h4>
+<div class="paragraph">
+<p>Bar Binding '{0}' has an Image with a type that is not 'Filled'</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -92,7 +101,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/bar-binding.html">BarBinding</a> that triggered the warning.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a> containing the <a href="#manual/bar-binding.html">BarBinding</a> that triggered the warning.</p></td>
 </tr>
 </tbody>
 </table>
@@ -100,26 +109,20 @@
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The <a href="https://docs.unity3d.com/ScriptReference/UI.Image.html" target="_blank" rel="noopener">Image</a> will have its <em>type</em> set to <code>Filled</code> with default values for the other fill related properties.</p>
+<p>The <a href="https://docs.unity3d.com/Manual/script-Image.html" target="_blank" rel="noopener">Image</a> will have its <em>type</em> set to <code>Filled</code> with default values for the other fill related properties.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <code>Image Type</code> of the <a href="https://docs.unity3d.com/ScriptReference/UI.Image.html" target="_blank" rel="noopener">Image</a> to <code>Filled</code>.</p>
+<p>Change the <code>Image Type</code> of the <a href="https://docs.unity3d.com/Manual/script-Image.html" target="_blank" rel="noopener">Image</a> to <code>Filled</code>.</p>
 </dd>
 </dl>
 </div>
 </div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CBLBMT</dt>
-<dd>
+<div class="sect3">
+<h4 id="_cblbmt">CBLBMT</h4>
+<div class="paragraph">
 <p>Unable to create item for List Binding '{0}': the Template is null</p>
-</dd>
-</dl>
 </div>
-<div class="openblock">
-<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 11.1111%;">
@@ -128,7 +131,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the <a href="#manual/list-binding.html">ListBinding</a> that triggered the warning.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/list-binding.html">ListBinding</a> that triggered the warning.</p></td>
 </tr>
 </tbody>
 </table>
@@ -145,869 +148,1830 @@
 </dl>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_cdonio">CDONIO</h4>
+<div class="paragraph">
+<p>Unable to disable object for node '{0)': the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/disable-object-node.html">DisableObjectNode</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CDONIO</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to disable object for node '{0)': the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
+<p>The <a href="#manual/disable-object-node.html">InstructionGraphNode</a> will do nothing.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change <em>Target</em> so it resolves to either a <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a>, <a href="https://docs.unity3d.com/ScriptReference/Behaviour.html" target="_blank" rel="noopener">Behaviour</a>, or <a href="https://docs.unity3d.com/ScriptReference/Renderer.html" target="_blank" rel="noopener">Renderer</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cebfc">CEBFC</h4>
+<div class="paragraph">
+<p>Unable to bind enabled state for binding '{0}': the Command '{1}' failed with error '{2}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-binding.html">EnableBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the command that failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message reported by the command.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEBFC</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind enabled state for binding {0}: the Command '{1}' failed with error {2}</p>
+<p>The enabled state of <em>Object</em> will not be changed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cebfe">CEBFE</h4>
+<div class="paragraph">
+<p>Unable to bind enabled state for binding '{0}': the expression '{1}' failed with error '{2}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-binding.html">EnableBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message reported by the expression.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEBFE</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind enabled state for binding {0}: the expression '{1}' failed with error {2}</p>
+<p>The enabled state of <em>Object</em> will not be changed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>The reported error ({2}) should provide details on how to go about fixing the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cebio">CEBIO</h4>
+<div class="paragraph">
+<p>Unable to bind enabled state for binding '{0)': the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-binding.html">EnableBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> assigned to <em>Object</em>.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEBIO</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind enabled state for binding {0): the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
+<p>The enabled state of <em>Object</em> will not be changed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change <em>Object</em> to either a <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a>, <a href="https://docs.unity3d.com/ScriptReference/Behaviour.html" target="_blank" rel="noopener">Behaviour</a>, or <a href="https://docs.unity3d.com/ScriptReference/Renderer.html" target="_blank" rel="noopener">Renderer</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cebiv">CEBIV</h4>
+<div class="paragraph">
+<p>Unable to bind enabled state for binding '{0}': the expression '{1}' did not evaluate to a bool</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-binding.html">EnableBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement in the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEBIV</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind enabled state for binding {0}: the expression '{1}' did not evaluate to a bool</p>
+<p>The enabled state of <em>Object</em> will not be changed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change <em>Condition</em> so that the final statement results in a bool value, potentially by using a comparison operation.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cebmv">CEBMV</h4>
+<div class="paragraph">
+<p>Unable to bind enabled state for binding '{0}': the expression is empty</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-binding.html">EnableBinding</a> that triggered the warning.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEBMV</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind enabled state for binding {0}: the expression is empty</p>
+<p>The enabled state of <em>Object</em> will not be changed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Set the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_ceir">CEIR</h4>
+<div class="paragraph">
+<p>'{0}' expected the Expression '{1}' to return type '{2}' but it instead returned type '{3}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that executed the <a href="#topics/variables-5.html">Expression</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement of the <a href="#topics/variables-5.html">Expression</a> that was expected to result in a specific type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> the caller expected from the result of the expression.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The actual <a href="#topics/variables-2.html">VariableType</a> of the result of the expression.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEIR</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>The Expression '{0}' was expected to return type {1} but instead returned type {2}</p>
+<p>The caller ({0}) will still be returned the result and how that result is used is dependent on the specific scenario.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change the expression defined on the caller ({0}) so that the final statement results in the expected type ({3}).</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_ceonio">CEONIO</h4>
+<div class="paragraph">
+<p>Unable to enable object for node '{0)': the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/enable-object-node.html">EnableObjectNode</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEONIO</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to enable object for node '{0)': the object '{1}' is not a GameObject, Behaviour, or Renderer</p>
+<p>The <a href="#manual/enable-object-node.html">EnableObjectNode</a> will do nothing.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change <em>Target</em> so it resolves to either a <a href="https://docs.unity3d.com/Manual/GameObjects.html" target="_blank" rel="noopener">GameObject</a>, <a href="https://docs.unity3d.com/ScriptReference/Behaviour.html" target="_blank" rel="noopener">Behaviour</a>, or <a href="https://docs.unity3d.com/ScriptReference/Renderer.html" target="_blank" rel="noopener">Renderer</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cexbfc">CEXBFC</h4>
+<div class="paragraph">
+<p>Unable to bind text for binding '{0}': the Command '{1}' failed with error '{2}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/expression-binding.html">ExpressionBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the command that failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message reported by the command.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEXBFC</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind text for binding {0}: the Command '{1}' failed with error {2}</p>
+<p>The <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> will be hidden and cleared.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cexbfe">CEXBFE</h4>
+<div class="paragraph">
+<p>Unable to bind text for binding '{0}': the expression '{1}' failed with error '{2}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/expression-binding.html">ExpressionBinding</a> that triggered the warning.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message reported by the expression.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEXBFE</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind text for binding {0}: the expression '{1}' failed with error {2}</p>
+<p>The <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> will be hidden and cleared.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>The reported error ({2}) should provide details on how to go about fixing the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cexbmv">CEXBMV</h4>
+<div class="paragraph">
+<p>Unable to bind text for binding '{0}': the expression is empty</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/expression-binding.html">ExpressionBinding</a> that triggered the warning.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CEXBMV</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>unable to bind text for binding {0}: the expression is empty</p>
+<p>The <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> will be hidden and cleared.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Set the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cignia">CIGNIA</h4>
+<div class="paragraph">
+<p>Failed to assign to variable '{0}' from node '{1}': the variable has an incompatible type</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> that attempted to assign to the variable.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNIA</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>failed to assign to variable '{0}' from node '{1}': the variable has an incompatible type</p>
+<p>The assignment will not be performed.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it either resolves to a variable with the correct type or resolves to a variable that can be assigned any type.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cignie">CIGNIE</h4>
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on node '{1}': the variable has enum type '{2}' and should have enum type '{3}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid enum type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> that attempted to resolve the variable.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNIE</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>failed to resolve variable '{0}' on node '{1}': the variable has enum type {2} and should have enum type {3}</p>
+<p>The effect depends on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a>. Usually it will skip performing its action but it may use a default value instead.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct enum type.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cignio">CIGNIO</h4>
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on node '{1}': the object '{2}' is a '{3}' and cannot be converted to a '{4}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid object type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> that attempted to resolve the variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that was resolved but is not the correct type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the resolved <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{4}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> expected.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNIO</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>failed to resolve variable '{0}' on node '{1}': the object is a {2} and cannot be converted to a {3}</p>
+<p>The effect depends on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a>. Usually it will skip performing its action but it may use a default value instead.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct object type.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cignio_2">CIGNIO</h4>
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on node '{1}': the value is a '{2}' and cannot be converted to a '{3}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid object type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> that attempted to resolve the variable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the resolved value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> expected.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNIV</dt>
+<dt class="hdlist1">Effect</dt>
 <dd>
-<p>failed to resolve variable '{0}' on node '{1}': the variable has type {2} and should have type {3}</p>
+<p>The effect depends on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a>. Usually it will skip performing its action but it may use a default value instead.</p>
+</dd>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct type.</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
+<div class="sect3">
+<h4 id="_cigniv">CIGNIV</h4>
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on node '{1}': the variable has type '{2}' and should have type '{3}'</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNMA</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
-<p>failed to assign to variable '{0}' from node '{1}': the variable could not be found</p>
+<p><mark>#</mark># CIGNMA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
+<div class="paragraph">
+<p>Failed to assign to variable '{0}' from node '{1}': the variable could not be found</p>
 </div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNMV</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
-<p>failed to resolve variable '{0}' on node '{1}': the variable could not be found</p>
+<p><mark>#</mark># CIGNMV</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on node '{1}': the variable could not be found</p>
 </div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIGNROA</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
-<p>failed to assign to variable '{0}' from node '{1}': the variable is read only</p>
+<p><mark>#</mark># CIGNROA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
+<div class="paragraph">
+<p>Failed to assign to variable '{0}' from node '{1}': the variable is read only</p>
 </div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CIMMV</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Unable to set text on message '{0}': the variable '{1}' could not be found</p>
+<p><mark>#</mark># CIMMV</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
+<div class="paragraph">
+<p>Unable to get text from Message '{0}': the Variable '{1}' could not be found</p>
 </div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">CNSLS</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
+<p><mark>#</mark># CNBIV</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Failed to resolve variable '{0}' on binding '{1}': the variable has type {2} and should have type 'Int' or 'Float'</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CNSLS</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Unable to load scene for {0}: the scene '{1}' could not be found. Make sure this variable refers to an int or a string</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CNSUS</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CNSUS</dt>
-<dd>
+<div class="paragraph">
 <p>Unable to unload scene for {0}: the scene '{1}' could not be found. Make sure this variable refers to an int or a string</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CSCIE</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CSCIE</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to expand item {0}: the variable '{1}' is not an IVariableList</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CTMIA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CTMIA</dt>
-<dd>
+<div class="paragraph">
 <p>this TransitionRenderer has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CTMIR</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CTMIR</dt>
-<dd>
+<div class="paragraph">
 <p>this TransitionRenderer has not been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBIA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBIA</dt>
-<dd>
+<div class="paragraph">
 <p>failed to assign to variable '{0}' from binding '{1}': the variable has an incompatible type</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBIE</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBIE</dt>
-<dd>
+<div class="paragraph">
 <p>failed to resolve variable '{0}' on binding '{1}': the variable has enum type {2} and should have enum type {3}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBIO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBIO</dt>
-<dd>
+<div class="paragraph">
 <p>failed to resolve variable '{0}' on binding '{1}': the object is a {2} and cannot be converted to a {3}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBIV</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBIV</dt>
-<dd>
+<div class="paragraph">
 <p>failed to resolve variable '{0}' on binding '{1}': the variable has type {2} and should have type {3}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBMA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBMA</dt>
-<dd>
+<div class="paragraph">
 <p>failed to assign to variable '{0}' from binding '{1}': the variable could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBMV</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBMV</dt>
-<dd>
+<div class="paragraph">
 <p>failed to resolve variable '{0}' on binding '{1}': the variable could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVBROA</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVBROA</dt>
-<dd>
+<div class="paragraph">
 <p>failed to assign to variable '{0}' from binding '{1}': the variable is read only</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CWWIW</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CWWIW</dt>
-<dd>
+<div class="paragraph">
 <p>unable to watch variable {0} of type {1} - only variable stores can be watched</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CWWMW</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CWWMW</dt>
-<dd>
+<div class="paragraph">
 <p>unable to find variable {0} to watch</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark> Errors</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
 </div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_errors">Errors</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCEE</dt>
-<dd>
+<div class="sect3">
+<h4 id="_ccee">CCEE</h4>
+<div class="paragraph">
 <p>Failed to execute Command '{0}' on '{1}': {2}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCIGPF</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCIGPF</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to process Node '{0}': the Node yielded a value other than null or IEnumerator</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCNMF</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCNMF</dt>
-<dd>
+<div class="paragraph">
 <p>failed to set target: unable to find field {0} for instruction graph node {1}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCNMI</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCNMI</dt>
-<dd>
+<div class="paragraph">
 <p>failed to set target: index {0} is out of range for instruction graph node {1}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCNMK</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCNMK</dt>
-<dd>
+<div class="paragraph">
 <p>failed to set target: unable to find key {0} for instruction graph node {1}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCSONIO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCSONIO</dt>
-<dd>
+<div class="paragraph">
 <p>failed to create object for {0}: an object of type '{1}' could not be instantiated</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CCSONIT</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CCSONIT</dt>
-<dd>
+<div class="paragraph">
 <p>failed to create object for {0}: the type '{1}' could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEEE</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEEE</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to execute Expression '{0}' on '{1}': {2}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CELDK</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CELDK</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to add keyword '{0}': a keyword with the same text has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CELDL</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CELDL</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to add constant '{0}': a constant with the same text has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEPDC</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEPDC</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to add Command '{0}': a Command with the same name has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEPDIO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEPDIO</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to add infix operator '{0}': an infix operator with the same symbol has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEPDPO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEPDPO</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to add prefix operator '{0}': a prefix operator with the same symbol has already been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEPE</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEPE</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to parse Expression at location {1} ({2}): {3}
 Expression: {0}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CEPMC</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CEPMC</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to remove Command '{0}': a Command with the same name has not been added</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CETE</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CETE</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to parse Expression at location {1}: {2}
 Expression: {0}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CIAR</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CIAR</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to run Instruction '{0}': the Instruction is already running</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISIC</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISIC</dt>
-<dd>
+<div class="paragraph">
 <p>failed to create context for {0}: the variable '{1}' does not satisfy the constraint</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISII</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISII</dt>
-<dd>
+<div class="paragraph">
 <p>failed to create input for {0}: the variable '{1}' does not satisfy the constraint</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISIOT</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISIOT</dt>
-<dd>
+<div class="paragraph">
 <p>failed to store output {0}: the variable '{1}' has an incompatible type</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISMI</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISMI</dt>
-<dd>
+<div class="paragraph">
 <p>failed to read input {0}: the variable '{1}' could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISMO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISMO</dt>
-<dd>
+<div class="paragraph">
 <p>failed to store output {0}: the variable '{1}' could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CISROO</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CISROO</dt>
-<dd>
+<div class="paragraph">
 <p>failed to store output {0}: the variable '{1}' is read only</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CMVSIF</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CMVSIF</dt>
-<dd>
+<div class="paragraph">
 <p>failed to map field '{0}' of type '{1}': Only VariableValue types can be mapped</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CMVSIP</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CMVSIP</dt>
-<dd>
+<div class="paragraph">
 <p>failed to map property '{0}' of type '{1}': Only VariableValue types can be mapped</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CSCII</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CSCII</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to create item {0}: the variable '{1}' is not an IVariableStore or IVariableList</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CSCMB</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CSCMB</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to initialize item {0}: the template '{1}' does not have a Binding Root</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CSCMI</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CSCMI</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to create item {0}: the variable '{1}' could not be found</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CSQIS</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CSQIS</dt>
-<dd>
+<div class="paragraph">
 <p>Unable to run sequence for {0}: index {1} has no connection</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CTMS</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CTMS</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to load Transition {0}: the shader has not been set</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># CVDII</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">CVDII</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to initialize variable: the definition specifies type {0} but the initializer returned type {1}</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p><mark>#</mark># ISCMC</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">ISCMC</dt>
-<dd>
+<div class="paragraph">
 <p>Failed to create item {0}: SelectionControl '{1}' does not have a child with the specified name</p>
-</dd>
-</dl>
 </div>
-<div class="openblock">
-<div class="content">
-
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">ISCMT</dt>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Failed to create item {0}: the object template has not been assigned</p>
+<p><mark>#</mark># ISCMT</p>
 </dd>
 </dl>
 </div>
-<div class="openblock">
-<div class="content">
-
+<div class="paragraph">
+<p>Failed to create item {0}: the object template has not been assigned</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 88.8889%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Effect</dt>
+<dt class="hdlist1">Resolution</dt>
+<dd>
+<p>:imagesdir: topics/graphs</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
