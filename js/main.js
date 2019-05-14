@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 			screenshotBackground.classList.add("enabled");
 			screenshotImg.src = event.target.src;
 		}
-		else if (event.target.classList.contains("screenshot-overlay"))
+		else if (event.target.classList.contains("screenshot-closer"))
 		{
 			var screenshotBackground = document.getElementById("screenshot-background");
 			screenshotBackground.classList.remove("enabled");
