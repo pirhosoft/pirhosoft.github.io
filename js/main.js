@@ -2,6 +2,7 @@ var pages =
 {
 	"/": [ "PiRho Soft", "/content/index.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
+	"/about": [ "About PiRho Soft", "/content/about.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
 
 	"/projects": [ "PiRho Soft Projects", "/content/projects.html" ],
@@ -162,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 			screenshotBackground.classList.add("enabled");
 			screenshotImg.src = event.target.src;
 		}
-		else if (event.target.classList.contains("screenshot-overlay"))
+		else if (event.target.classList.contains("screenshot-closer"))
 		{
 			var screenshotBackground = document.getElementById("screenshot-background");
 			screenshotBackground.classList.remove("enabled");

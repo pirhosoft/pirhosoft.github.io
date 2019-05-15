@@ -638,6 +638,7 @@ iframe
 {
 	max-width: 400px;
 	margin: 20px;
+	cursor: pointer;
 }
 
 @media all and (max-width: 600px)
@@ -658,26 +659,41 @@ iframe
 	top: 0;
 	bottom: 0;
 	background: rgba(0.0, 0.0, 0.0, 0.75);
+	align-items: center;
+	justify-content: center;
 }
 
 #screenshot-background.enabled
 {
-	display: block;
+	display: flex;
 }
 
 #screenshot-background .screenshot-overlay
 {
-	height: 100%;
+	max-width: 90%;
+	max-height: 90%;
+	position: relative;
+}
+
+.screenshot-overlay .screenshot-close
+{
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	font-size: 45px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 50%;
+	border: black 4px solid;
 }
 
 .screenshot-overlay #screenshot-img
 {
-	max-width: 90%;
-	max-height: 90%;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .page .tips
