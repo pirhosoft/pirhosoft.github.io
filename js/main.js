@@ -2,6 +2,7 @@ var pages =
 {
 	"/": [ "PiRho Soft", "/content/index.html" ],
 	"/blog": [ "PiRho Soft Blog", "/content/blog.html" ],
+	"/about": [ "About PiRho Soft", "/content/about.html" ],
 	"/downloads": [ "Downloads", "/content/downloads.html" ],
 
 	"/projects": [ "PiRho Soft Projects", "/content/projects.html" ],
