@@ -517,6 +517,39 @@ iframe
 	font-size: 18px;
 }
 
+.about.content
+{
+	margin: 40px;
+	text-align: center;
+}
+
+.about .content-column
+{
+	display: inline-block;
+	width: 300px;
+	padding: 0 50px;
+}
+
+.about .content-column .profile
+{
+	width: 200px;
+}
+
+.about .content-column .label
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 20px;
+}
+
+.about .content-column .caption
+{
+	margin: 20px;
+	font-family: serif;
+	font-size: 18px;
+}
+
 .list-item.project-item
 {
 	flex-direction: column;
