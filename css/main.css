@@ -110,10 +110,16 @@ body
 		font-size: 18px !important;
 	}
 
-	.header .social-link
+	.header .social-link span
 	{
-		font-size: 12px !important;
-		margin-right: 8px !important;
+		display: none;
+	}
+
+	.about .content-column
+	{
+		width: 100% !important;
+		max-width: 400px;
+		padding: 0 !important;
 	}
 }
 
@@ -168,7 +174,7 @@ body
 
 .header .page-link:not(:last-child)
 {
-	margin-right: 40px;
+	margin-right: 36px;
 }
 
 .header .page-link:hover
@@ -483,7 +489,7 @@ iframe
 {
 	display: inline-block;
 	width: 300px;
-	padding: 0 50px;
+	padding: 0 45px;
 }
 
 .index .content-column img
@@ -535,7 +541,7 @@ iframe
 {
 	display: inline-block;
 	width: 400px;
-	padding: 0 50px;
+	padding: 0 45px;
 }
 
 .about .content-column .profile
