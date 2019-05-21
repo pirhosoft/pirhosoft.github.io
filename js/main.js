@@ -24,7 +24,8 @@ var pages =
 var posts =
 {
 	"2018-03-19": [ "The Art of War Released!", "We have officially released the 1.0 version of The Art of War on Windows and Xbox" ],
-	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ]
+	"2017-10-10": [ "PiRho Soft and The Art of War", "Introducing our independent development studio PiRho Soft and our first game: The Art of War" ],
+	//"2019-05-27": [ "Yielding Coroutines Without Delay", "Eliminate the frame delay introduced by yielding an iterator method in a coroutine" ]
 };
 
 var articles =
