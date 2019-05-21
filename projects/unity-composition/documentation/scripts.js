@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _visibleClass = "visible";
 	var _hljsClass = "hljs";
 
-	var _title = "Unity Composition";
+	var _title = "Composition Framework";
 	var _newestVersion = "v10";
 	var _documentationPath = "/projects/unity-composition/documentation/";
 	var _rootUrl = window.location.origin + _documentationPath;
@@ -20,9 +20,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _searchIndexUrl = "search-index.json";
 	var _tableOfContentsUrl = "table-of-contents.html";
 
-	var _videoLink = document.getElementById("video-button");
-	var _pdfLink = document.getElementById("pdf-button");
-	var _discordLink = document.getElementById("discord-button");
 	var _nextLink = document.getElementById("next-button");
 	var _menuButton = document.getElementById("menu-button");
 	var _menuOverlay = document.getElementById("menu-overlay");
@@ -35,31 +32,15 @@ document.addEventListener("DOMContentLoaded", function(event)
 	var _articleContent = document.getElementById("article-content");
 	var _menuSections = document.getElementsByClassName("menu-section");
 	var _searchRoots = document.getElementsByClassName("search-root");
-	var _menuRootLinks = document.getElementsByClassName("menu-root-link");
 	var _menuLinks = document.getElementsByClassName("menu-link");
 
 	var _titleSeparator = "<i class='fas fa-chevron-right'></i>"
 
 	var _currentVersion = "";
 	var _currentArticle = "";
-	var _currentSection = "";
 	
 	var _searchIndex = null;
 	var _searchTimeout = null;
-
-	var _videoUrl = null;// "https://www.youtube.com/playlist?list=PL3n_h8eLvFjDl8xa0_Pal5XdlKgXv1sCg";
-	var _discordUrl = "https://discord.gg/aRznrUb";
-
-	var _pdfNames =
-	{
-		manual: "manual.pdf",
-		reference: "reference.pdf",
-		overview: "overview.pdf",
-		"topics/graphs": "graphs.pdf",
-		"topics/variables": "variables.pdf",
-		"topics/bindings": "bindings.pdf",
-		"topics/interface": "interface.pdf"
-	};
 
 	var _nextArticle =
 	{
@@ -110,11 +91,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 		var article = articleStart < hash.length ? (hash.substring(articleStart) + ".html") : _defaultArticle;
 
 		return { version: version, article: article };
-	}
-
-	function GetArticleSection(article)
-	{
-		return article.substring(0, article.indexOf('/'));
 	}
 
 	function GetSectionMenu(section)
@@ -459,7 +435,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 	function LoadArticle(article, pushState)
 	{
 		_currentArticle = article;
-		_currentSection = GetArticleSection(article);
 
 		AddClass(_titleText, _loadingClass);
 		AddClass(_articleContent, _loadingClass);
@@ -495,18 +470,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 		UpdateNavigationLinks();
 
-		var videoUrl = GetVideoUrl(_currentVersion, _currentArticle);
-		ToggleClass(_videoLink, _linkDisabledClass, !videoUrl);
-		_videoLink.href = videoUrl;
-
-		var pdfUrl = GetPdfUrl(_currentVersion, _currentSection, _currentArticle);
-		ToggleClass(_pdfLink, _linkDisabledClass, !pdfUrl);
-		_pdfLink.href = pdfUrl;
-
-		var discordUrl = GetDiscordUrl(_currentSection);
-		ToggleClass(_discordLink, _linkDisabledClass, !discordUrl);
-		_discordLink.href = discordUrl;
-
 		var nextUrl = GetNextUrl(_currentArticle);
 		ToggleClass(_nextLink, _linkDisabledClass, !nextUrl);
 		_nextLink.href = nextUrl;
@@ -521,30 +484,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 			.replace(/[0-9]-+/g, "")
 			.replace(/^[a-z]/g, function (match) { return match.toUpperCase(); })
 			.replace(/[- ]([a-z])/g, function (match, capture) { return " " + capture.toUpperCase(); });
-	}
-
-	function GetVideoUrl(version, article)
-	{
-		return _videoUrl;
-	}
-
-	function GetDiscordUrl(section)
-	{
-		return _discordUrl;
-	}
-
-	function GetPdfUrl(version, section, article)
-	{
-		var name = _pdfNames[section];
-
-		if (!name)
-		{
-			var dash = article.indexOf('-');
-			var group = article.substring(0, dash);
-			name = _pdfNames[group];
-		}
-
-		return name ? _documentationPath + version + "/" + name : null;
 	}
 
 	function GetNextUrl(article)
