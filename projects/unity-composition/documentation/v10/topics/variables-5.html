@@ -98,12 +98,8 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Determines if two values are both <code>true</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">`</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if either or both values <code>true</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&vert;&vert;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Determines if either or both values are <code>true</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>!</code></p></td>
@@ -151,7 +147,7 @@ Logic operations are executed before comparison operations, which are executed b
 <div class="sect2">
 <h3 id="_asssignment">Asssignment</h3>
 <div class="paragraph">
-<p>In addition to accessing variables, expressions can set variables. This is done with the <code>=</code> operator. For example to store a computed damage value instead of returning it like the above example, write the expression <code>local.damage = global.player.attack * 2</code>. The damage value can be then later accessed by other Expressions and Variable References as <code>local.damage</code>. Each of the math and logic operations also exist as an assignment to more simply modify a value. These are: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code>, <code>&amp;=</code>, and <code>|=</code>. For example, the <code>player&#8217;s `attack</code>, can be permanently buffed with the statement <code>global.player.attack *= 2</code>. Shortcuts for adding and subtracting one from a variable are available with the <code>` and `--` operators. Place the operator before a value to include the increment or decrement in the result. For example, if `local.number` has the value `4`, the expression `local.result = local.number</code> will assign <code>5</code> to both <code>local.result</code> and <code>local.number</code> whereas the expression <code>local.result = local.number++</code> will assign <code>4</code> to <code>local.result</code> and <code>5</code> to <code>local.number</code>.</p>
+<p>In addition to accessing variables, expressions can set variables. This is done with the <code>=</code> operator. For example to store a computed damage value instead of returning it like the above example, write the expression <code>local.damage = global.player.attack * 2</code>. The damage value can be then later accessed by other Expressions and Variable References as <code>local.damage</code>. Each of the math and logic operations also exist as an assignment to more simply modify a value. These are: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code>, <code>&amp;=</code>, and <code>|=</code>. For example, the player&#8217;s <code>attack</code>, can be permanently buffed with the statement <code>global.player.attack *= 2</code>. Shortcuts for adding and subtracting one from a variable are available with the <code>++</code> and <code>--</code> operators. Place the operator before a value to include the increment or decrement in the result. For example, if <code>local.number</code> has the value <code>4</code>, the expression <code>local.result = ++local.number</code> will assign <code>5</code> to both <code>local.result</code> and <code>local.number</code> whereas the expression <code>local.result = local.number++</code> will assign <code>4</code> to <code>local.result</code> and <code>5</code> to <code>local.number</code>.</p>
 </div>
 </div>
 <div class="sect2">
