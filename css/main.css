@@ -420,15 +420,43 @@ iframe
 	margin: auto;
 }
 
+.markdown .video-wrapper
+{
+	margin: 0 40px;
+}
+
 .markdown .youtube
 {
-	text-align: center;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.markdown .youtube iframe
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .markdown p
 {
 	font-size: 20px;
 	line-height: 1.4em;
+}
+
+.markdown p code
+{
+	font-size: 17px;
+}
+
+.markdown pre code
+{
+	margin: 0 40px;
+	border-radius: 10px;
 }
 
 .footer

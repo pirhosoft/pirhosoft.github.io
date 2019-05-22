@@ -90,6 +90,23 @@ article .imageblock .title
 	font-style: italic;
 }
 
+article .videoblock .content
+{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+article .videoblock iframe
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
 article table.tableblock caption.title
 {
 	text-align: left;

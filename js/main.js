@@ -79,7 +79,7 @@ var facebookComments = "<div class='fb-comments' data-width='100%'></div>";
 function setContent(url, content, md)
 {
 	var page = document.getElementsByClassName("page").item(0);
-	var doComments = url.startsWith("/news/") || url.startsWith("/blog/");
+	var isArticle = url.startsWith("/news/") || url.startsWith("/blog/");
 
 	if (md)
 	{
@@ -90,13 +90,28 @@ function setContent(url, content, md)
 			literalMidWordUnderscores: true
 		});
 
-		var comments = doComments ? facebookComments : "";
+		var comments = isArticle ? facebookComments : "";
 		content = "<div class='markdown'>" + converter.makeHtml(content) + comments + "</div>";
 	}
 
 	page.innerHTML = content;
 
-	if (doComments && location.hostname == "pirhosoft.com")
+	if (isArticle && md)
+	{
+		var links = page.getElementsByTagName("a");
+		for (var i = 0; i < links.length; i++)
+			links[i].dataset.direct = true;
+
+		var videos = page.getElementsByClassName("youtube");
+		for (var i = 0; i < videos.length; i++)
+			wrapElement(videos[i], "div", "video-wrapper");
+
+		var codes = page.querySelectorAll("pre code");
+		for (var i = 0; i < codes.length; i++)
+			hljs.highlightBlock(codes[i]);
+	}
+
+	if (isArticle && location.hostname == "pirhosoft.com")
 	{
 		FB.XFBML.parse();
 	}
@@ -115,6 +130,16 @@ function setContent(url, content, md)
 	var scripts = page.getElementsByTagName("script");
 	for (var i = 0; i < scripts.length; i++)
 		eval(scripts[i].innerHTML)
+}
+
+function wrapElement(element, tag, c)
+{
+	var wrapper = document.createElement(tag);
+	wrapper.classList.add(c);
+	wrapper.innerHTML = element.outerHTML;
+	
+	element.parentNode.insertBefore(wrapper, element);
+	element.remove();
 }
 
 function setPage(url, push)
