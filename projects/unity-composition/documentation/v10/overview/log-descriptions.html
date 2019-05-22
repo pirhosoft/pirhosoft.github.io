@@ -12,10 +12,10 @@
 <div class="sect2">
 <h3 id="_general_tips">General Tips</h3>
 <div class="paragraph">
-<p>When dealing with <a href="#topics/variables-4.html">VariableReference</a> errors, the <a href="#topics/graphs-5.html">Watch Window</a> can be extremely useful. Global variables can be investigated at any time and variables on a specific <a href="#topics/graphs-1.html">InstructionGraph</a> can be investigated by <a href="#topics/graphs-5.html">setting a breakpoint</a> on a node.</p>
+<p>When dealing with <a href="#topics/variables/accessing-variables.html">VariableReference</a> errors, the <a href="#topics/graphs/debugging.html">Watch Window</a> can be extremely useful. Global variables can be investigated at any time and variables on a specific <a href="#topics/graphs/overview.html">InstructionGraph</a> can be investigated by <a href="#topics/graphs/debugging.html">setting a breakpoint</a> on a node.</p>
 </div>
 <div class="paragraph">
-<p><a href="#topics/variables-5.html">Expression</a> errors can be harder to track down. If the text box containing the <a href="#topics/variables-5.html">Expression</a> is red, the issue is with the actual structure of the <a href="#topics/variables-5.html">Expression</a> and details will be displayed. In this case the error state will update as the <a href="#topics/variables-5.html">Expression</a> is modified so it is easy to see when the issue has been resolved. If the <a href="#topics/variables-5.html">Expression</a> is valid and an error is printed at runtime, the issue is usually related to a <a href="#topics/variables-4.html">VariableReference</a> and the above tip for using the <a href="#topics/graphs-5.html">Watch Window</a> applies.</p>
+<p><a href="#topics/variables/writing-expressions.html">Expression</a> errors can be harder to track down. If the text box containing the <a href="#topics/variables/writing-expressions.html">Expression</a> is red, the issue is with the actual structure of the <a href="#topics/variables/writing-expressions.html">Expression</a> and details will be displayed. In this case the error state will update as the <a href="#topics/variables/writing-expressions.html">Expression</a> is modified so it is easy to see when the issue has been resolved. If the <a href="#topics/variables/writing-expressions.html">Expression</a> is valid and an error is printed at runtime, the issue is usually related to a <a href="#topics/variables/accessing-variables.html">VariableReference</a> and the above tip for using the <a href="#topics/graphs/debugging.html">Watch Window</a> applies.</p>
 </div>
 </div>
 <div class="sect2">
@@ -165,7 +165,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
 </tr>
 </tbody>
 </table>
@@ -215,7 +215,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
+<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Condition</em> <a href="#topics/variables/writing-expressions.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
 </dd>
 </dl>
 </div>
@@ -237,7 +237,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Condition</em> <a href="#topics/variables/writing-expressions.html">Expression</a> that failed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
@@ -253,7 +253,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>The reported error ({2}) should provide details on how to go about fixing the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p>
+<p>The reported error ({2}) should provide details on how to go about fixing the <em>Condition</em> <a href="#topics/variables/writing-expressions.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
@@ -309,7 +309,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement in the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement in the <em>Condition</em> <a href="#topics/variables/writing-expressions.html">Expression</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -351,7 +351,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Set the <em>Condition</em> <a href="#topics/variables-5.html">Expression</a>.</p>
+<p>Set the <em>Condition</em> <a href="#topics/variables/writing-expressions.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
@@ -369,19 +369,19 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that executed the <a href="#topics/variables-5.html">Expression</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that executed the <a href="#topics/variables/writing-expressions.html">Expression</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement of the <a href="#topics/variables-5.html">Expression</a> that was expected to result in a specific type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The final statement of the <a href="#topics/variables/writing-expressions.html">Expression</a> that was expected to result in a specific type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> the caller expected from the result of the expression.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> the caller expected from the result of the expression.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The actual <a href="#topics/variables-2.html">VariableType</a> of the result of the expression.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The actual <a href="#topics/variables/creating-variables.html">VariableType</a> of the result of the expression.</p></td>
 </tr>
 </tbody>
 </table>
@@ -415,7 +415,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> assigned to <em>Target</em> that resolved to an invalid type.</p></td>
 </tr>
 </tbody>
 </table>
@@ -465,7 +465,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
+<p>If the reported error ({2}) indicates a parameter is invalid, the <em>Expression</em> <a href="#topics/variables/writing-expressions.html">Expression</a> is calling the command incorrectly. Otherwise, the command itself has an error and needs to be edited directly. The message should provide details on how to go about fixing the issue.</p>
 </dd>
 </dl>
 </div>
@@ -487,7 +487,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <em>Expression</em> <a href="#topics/variables/writing-expressions.html">Expression</a> that failed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
@@ -503,7 +503,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>The reported error ({2}) should provide details on how to go about fixing the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a>.</p>
+<p>The reported error ({2}) should provide details on how to go about fixing the <em>Expression</em> <a href="#topics/variables/writing-expressions.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
@@ -533,7 +533,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Set the <em>Expression</em> <a href="#topics/variables-5.html">Expression</a>.</p>
+<p>Set the <em>Expression</em> <a href="#topics/variables/writing-expressions.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
@@ -551,7 +551,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables/creating-variables.html">VariableType</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -567,7 +567,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it either resolves to a variable with the correct type or resolves to a variable that can be assigned any type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it either resolves to a variable with the correct type or resolves to a variable that can be assigned any type.</p>
 </dd>
 </dl>
 </div>
@@ -585,7 +585,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid enum type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid enum type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -601,7 +601,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct enum type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct enum type.</p>
 </dd>
 </dl>
 </div>
@@ -619,7 +619,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid object type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid object type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -647,7 +647,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct object type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct object type.</p>
 </dd>
 </dl>
 </div>
@@ -665,7 +665,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -689,7 +689,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct type.</p>
 </dd>
 </dl>
 </div>
@@ -707,7 +707,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables/creating-variables.html">VariableType</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -715,11 +715,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> of the resolved value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> of the resolved value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> expected.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> expected.</p></td>
 </tr>
 </tbody>
 </table>
@@ -731,7 +731,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a variable with the correct type.</p>
 </dd>
 </dl>
 </div>
@@ -749,7 +749,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be resolved.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -765,7 +765,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a valid variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -783,7 +783,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be resolved.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -799,7 +799,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a valid variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -817,7 +817,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to a read only variable.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to a read only variable.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -833,7 +833,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a writable variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/instruction-graph-node.html">InstructionGraphNode</a> so it resolves to a writable variable.</p>
 </dd>
 </dl>
 </div>
@@ -851,11 +851,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The format of the <a href="#topics/interface-3.html">Message</a> that is being resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The format of the <a href="#topics/interface/messages.html">Message</a> that is being resolved.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be found.</p></td>
 </tr>
 </tbody>
 </table>
@@ -867,7 +867,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> in the <a href="#topics/interface-3.html">Message</a> to a valid variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> in the <a href="#topics/interface/messages.html">Message</a> to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -885,7 +885,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables/creating-variables.html">VariableType</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -893,7 +893,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> of the resolved value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> of the resolved value.</p></td>
 </tr>
 </tbody>
 </table>
@@ -905,7 +905,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>If the effect of disabling the <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> is desired, set <em>Suppress Errors</em> on the <a href="#manual/number-binding.html">NumberBinding</a>. Otherwise, change the <a href="#topics/variables-4.html">VariableReference</a> to a valid variable.</p>
+<p>If the effect of disabling the <a href="http://digitalnativestudios.com/textmeshpro/docs/" target="_blank" rel="noopener">TMP_Text</a> is desired, set <em>Suppress Errors</em> on the <a href="#manual/number-binding.html">NumberBinding</a>. Otherwise, change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -927,7 +927,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be found.</p></td>
 </tr>
 </tbody>
 </table>
@@ -939,7 +939,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> to a variable that resolves to either an <code>Int</code> or <code>String</code>.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> to a variable that resolves to either an <code>Int</code> or <code>String</code>.</p>
 </dd>
 </dl>
 </div>
@@ -961,7 +961,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be found.</p></td>
 </tr>
 </tbody>
 </table>
@@ -973,7 +973,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> to a variable that resolves to either an <code>Int</code> or <code>String</code>.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> to a variable that resolves to either an <code>Int</code> or <code>String</code>.</p>
 </dd>
 </dl>
 </div>
@@ -991,7 +991,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables/creating-variables.html">VariableType</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1007,7 +1007,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it either resolves to a variable with the correct type or resolves to a variable that can be assigned any type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it either resolves to a variable with the correct type or resolves to a variable that can be assigned any type.</p>
 </dd>
 </dl>
 </div>
@@ -1025,7 +1025,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid enum type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid enum type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1041,7 +1041,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct enum type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct enum type.</p>
 </dd>
 </dl>
 </div>
@@ -1059,7 +1059,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid object type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid object type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1087,7 +1087,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct object type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct object type.</p>
 </dd>
 </dl>
 </div>
@@ -1105,7 +1105,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid type.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1129,7 +1129,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct type.</p>
 </dd>
 </dl>
 </div>
@@ -1147,7 +1147,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables-2.html">VariableType</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to an invalid <a href="#topics/variables/creating-variables.html">VariableType</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1155,11 +1155,11 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> of the resolved value.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> of the resolved value.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> the <a href="#manual/variable-binding.html">VariableBinding</a> expected.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> the <a href="#manual/variable-binding.html">VariableBinding</a> expected.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1171,7 +1171,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct type.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a variable with the correct type.</p>
 </dd>
 </dl>
 </div>
@@ -1189,7 +1189,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be resolved.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1205,7 +1205,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a valid variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -1223,7 +1223,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that could not be resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that could not be resolved.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1239,7 +1239,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a valid variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a valid variable.</p>
 </dd>
 </dl>
 </div>
@@ -1257,7 +1257,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-4.html">VariableReference</a> that resolved to a read only variable.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/accessing-variables.html">VariableReference</a> that resolved to a read only variable.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
@@ -1273,7 +1273,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change the <a href="#topics/variables-4.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a writable variable.</p>
+<p>Change the <a href="#topics/variables/accessing-variables.html">VariableReference</a> on the <a href="#manual/variable-binding.html">VariableBinding</a> so it resolves to a writable variable.</p>
 </dd>
 </dl>
 </div>
@@ -1291,11 +1291,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The variable that was entered in the <a href="#topics/graphs-5.html">watch window</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The variable that was entered in the <a href="#topics/graphs/debugging.html">watch window</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">VariableType</a> of the variable that was entered.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">VariableType</a> of the variable that was entered.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1307,7 +1307,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>This only happens in the editor as a result of entering an invalid variable in the manual entry of the <a href="#topics/graphs-5.html">watch window</a>.</p>
+<p>This only happens in the editor as a result of entering an invalid variable in the manual entry of the <a href="#topics/graphs/debugging.html">watch window</a>.</p>
 </dd>
 </dl>
 </div>
@@ -1325,7 +1325,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The variable that was entered in the <a href="#topics/graphs-5.html">watch window</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The variable that was entered in the <a href="#topics/graphs/debugging.html">watch window</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1337,7 +1337,7 @@
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>This only happens in the editor as a result of entering an invalid variable in the manual entry of the <a href="#topics/graphs-5.html">watch window</a>.</p>
+<p>This only happens in the editor as a result of entering an invalid variable in the manual entry of the <a href="#topics/graphs/debugging.html">watch window</a>.</p>
 </dd>
 </dl>
 </div>
@@ -1358,11 +1358,11 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The command called from an <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The command called from an <a href="#topics/variables/writing-expressions.html">Expression</a> that failed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that initiated execution of the <a href="#topics/variables-5.html">Expression</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that initiated execution of the <a href="#topics/variables/writing-expressions.html">Expression</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
@@ -1374,7 +1374,7 @@
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>Execution of the <a href="#topics/variables-5.html">Expression</a> that called the command will stop and result in an empty variable.</p>
+<p>Execution of the <a href="#topics/variables/writing-expressions.html">Expression</a> that called the command will stop and result in an empty variable.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
@@ -1464,15 +1464,15 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <a href="#topics/variables-5.html">Expression</a> that failed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The statement in the <a href="#topics/variables/writing-expressions.html">Expression</a> that failed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that initiated execution of the <a href="#topics/variables-5.html">Expression</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://docs.unity3d.com/ScriptReference/Object.html" target="_blank" rel="noopener">Object</a> that initiated execution of the <a href="#topics/variables/writing-expressions.html">Expression</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The error message from the failed comman<a href="#topics/variables-5.html">Expression</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message from the failed comman<a href="#topics/variables/writing-expressions.html">Expression</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1480,11 +1480,11 @@
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>Execution of the <a href="#topics/variables-5.html">Expression</a> will stop and result in an empty variable.</p>
+<p>Execution of the <a href="#topics/variables/writing-expressions.html">Expression</a> will stop and result in an empty variable.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>The content of the error message should help explain what needs to be fixed in the <a href="#topics/variables-5.html">Expression</a>.</p>
+<p>The content of the error message should help explain what needs to be fixed in the <a href="#topics/variables/writing-expressions.html">Expression</a>.</p>
 </dd>
 </dl>
 </div>
@@ -1502,7 +1502,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The keyword that was attempted to be added to the <a href="#topics/variables-5.html">Expression</a> system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The keyword that was attempted to be added to the <a href="#topics/variables/writing-expressions.html">Expression</a> system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1532,7 +1532,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The constant that was attempted to be added to the <a href="#topics/variables-5.html">Expression</a> system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The constant that was attempted to be added to the <a href="#topics/variables/writing-expressions.html">Expression</a> system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1562,7 +1562,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The command that was attempted to be added to the <a href="#topics/variables-5.html">Expression</a> system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The command that was attempted to be added to the <a href="#topics/variables/writing-expressions.html">Expression</a> system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1592,7 +1592,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The symbol for the operator that was attempted to be added to the <a href="#topics/variables-5.html">Expression</a> system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The symbol for the operator that was attempted to be added to the <a href="#topics/variables/writing-expressions.html">Expression</a> system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1622,7 +1622,7 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The symbol for the operator that was attempted to be added to the <a href="#topics/variables-5.html">Expression</a> system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The symbol for the operator that was attempted to be added to the <a href="#topics/variables/writing-expressions.html">Expression</a> system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1653,15 +1653,15 @@ Expression: {0}</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{0}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The full text of the <a href="#topics/variables-5.html">Expression</a> that could not be parsed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The full text of the <a href="#topics/variables/writing-expressions.html">Expression</a> that could not be parsed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The character index in the <a href="#topics/variables-5.html">Expression</a> text where the error happened.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The character index in the <a href="#topics/variables/writing-expressions.html">Expression</a> text where the error happened.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The token in the <a href="#topics/variables-5.html">Expression</a> text where the error happened.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The token in the <a href="#topics/variables/writing-expressions.html">Expression</a> text where the error happened.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{3}</p></td>
@@ -1673,11 +1673,11 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The <a href="#topics/variables-5.html">Expression</a> will not be executable.</p>
+<p>The <a href="#topics/variables/writing-expressions.html">Expression</a> will not be executable.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Fix the structure of the <a href="#topics/variables-5.html">Expression</a> based on the details given in the error message.</p>
+<p>Fix the structure of the <a href="#topics/variables/writing-expressions.html">Expression</a> based on the details given in the error message.</p>
 </dd>
 </dl>
 </div>
@@ -1733,7 +1733,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The value that was sent to the <a href="#manual/instruction.html">Instruction</a> as the context but didn&#8217;t match the <a href="#topics/variables-2.html">constraint</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value that was sent to the <a href="#manual/instruction.html">Instruction</a> as the context but didn&#8217;t match the <a href="#topics/variables/creating-variables.html">constraint</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1771,7 +1771,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The value that was sent to the <a href="#manual/instruction.html">Instruction</a> for the input but didn&#8217;t match the <a href="#topics/variables-2.html">constraint</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value that was sent to the <a href="#manual/instruction.html">Instruction</a> for the input but didn&#8217;t match the <a href="#topics/variables/creating-variables.html">constraint</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1809,7 +1809,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1821,7 +1821,7 @@ Expression: {0}</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Either change the <a href="#topics/variables-2.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
+<p>Either change the <a href="#topics/variables/creating-variables.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
 </dd>
 </dl>
 </div>
@@ -1847,7 +1847,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to read the input from.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to read the input from.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1859,7 +1859,7 @@ Expression: {0}</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Either change the <a href="#topics/variables-2.html">variable</a> the input is read from or change the input to a specific value.</p>
+<p>Either change the <a href="#topics/variables/creating-variables.html">variable</a> the input is read from or change the input to a specific value.</p>
 </dd>
 </dl>
 </div>
@@ -1885,7 +1885,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1897,7 +1897,7 @@ Expression: {0}</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Either change the <a href="#topics/variables-2.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
+<p>Either change the <a href="#topics/variables/creating-variables.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
 </dd>
 </dl>
 </div>
@@ -1923,7 +1923,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> that the <a href="#manual/instruction.html">Instruction</a> attempted to assign the output to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1935,7 +1935,7 @@ Expression: {0}</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Either change the <a href="#topics/variables-2.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
+<p>Either change the <a href="#topics/variables/creating-variables.html">variable</a> the output is assigned to to one with a compatible type or one that can be set to any value, or set the output to be ignored.</p>
 </dd>
 </dl>
 </div>
@@ -1961,7 +1961,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> specified on the item that is not a <code>List</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> specified on the item that is not a <code>List</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1969,11 +1969,11 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The item will not be added to the <a href="#topics/interface-4.html">menu</a>.</p>
+<p>The item will not be added to the <a href="#topics/interface/menus-and-selections.html">menu</a>.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Either change <em>Variables</em> on the <a href="#topics/interface-4.html">menu item</a> so it refers to a <code>List</code> value or disable <em>Expand</em> on the <a href="#topics/interface-4.html">menu item</a></p>
+<p>Either change <em>Variables</em> on the <a href="#topics/interface/menus-and-selections.html">menu item</a> so it refers to a <code>List</code> value or disable <em>Expand</em> on the <a href="#topics/interface/menus-and-selections.html">menu item</a></p>
 </dd>
 </dl>
 </div>
@@ -1999,7 +1999,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> specified on the item that is not a <code>Store</code> or <code>List</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> specified on the item that is not a <code>Store</code> or <code>List</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2007,11 +2007,11 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The item will not be added to the <a href="#topics/interface-4.html">menu</a>.</p>
+<p>The item will not be added to the <a href="#topics/interface/menus-and-selections.html">menu</a>.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change <em>Variables</em> on the <a href="#topics/interface-4.html">menu item</a> so it refers to a <code>Store</code> or <code>List</code>.</p>
+<p>Change <em>Variables</em> on the <a href="#topics/interface/menus-and-selections.html">menu item</a> so it refers to a <code>Store</code> or <code>List</code>.</p>
 </dd>
 </dl>
 </div>
@@ -2041,7 +2041,7 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The item will not be added to the <a href="#topics/interface-4.html">menu</a>.</p>
+<p>The item will not be added to the <a href="#topics/interface/menus-and-selections.html">menu</a>.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
@@ -2071,7 +2071,7 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">variable</a> specified on the item that could not be resolved.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">variable</a> specified on the item that could not be resolved.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2079,11 +2079,11 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The item will not be added to the <a href="#topics/interface-4.html">menu</a>.</p>
+<p>The item will not be added to the <a href="#topics/interface/menus-and-selections.html">menu</a>.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Change <em>Variables</em> on the <a href="#topics/interface-4.html">menu item</a> so it refers to a <code>Store</code> or <code>List</code>.</p>
+<p>Change <em>Variables</em> on the <a href="#topics/interface/menus-and-selections.html">menu item</a> so it refers to a <code>Store</code> or <code>List</code>.</p>
 </dd>
 </dl>
 </div>
@@ -2113,11 +2113,11 @@ Expression: {0}</p>
 <dl>
 <dt class="hdlist1">Effect</dt>
 <dd>
-<p>The item will not be added to the <a href="#topics/interface-4.html">menu</a>.</p>
+<p>The item will not be added to the <a href="#topics/interface/menus-and-selections.html">menu</a>.</p>
 </dd>
 <dt class="hdlist1">Resolution</dt>
 <dd>
-<p>Assign <em>Template</em> on the <a href="#topics/interface-4.html">menu item</a>.</p>
+<p>Assign <em>Template</em> on the <a href="#topics/interface/menus-and-selections.html">menu item</a>.</p>
 </dd>
 </dl>
 </div>
@@ -2203,11 +2203,11 @@ Expression: {0}</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{1}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">type</a> the definition was given.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">type</a> the definition was given.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">{2}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables-2.html">type</a> the definition&#8217;s initializer evaluated to.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="#topics/variables/creating-variables.html">type</a> the definition&#8217;s initializer evaluated to.</p></td>
 </tr>
 </tbody>
 </table>

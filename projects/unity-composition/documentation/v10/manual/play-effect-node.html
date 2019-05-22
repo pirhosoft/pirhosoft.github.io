@@ -5,7 +5,7 @@
 <p>A Play Effect Node is an <a href="#manual/instruction-graph-node.html">Instruction Graph Node</a> that will spawn a prefab at the given Name, Position, and Rotation relative to the world, another object, or as a child object. The created effect can optionally be stored in a given <a href="#reference/variable-reference.html">VariableReference</a> so that it can be accessed later. This differs from a standard <a href="#manual/create-game-object-node.html">Create Game Object Node</a> in that a Play Effect Node can <em>WaitForCompletion</em> of the effect and destroy it when it is finished. The created effect object is queried for <a href="https://docs.unity3d.com/ScriptReference/ParticleSystem.html" target="_blank" rel="noopener">ParticleSystems</a> and other components that implement <a href="#reference/i-completion-notifier.html">ICompletionNotifier</a> to determine when the effect is finished. Create a Play Effect Node in the <span class="menuseq"><b class="menu">Create</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Animation</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Play Effect</b></span> menu of the Instruction Graph Window.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="#topics/graphs-1.html">Graphs</a> for more information on instruction graphs.<br>
+<p>See <a href="#topics/graphs/overview.html">Graphs</a> for more information on instruction graphs.<br>
 See the <em>"Play Jewel Sparkle"</em> node on the <em>"MazeJewel"</em> <a href="#manual/instruction-graph.html">Instruction Graph</a> in the Maze project for an example usage.</p>
 </div>
 <div class="sect2">
