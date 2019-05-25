@@ -87,12 +87,18 @@ document.addEventListener("DOMContentLoaded", function(event)
 		if (!hash || hash == "#" || hash == "#/")
 			hash = "#/" + _newestVersion + "/";
 
+		if (!hash.startsWith("#/v"))
+			hash = "#/" + _newestVersion + "/" + hash.substring(1);
+
 		var versionStart = 2;
 		var versionEnd = hash.indexOf("/", versionStart);
 		var articleStart = versionEnd + 1;
 
 		var version = hash.substring(versionStart, versionEnd);
-		var article = articleStart < hash.length ? (hash.substring(articleStart) + ".html") : _defaultArticle;
+		var article = articleStart < hash.length ? hash.substring(articleStart) : _defaultArticle;
+
+		if (!article.endsWith(".html"))
+			article = article + ".html";
 
 		return { version: version, article: article };
 	}

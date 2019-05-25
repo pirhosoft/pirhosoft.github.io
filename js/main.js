@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function(event)
 			var href = event.target.href || event.target.parentElement.href;
 			var direct = event.target.dataset.direct != undefined;
 
-			if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0)
+			if (!direct && href && href.startsWith(domain) && href.indexOf(".zip") < 0 && href.indexOf(".unitypackage") < 0)
 			{
 				var path = href.substring(domain.length);
 				setPage(path, true);
