@@ -5,6 +5,37 @@ article
 	color: #222;
 }
 
+article .loading .sect1
+{
+	visibility: hidden;
+}
+
+article .loading::before
+{
+	border-bottom: solid 3px #2984a9;
+	border-radius: 50%;
+	content: "";
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	animation: 1s linear infinite spinner;
+}
+
+@keyframes spinner
+{
+	0%
+	{
+		transform: translate3d(-50%, -50%, 0) rotate(0deg);
+	}
+	100%
+	{
+		transform: translate3d(-50%, -50%, 0) rotate(360deg);
+	}
+}
+
 article .sect1
 {
 	margin: 50px;

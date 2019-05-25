@@ -451,10 +451,19 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 		var hash = GetHash(_currentVersion, _currentArticle);
 
-		Load(_currentVersion + "/" + _currentArticle, SetArticleContent, function()
-		{
-			LoadArticle(_defaultArticle, false);
-		});
+		Load(_currentVersion + "/" + _currentArticle,
+			function(content)
+			{
+				if (pushState)
+					window.scrollTo(0, 0);
+
+				SetArticleContent(content);
+			},
+			function()
+			{
+				LoadArticle(_defaultArticle, false);
+			}
+		);
 
 		if (pushState)
 			window.history.pushState({ version: _currentVersion, article: _currentArticle }, "", hash);
