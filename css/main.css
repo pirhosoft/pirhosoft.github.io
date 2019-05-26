@@ -442,7 +442,7 @@ iframe
 	height: 100%;
 }
 
-.markdown p
+.markdown p, .markdown ul
 {
 	font-size: 20px;
 	line-height: 1.4em;
