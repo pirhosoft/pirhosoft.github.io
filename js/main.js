@@ -10,8 +10,8 @@ var pages =
 	"/projects/photon-phanatics/solutions": [ "Photon Phanatics Solutions", "/content/projects/photon-phanatics/solutions.html" ],
 	"/projects/photon-phanatics/solution": [ "Photon Phanatics Solution", "/content/projects/photon-phanatics/solution.html" ],
 	"/projects/the-art-of-war": [ "The Art of War", "/content/projects/the-art-of-war.html" ],
-	"/projects/unity-utilities": [ "Unity Utilities", "/content/projects/unity-utilities.html" ],
-	"/projects/unity-composition": [ "Unity Composition", "/content/projects/unity-composition.html" ],
+	"/projects/unity-utilities": [ "Utilities for Unity", "/content/projects/unity-utilities.html" ],
+	"/projects/unity-composition": [ "Composition Framework", "/content/projects/unity-composition.html" ],
 
 	"/legal/attribution": [ "PiRho Soft Attribution", "/content/legal/attribution.md" ],
 	"/legal/privacy-policy": [ "PiRho Soft Privacy Policy", "/content/legal/privacy-policy.md" ],
