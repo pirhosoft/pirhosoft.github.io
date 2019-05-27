@@ -117,10 +117,13 @@ This setting is saved with <a href="https://docs.unity3d.com/ScriptReference/Edi
 <dl>
 <dt class="hdlist1"><a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerator" target="_blank" rel="noopener">IEnumerator</a> Run(<a href="#reference/instruction-store.html">InstructionStore</a> <em>variables</em>, <a href="#reference/instruction-graph-node.html">InstructionGraphNode</a> <em>root</em>, string <em>source</em>)</dt>
 <dd>
-<p><mark>#</mark> Editor Support</p>
+<p>Call this from a subclass to start running the branch <em>root</em>. Pass the <a href="#reference/instruction-store.html">InstructionStore</a> given to the <em>Run</em> method as <em>variables</em>. <em>name</em> should be the name of the property the branch was assigned to for use in log messages.</p>
 </dd>
 </dl>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_editor_support">Editor Support</h3>
 <div class="paragraph">
 <p>The following properties and methods are exposed for use by the editor and only available in editor builds. They can be ignored.</p>
 </div>

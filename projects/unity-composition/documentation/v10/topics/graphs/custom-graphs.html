@@ -6,7 +6,12 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">	public class ScopedGraph : InstructionGraph
+<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">using System.Collections;
+using PiRhoSoft.CompositionEngine;
+
+namespace PiRhoSoft.CompositionExample
+{
+	public class ScopedGraph : InstructionGraph
 	{
 		<i class="conum" data-value="1"></i><b>(1)</b>
 		public InstructionGraphNode Enter = null;
@@ -20,7 +25,8 @@
 			yield return Run(variables, Process, nameof(Process));
 			yield return Run(variables, Exit, nameof(Exit));
 		}
-	}</code></pre>
+	}
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -36,7 +42,7 @@
 </table>
 </div>
 <div class="paragraph">
-<p>Ultimately, graphs are just a <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">Asset</a> so they can store data and implement any functionality desired. Execution will end when the <code>Run()</code> function finishes.</p>
+<p>Ultimately, graphs are just an <a href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html" target="_blank" rel="noopener">Asset</a> so they can store data and implement any functionality desired. Execution will end when the <code>Run()</code> function finishes.</p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>

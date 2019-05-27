@@ -2,11 +2,16 @@
 <h2 id="topics/bindings/custom-binding-roots">Creating Custom Binding Roots</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To create custom binding roots, derive from <a href="#reference/binding-root.html">BindingRoot</a> and override the <em>Value</em> property. The following is an example of a custom binding root uses an Object that is set in the editor as the value for child variable bindings to look up data on.</p>
+<p>To create custom binding roots, derive from <a href="#reference/binding-root.html">BindingRoot</a> and override the <em>Value</em> property. The following is an example of a custom binding root that uses an Object set in the editor as its value.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">	public class ObjectBindingRoot : BindingRoot
+<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">using PiRhoSoft.CompositionEngine;
+using UnityEngine;
+
+namespace PiRhoSoft.CompositionExample
+{
+	public class ObjectBindingRoot : BindingRoot
 	{
 		public Object Object;
 
@@ -17,7 +22,8 @@
 				return Object ? VariableValue.Create(Object) : VariableValue.Empty;
 			}
 		}
-	}</code></pre>
+	}
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">

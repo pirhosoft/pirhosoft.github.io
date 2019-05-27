@@ -2,7 +2,7 @@
 <h2 id="topics/variables/accessing-variables">Accessing Variables</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once a set of variables has been defined and created in stores, they can now be accessed and used by other objects. Objects that use variables to control their functionality will have Variable References and Expressions exposed as a way to specify the variable they should access. Variable References, which refer to a variable directly, are covered here. Expressions, which can use multiple variables to compute a value, are covered in the <a href="#topics/variables/accessing-variables.html">next section</a>.</p>
+<p>Once a set of variables has been defined and created in stores they can be accessed and used by other objects. Objects that use variables to control their functionality will have Variable References and Expressions exposed as a way to specify the variable they should access. Variable References, which refer to a variable directly, are covered here. Expressions, which can use multiple variables to compute a value, are covered in the <a href="#topics/variables/accessing-variables.html">next section</a>.</p>
 </div>
 <div class="paragraph">
 <p>Most commonly Variable References are encountered as properties on <a href="#topics/graphs/nodes.html">Graph Nodes</a>. The documentation for the specific node will indicate the type of value it expects. <a href="#topics/graphs/nodes.html">Graph Nodes</a> resolve Variable References using an Instruction Store. The Instruction Store has the following Variable Stores exposed and available to Variable References:</p>
@@ -54,7 +54,7 @@ Variable References used outside of <a href="#topics/graphs/nodes.html">Graph No
 </table>
 </div>
 <div class="paragraph">
-<p>Variable References are specified as a string and have a simple syntax. Basic references that refer to a variable in a store or specified with the store name, followed by a <code>'.'</code>, followed by the variable name. For example to reference a variable named <code>attack</code> on the <code>local</code> store the reference would be <code>local.attack</code>. Because variables can also be stores themselves, this syntax can be chained. For example, to access the <code>attack</code> variable on a <code>player</code> in the <code>global</code> store, the reference would be <code>global.player.attack</code>. To access the variables inside a variable with type <code>List</code>, brackets are used along with the index of the variable to access. For example if the <code>global</code> <code>player</code> has a list of <code>items</code>. The second item would be referenced with <code>global.player.items[1]</code> (note the indexes are 0 based so the second item is at index 1). A variable in a <code>List</code> could itself be a variable store, in which case the same chaining can be used. So if an item has a <code>name</code>, that <code>name</code> would be referenced with <code>global.player.items[1].name</code>. This chaining works with any combination of <code>List</code> and <code>Store</code> variables to any depth.</p>
+<p>Variable References are specified as a string and have a simple syntax. Basic references that refer to a variable in a store are specified with the store name, followed by a <code>'.'</code>, followed by the variable name. For example to reference a variable named <code>attack</code> on the <code>local</code> store the reference would be <code>local.attack</code>. Because variables can also be stores themselves, this syntax can be chained. For example, to access the <code>attack</code> variable on a <code>player</code> in the <code>global</code> store, the reference would be <code>global.player.attack</code>. To access the variables inside a variable with type <code>List</code>, brackets are used along with the index of the variable to access. For example if the <code>global</code> <code>player</code> has a list of <code>items</code>. The second item would be referenced with <code>global.player.items[1]</code> (note the indexes are 0 based so the second item is at index 1). A variable in a <code>List</code> could itself be a variable store, in which case the same chaining can be used. So if an item has a <code>name</code>, that <code>name</code> would be referenced with <code>global.player.items[1].name</code>. This chaining works with any combination of <code>List</code> and <code>Store</code> variables to any depth.</p>
 </div>
 <div class="paragraph">
 <p>The final capability of Variable References is casting. If a Variable Reference is supposed to refer to a certain component type, but the available stores only have access to a sibling of that component, the component can be accessed with <code>as</code>. For example if the <code>items</code> of the <code>player</code> in the previous example are stored on a different component of type <code>Inventory</code> that is a sibling of the <code>player</code> component, the items would be referenced with <code>global.player as Inventory.items</code>. Note that <code>Inventory</code> in this case is the exact name of the Component type that is being looked up.</p>
@@ -112,52 +112,52 @@ Often Variable References to objects do not need to be cast as the code using th
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">IntRect</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'x'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>x</code> on the <a href="https://docs.unity3d.com/ScriptReference/RectInt.html" target="_blank" rel="noopener">RectInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'y'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>y</code> on the <a href="https://docs.unity3d.com/ScriptReference/RectInt.html" target="_blank" rel="noopener">RectInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'w'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>w</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>width</code> on the <a href="https://docs.unity3d.com/ScriptReference/RectInt.html" target="_blank" rel="noopener">RectInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'h'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>height</code> on the <a href="https://docs.unity3d.com/ScriptReference/RectInt.html" target="_blank" rel="noopener">RectInt</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">IntBounds</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'x'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>x</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'y'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>y</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'z'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>z</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>z</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'w'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>w</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.x</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'h'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.y</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'d'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.z</code> on the <a href="https://docs.unity3d.com/ScriptReference/BoundsInt.html" target="_blank" rel="noopener">BoundsInt</a></p></td>
 </tr>
 <tr>
@@ -218,52 +218,52 @@ Often Variable References to objects do not need to be cast as the code using th
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Rect</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'x'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>x</code> on the <a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'y'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>y</code> on the <a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'w'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>w</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>width</code> on the <a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'h'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>height</code> on the <a href="https://docs.unity3d.com/ScriptReference/Rect.html" target="_blank" rel="noopener">Rect</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" rowspan="6"><p class="tableblock">Bounds</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'x'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>center.x</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'y'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>y</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>center.y</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'z'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>z</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>center.z</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'w'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>w</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.x</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'h'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>h</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.y</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a>
 .</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'d'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>d</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>size.z</code> on the <a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank" rel="noopener">Bounds</a></p></td>
 </tr>
 <tr>
@@ -337,7 +337,7 @@ Often Variable References to objects do not need to be cast as the code using th
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If a variable reference is entered with incorrect syntax, the text box will be colored red indicating there is an error. This will not check if the referenced variable actually exists or is the correct type as that can only be known at runtime. These runtime errors will be indicated by printing an error to the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">console window</a> and can be tracked down using the built in <a href="#topics/graphs/debugging.html">debugging features</a>.
+If a variable reference is entered with incorrect syntax, the text box will be colored red indicating there is an error. This will not check if the referenced variable actually exists or is the correct type as that can only be known at runtime. These runtime errors will be indicated with an error in the <a href="https://docs.unity3d.com/Manual/Console.html" target="_blank" rel="noopener">console window</a> and can be tracked down using the built in <a href="#topics/graphs/debugging.html">debugging features</a>.
 </td>
 </tr>
 </table>
@@ -345,7 +345,7 @@ If a variable reference is entered with incorrect syntax, the text box will be c
 <div class="sect2">
 <h3 id="_the_global_store">The Global Store</h3>
 <div class="paragraph">
-<p>Variables in the global store are available to every Variable Reference and Expression and can be added and changed at any time. To add variables during editing, use the Variable Link Component. This component can be added to any object and any number of them can be used. When a Variable Link Component is loaded and enabled, the variables it defines will be added to the global store. When it is unloaded or disabled, the variables will be removed.</p>
+<p>Variables in the global store are available to every Variable Reference and can be added and changed at any time. To add variables during editing, use the Variable Link Component. This component can be added to any object and any number of them can be used. When a Variable Link Component is loaded and enabled, the variables it defines will be added to the global store. When it is unloaded or disabled, the variables will be removed.</p>
 </div>
 <div class="imageblock">
 <div class="content">
