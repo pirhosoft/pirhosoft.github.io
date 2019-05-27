@@ -11,7 +11,7 @@
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-When storing a graph that will be serialized on an object it is important to define it as a <a href="#reference/instruction-caller.html">InstructionColler</a> instead of a standard instruction. This will ensure that inputs and outputs on the referenced graph are read and written correctly.
+When storing a graph that will be serialized on an object it is important to define it as an <a href="#reference/instruction-caller.html">InstructionCaller</a>. This will ensure that inputs and outputs on the referenced graph are read and written correctly.
 </td>
 </tr>
 </table>
@@ -21,7 +21,12 @@ When storing a graph that will be serialized on an object it is important to def
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">	public class RunGraph : MonoBehaviour
+<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">using PiRhoSoft.CompositionEngine;
+using UnityEngine;
+
+namespace PiRhoSoft.CompositionExample
+{
+	public class RunGraph : MonoBehaviour
 	{
 		public InstructionCaller Graph = new InstructionCaller(); <i class="conum" data-value="1"></i><b>(1)</b>
 
@@ -30,7 +35,8 @@ When storing a graph that will be serialized on an object it is important to def
 			if (Graph.Instruction &amp;&amp; !Graph.IsRunning) <i class="conum" data-value="2"></i><b>(2)</b>
 				CompositionManager.Instance.RunInstruction(Graph, CompositionManager.Instance.DefaultStore, VariableValue.Create(this)); <i class="conum" data-value="3"></i><b>(3)</b>
 		}
-	}</code></pre>
+	}
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">

@@ -87,12 +87,18 @@ document.addEventListener("DOMContentLoaded", function(event)
 		if (!hash || hash == "#" || hash == "#/")
 			hash = "#/" + _newestVersion + "/";
 
+		if (!hash.startsWith("#/v"))
+			hash = "#/" + _newestVersion + "/" + hash.substring(1);
+
 		var versionStart = 2;
 		var versionEnd = hash.indexOf("/", versionStart);
 		var articleStart = versionEnd + 1;
 
 		var version = hash.substring(versionStart, versionEnd);
-		var article = articleStart < hash.length ? (hash.substring(articleStart) + ".html") : _defaultArticle;
+		var article = articleStart < hash.length ? hash.substring(articleStart) : _defaultArticle;
+
+		if (!article.endsWith(".html"))
+			article = article + ".html";
 
 		return { version: version, article: article };
 	}
@@ -445,10 +451,19 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 		var hash = GetHash(_currentVersion, _currentArticle);
 
-		Load(_currentVersion + "/" + _currentArticle, SetArticleContent, function()
-		{
-			LoadArticle(_defaultArticle, false);
-		});
+		Load(_currentVersion + "/" + _currentArticle,
+			function(content)
+			{
+				if (pushState)
+					window.scrollTo(0, 0);
+
+				SetArticleContent(content);
+			},
+			function()
+			{
+				LoadArticle(_defaultArticle, false);
+			}
+		);
 
 		if (pushState)
 			window.history.pushState({ version: _currentVersion, article: _currentArticle }, "", hash);

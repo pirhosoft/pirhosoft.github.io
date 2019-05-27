@@ -145,7 +145,7 @@ Logic operations are executed before comparison operations, which are executed b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_asssignment">Asssignment</h3>
+<h3 id="_assignment">Assignment</h3>
 <div class="paragraph">
 <p>In addition to accessing variables, expressions can set variables. This is done with the <code>=</code> operator. For example to store a computed damage value instead of returning it like the above example, write the expression <code>local.damage = global.player.attack * 2</code>. The damage value can be then later accessed by other Expressions and Variable References as <code>local.damage</code>. Each of the math and logic operations also exist as an assignment to more simply modify a value. These are: <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>^=</code>, <code>&amp;=</code>, and <code>|=</code>. For example, the player&#8217;s <code>attack</code>, can be permanently buffed with the statement <code>global.player.attack *= 2</code>. Shortcuts for adding and subtracting one from a variable are available with the <code>++</code> and <code>--</code> operators. Place the operator before a value to include the increment or decrement in the result. For example, if <code>local.number</code> has the value <code>4</code>, the expression <code>local.result = ++local.number</code> will assign <code>5</code> to both <code>local.result</code> and <code>local.number</code> whereas the expression <code>local.result = local.number++</code> will assign <code>4</code> to <code>local.result</code> and <code>5</code> to <code>local.number</code>.</p>
 </div>
@@ -291,8 +291,18 @@ Logic operations are executed before comparison operations, which are executed b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Time</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets the value of <a href="https://docs.unity3d.com/ScriptReference/Time-time.html" target="_blank" rel="noopener">Time.time</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>local.time = Time()</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Realtime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets the value of <a href="https://docs.unity3d.com/ScriptReference/Time-realtimeSinceStartup.html" target="_blank" rel="noopener">Time.realtimeSinceStartup</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>local.time = Realtime()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UnscaledTime</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Gets the value of <a href="https://docs.unity3d.com/ScriptReference/Time-unscaledTime.html" target="_blank" rel="noopener">Time.unscaledTime</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>local.time = UnscaledTime()</code></p></td>
 </tr>
 </tbody>
 </table>

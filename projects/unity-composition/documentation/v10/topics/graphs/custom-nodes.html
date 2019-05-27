@@ -6,7 +6,12 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">	public class SpawnObjectNode : InstructionGraphNode
+<pre class="highlightjs highlight"><code class="language-cs hljs" data-lang="cs">using System.Collections;
+using PiRhoSoft.CompositionEngine;
+
+namespace PiRhoSoft.CompositionExample
+{
+	public class SpawnObjectNode : InstructionGraphNode
 	{
 		public InstructionGraphNode Next = null; <i class="conum" data-value="1"></i><b>(1)</b>
 		public GameObjectVariableSource Prefab = new GameObjectVariableSource();
@@ -25,18 +30,19 @@
 
 			yield break;
 		}
-	}</code></pre>
+	}
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><a href="#reference/intruction-graph-node.html">InstructionGraphNode</a> fields on a node will automatically be added as branch options for that node in Instruction Graph Window.</td>
+<td><a href="#reference/intruction-graph-node.html">InstructionGraphNode</a> fields on a node will automatically be added as branch options for that node in the Instruction Graph Window.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The third parameter <em>iteration</em> will increment if this node is an <a href="#reference/i-sequence-node.html">ISequenceNode</a> or an <a href="#reference/i-loop-node.html">ILoopNode</a> every time this node is run.</td>
+<td>The third parameter <em>iteration</em> will increment if this node is an <a href="#reference/i-sequence-node.html">ISequenceNode</a> or an <a href="#reference/i-loop-node.html">ILoopNode</a> every time this node is repeated.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
