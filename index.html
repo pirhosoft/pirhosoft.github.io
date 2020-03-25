@@ -1,70 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140828807-1"></script>
-		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-140828807-1');</script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="google-site-verification" content="a_qwwpDhJlLdFvY5nivVvf6tB5Hw7-njrTYyq9qLuMM">
-
-		<meta property="og:url" content="http://pirhosoft.com">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="PiRho Soft">
-		<meta property="og:description" content="Makers of games and game technology">
-		<meta property="og:image" content="http://pirhosoft.com/images/logo-temp.png">
-		<meta property="fb:app_id" content="2343268215898821">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@pirhosoft">
-		<meta name="twitter:creator" content="@pirhosoft">
-
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/favicon/site.webmanifest">
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#000000">
-
-		<title>PiRho Soft</title>
-		<script type="text/javascript" src="/js/main.js"></script>
-		<script type="text/javascript" src="/vendor/showdown.min.js"></script>
-		<script type="text/javascript" src="/vendor/showdown-youtube.min.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-		<link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css"/>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/obsidian.min.css">
-		<link rel="stylesheet" href="/css/main.css"/>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>PiRhoSoft</title>
+		<!-- Icon -->
+		<link rel="icon" href="img/logo.png">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<!-- Google Fonts Roboto -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Material Design Bootstrap -->
+		<link rel="stylesheet" href="/css/mdb.min.css">
+		<!-- Your custom styles (optional) -->
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
+
 	<body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=2343268215898821"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-		<div class="body">
-			<div class="header">
-				<a class="logo" href="/"><img src="/images/logo-icon.png" alt="PiRho Soft" /></a>
-				<div class="page-links">
-					<a class="page-link" href="/projects"><i class="fa fa-gamepad" aria-hidden="true"></i>Projects</a>
-					<a class="page-link" href="/blog"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a>
-					<a class="page-link" href="/about"><i class="fa fa-address-card" aria-hidden="true"></i>About</a>
-				</div>
-				<div class="spacer"></div>
-				<div class="social-links">
-					<a class="social-link" href="https://twitter.com/pirhosoft" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
-					<a class="social-link" href="https://www.facebook.com/pirhosoft" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-					<a class="social-link" href="https://www.youtube.com/channel/UCRiSxdervZlO_RnMOa-PMhw" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span>YouTube</span></a>
-					<a class="social-link" href="https://github.com/pirhosoft" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>Github</span></a>
-					<a class="social-link" href="https://discord.gg/3tDcmBF" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i><span>Discord</span></a>
-					<a class="social-link" href="mailto:support@pirhosoft.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+
+		<!-- Navbar -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+			<div class="container">
+				<!-- Brand -->
+				<a class="navbar-brand" href="#">
+					<img src="/img/logo.png" height="30">
+				</a>
+
+				<!-- Collapse -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Links -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+					<!-- Left -->
+					<div class="active-scroll mr-auto">
+						<ul class="nav navbar-nav">
+							<!-- About -->
+							<li class="nav-item">
+								<a class="nav-link" href="#about">About</a>
+							</li>
+							<!-- Projects -->
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown">Projects</a>
+								<div class="dropdown-menu dropdown-ins">
+									<a class="dropdown-item" href="#the-art-of-war"><i class="fas fa-paint-brush ml-2 mr-3"></i>The Art of War</a>
+									<a class="dropdown-item" href="#photon-phanatics"><i class="fas fa-lightbulb ml-2 mr-3"></i>Photon Phanatics</a>
+									<a class="dropdown-item" href="#composition"><i class="fas fa-hammer ml-2 mr-3"></i>PiRho Composition</a>
+									<a class="dropdown-item" href="#pargon"><i class="fas fa-plug ml-2 mr-3"></i>Pargon</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Right -->
+					<ul class="navbar-nav nav-flex-icons">
+						<!-- GitHub -->
+						<li class="nav-item">
+							<a href="https://github.com/pirhosoft/" class="nav-link" target="_blank">
+								<i class="fab fa-github mr-2"></i>GitHub
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="mailto:admin@pirhosoft.com" class="nav-link" target="_blank">
+								<i class="fa fa-envelope mr-2"></i>Contact
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="page"></div>
-			<div class="footer-spacing"></div>
+		</nav>
+
+		<!-- Jumbotron -->
+		<div class="card card-image" style="background-color: #070709;">
+			<div class="text-white text-center animated fadeIn py-5 px-4">
+				<div class="py-5">
+					<!-- Content -->
+					<div>
+						<img class="avatar" src="img/logo.png"/>
+						<img class="avatar-words" src="img/logo-words.png"/>
+					</div>
+					<p class="location btn blue-gradient mt-4"><i class="fas fa-map-marker-alt left"></i> Seattle, WA</p>
+				</div>
+			</div>
 		</div>
-		<div class="footer">
-			<span class="logo"><a href="/"><img src="/images/logo-full-white.png" /></a></span>
-			<span class="copyright">COPYRIGHT © 2010 - 2019 ALL RIGHTS RESERVED</span>
-			<span class="legal"><a href="/legal/terms-of-service">Terms of Service</a> | <a href="/legal/privacy-policy">Privacy Policy</a> | <a href="/legal/attribution">Attribution</a></span>
+
+		<!-- Modal Video -->
+		<div class="modal fade" id="art-of-war-player" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+						<iframe id="taow-player" class="embed-responsive-item" src="https://www.youtube.com/embed/4xOs599U6OQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		<!-- Modal Video -->
+		<div class="modal fade" id="photon-phanatics-player" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+						<iframe id="pp-player" class="embed-responsive-item" src="https://www.youtube.com/embed/oZ30GlaklKE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="container animated fadeIn py-5">
+
+			<!-- About -->
+			<div class="card dark-grey-text">
+				<div class="header text-center py-3 unique-color-dark">
+					<h3 class="font-weight-bold white-text py-3">About Us</h3>
+				</div>
+				<div class="p-4">
+					<div class="row">
+						<div class="col-md-6">
+							<p>Welcome to PiRhoSoft! We are an independent development studio started by two brothers in Seattle, Washington.</p> We have two commercially released games
+							(<a href="#the-art-of-war">The Art of War</a> and <a href="#photon-phanatics">Photon Phanatics</a>), but we specialize in creating tools to empower other amateur and professional developers.</p>
+						</div>
+						<div class="col-md-6">
+							<p>Check out our open source Unity tools including the <a href="composition">Composition Framework</a> and <a href="utilities">Unity Utilities Suite</a> or visit our <a href="https://github.com/pirhosoft/">GitHub</a> for other various projects we have worked on.</p>
+							<p>Some of our favorite games include Ocarina of Time, Beyond Good and Evil, Eternal Darkness, Horizon: Zero Dawn, Outer Wilds (not Worlds!) and Advent Rising (where is our sequel Mustard Brothers?!).</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Projects -->
+			<div id="the-art-of-war" class="mt-5 card">
+				<div class="header text-center py-3 unique-color-dark">
+					<h3 class="font-weight-bold white-text py-3">Projects<h3>
+				</div>
+
+				<div class="p-4 pb-5">
+
+					<!-- The Art of War -->
+					<section class="dark-grey-text">
+
+						<!-- Header -->
+						<div class="text-center">
+							<img src="img/art-of-war-title.png" class="w-responsive" />
+						</div>
+						<p class="text-center text-muted w-responsive mx-auto my-4">Equip your character with collectable parts to battle with friends or against bots in this 2D, twin stick, platformer shooting game
+
+						<!-- Row -->
+						<div class="row align-items-center">
+							<!-- Content -->
+							<div class="col-lg-7">
+								<ul class="list-unstyled fa-ul">
+									<li class="d-flex pl-4">
+										<span class="fa-li"><i class="fas fa-paint-brush fa-2x indigo-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Features</h5>
+											<div class="mt-2">Collect a variety of equippable parts and weapons.</div>
+											<div class="mt-2">Outfit your character with parts from your collection.</div>
+											<div class="mt-2">Tight twin stick, platforming controls.</div>
+											<div class="mt-2">Wide selection of maps and game types</div>
+											<div class="mt-2">Fully customizable matches and attributes</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Image -->
+							<div class="col-lg-5">
+								<div class="view z-depth-1-half rounded">
+									<img class="rounded img-fluid" src="img/art-of-war.png">
+									<div class="mask flex-center">
+										<a id="taow-play" class="btn-primary btn-lg" data-toggle="modal" data-target="#art-of-war-player"><i class="text-white fas fa-play"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="text-center mt-5">
+							<a href="https://www.microsoft.com/en-us/p/the-art-of-war-game/9pgj9477r23x" target="_blank">
+								<img style="max-width: 50%" src="img/microsoft-store-badge.png" />
+							</a>
+						</div>
+					</section>
+					
+					<hr class="my-5" id="photon-phanatics"> 
+
+					<!-- Photon Phanatics -->
+					<section class="dark-grey-text" id="photon-phanatics">
+
+						<!-- Header -->
+						<div class="text-center">
+							<img src="img/photon-phanatics-title.png" class="w-responsive" />
+						</div>
+						<p class="text-center text-muted w-responsive mx-auto my-4">Guide a laser beam through hundreds of custom designed puzzles using mirrors, prisms, refractors, and more</p>
+
+						<!-- Row -->
+						<div class="row align-items-center">
+
+							<!-- Image -->
+							<div class="col-lg-5 mb-lg-0 mb-5">
+								<div class="view z-depth-1-half rounded">
+									<img class="rounded img-fluid" src="img/photon-phanatics.png">
+									<div class="mask flex-center">
+										<a id="pp-play" class="btn-primary btn-lg" data-toggle="modal" data-target="#photon-phanatics-player"><i class="text-white fas fa-play"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<!-- Content -->
+							<div class="col-lg-7">
+								<ul class="list-unstyled fa-ul mb-0">
+									<li class="pl-4">
+										<span class="fa-li"><i class="fas fa-lightbulb fa-2x cyan-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Features</h5>
+											<p>Photon Phanatics is a clever and difficult puzzle game for iOS requiring you to direct light to solar panels using a variety of different fixtures such as mirrors, capacitors, and prisms.
+												The base game is free and contains 40 levels of varying difficulties to let you try it out. Once you complete them all, you can make a one time purchase of $1.99 to unlock the rest of the levels.
+											<p>An easy to use level editor is included with the free game allowing you to create your own puzzles and share them with friends.</p>
+											<p>Having trouble? <a href="projects/photon-phanatics/solutions.html">Get tips and solutions</a></p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="text-center mt-5">
+							<a href="https://apps.apple.com/us/app/photon-phanatics/id1345493476" target="_blank">
+								<img style="max-width: 50%" src="img/app-store-badge.png" />
+							</a>
+						</div>
+					</section>
+
+					<hr class="my-5" id="composition">
+
+					<!-- Unity Tool Suite -->
+					<section class="dark-grey-text">
+
+						<!-- Header -->
+						<h3 class="text-center font-weight-bold mt-3 mb-4">PiRho Composition Framework</h3>
+						<p class="text-center text-muted w-responsive mx-auto mb-4">Open source package for composing game logic, events, cinema scenes, and user interfaces in <a href="https://unity.com/">Unity</a>
+							with powerful, simple to use, graph based editing, dynamic variables, and data bindings.</p>
+
+						<!-- Row -->
+						<div class="row align-items-center">
+
+							<!-- Content -->
+							<div class="col-lg-6">
+								<ul class="list-unstyled fa-ul mb-lg-0 mb-5">
+									<li class="d-flex pl-4">
+										<span class="fa-li"><i class="fas fa-code-branch fa-2x blue-grey-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Graphs</h5>
+											<p class="text-muted">A node based, dynamic event system to drive cinema scenes and other gameplay sequences</p>
+										</div>
+									</li>
+									<li class="d-flex pl-4">
+										<span class="fa-li"><i class="fas fa-tools fa-2x indigo-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Editor UI Suite</h5>
+											<p class="text-muted">Various UI controls to increase designer productivity</p>
+										</div>
+									</li>
+									<li class="d-flex pl-4">
+										<span class="fa-li"><i class="fas fa-terminal fa-2x amber-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Expressions and Variables</h5>
+											<p class="text-muted">A runtime variable and expression system that minimizes allocations by avoiding boxing</p>
+										</div>
+									</li>
+									<li class="d-flex pl-4">
+										<span class="fa-li"><i class="fas fa-ring fa-2x deep-purple-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Data Bindings</h5>
+											<p class="text-muted">General purpose data binding system with modular formatting and animation to expedite creating UIs</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<!-- Image -->
+							<div class="col-lg-6">
+								<div class="view z-depth-1-half rounded">
+									<img src="img/composition.png" class="rounded img-fluid">
+								</div>
+							</div>
+
+							<div class="col-lg-12 text-center mt-5">
+								<a href="projects/unity-composition/composition.html" class="btn blue-gradient btn-rounded"><i class="fas fa-plus mr-2"></i>Learn More!</a>
+								<a href="projects/unity-composition/documentation/index.html" class="btn blue-gradient btn-rounded" target="_blank"><i class="far fa-file-alt mr-2"></i>Read the Docs</a>
+							</div>
+						</div>
+					</section>
+
+					<hr class="my-5" id="pargon"> 
+
+					<!-- Pargon -->
+					<section class="dark-grey-text">
+
+						<!-- Header -->
+						<h3 class="text-center font-weight-bold mb-4">Pargon</h3>
+						<p class="text-center text-muted w-responsive mx-auto mb-5">A cross platform <a href="https://github.com/pirhosoft/Pargon">game and application framework</a> written in C++</p>
+
+						<!-- Row -->
+						<div class="row align-items-center">
+
+							<!-- Content -->
+							<div class="col-lg-12">
+								<ul class="list-unstyled fa-ul mb-0">
+									<li class="pl-4">
+										<span class="fa-li"><i class="fas fa-images fa-2x cyan-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Graphics</h5>
+											<p class="text-muted">Cross plotform <a href="https://github.com/pirhosoft/PargonGraphics" target="_blank">graphics</a> abstraction layers: DirectX11, DirectX12, OpenGL, and Metal</p>
+										</div>
+									</li>
+									<li class="pl-4">
+										<span class="fa-li"><i class="fas fa-laptop-code fa-2x purple-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Crossplatform</h5>
+											<p class="text-muted">Application layers for <a href="https://github.com/pirhosoft/PargonInput" target="_blank">input</a>, <a href="https://github.com/pirhosoft/PargonAudio" target="_blank">audio</a>, <a href="https://github.com/pirhosoft/PargonFiles" target="_blank">file IO</a>, and <a href="https://github.com/pirhosoft/PargonApplication" target="_blank">application</a> including OpenAL, XAudio, XInput to support builds on Win32, UWP, OSX, iOS</p>
+										</div>
+									</li>
+									<li class="pl-4">
+										<span class="fa-li"><i class="fas fa-th-large fa-2x orange-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">UI</h5>
+											<p class="text-muted">UI layout and styling system</p>
+										</div>
+									</li>
+									<li class="pl-4">
+										<span class="fa-li"><i class="fas fa-pencil-alt fa-2x yellow-text"></i></span>
+										<div>
+											<h5 class="font-weight-bold mb-1">Serialization</h5>
+											<p class="text-muted mb-0">Object, text, and binary <a href="https://github.com/pirhosoft/PargonSerialization" target="_blank">serialization</a> system</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Footer-->
+		<footer class="page-footer text-center font-small mt-4 fadeIn">
+			<!--Copyright-->
+			<div class="footer-copyright py-3">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							© 2020 Copywrite: <a href="/">PiRhoSoft, Inc.</a>
+						</div>
+						<div class="col-md-6 mt-2 mt-md-0">
+							<a href="legal/privacy-policy.html">Privacy Policy</a> |
+							<a href="legal/terms-of-service.html">Terms of Service</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="/js/mdb.min.js"></script>
+		<!-- Custom scripts -->
+		<script src="js/modalPlay.js"></script>
+
 	</body>
 </html>

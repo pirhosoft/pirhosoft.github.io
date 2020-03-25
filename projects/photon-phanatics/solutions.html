@@ -1,69 +1,860 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140828807-1"></script>
-		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-140828807-1');</script>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-
-		<meta property="og:url" content="http://pirhosoft.com/projects/photon-phanatics/solutions">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Photon Phanatics">
-		<meta property="og:description" content="Solutions for Photon Phanatics puzzles">
-		<meta property="og:image" content="http://pirhosoft.com/images/projects/photon-phanatics/thumbnail-temp.png">
-		<meta property="fb:app_id" content="2343268215898821">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@pirhosoft">
-		<meta name="twitter:creator" content="@pirhosoft">
-
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/favicon/site.webmanifest">
-		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="/favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#2b5797">
-		<meta name="msapplication-config" content="/favicon/browserconfig.xml">
-		<meta name="theme-color" content="#000000">
-
-		<title>Photon Phanatics</title>
-		<script type="text/javascript" src="/js/main.js"></script>
-		<script type="text/javascript" src="/vendor/showdown.min.js"></script>
-		<script type="text/javascript" src="/vendor/showdown-youtube.min.js"></script>
-		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-		<link rel="stylesheet" href="/vendor/font-awesome/css/all.min.css"/>
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/obsidian.min.css">
-		<link rel="stylesheet" href="/css/main.css"/>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Photon Phanatics Solutions</title>
+		<!-- Icon -->
+		<link rel="icon" href="/img/logo.png">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<!-- Google Fonts Roboto -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<!-- Material Design Bootstrap -->
+		<link rel="stylesheet" href="/css/mdb.min.css">
+		<!-- Your custom styles (optional) -->
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
+
 	<body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=2343268215898821"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-		<div class="body">
-			<div class="header">
-				<a class="logo" href="/"><img src="/images/logo-icon.png" alt="PiRho Soft" /></a>
-				<div class="page-links">
-					<a class="page-link" href="/projects"><i class="fa fa-gamepad" aria-hidden="true"></i>Projects</a>
-					<a class="page-link" href="/blog"><i class="fa fa-rss-square" aria-hidden="true"></i>Blog</a>
-					<a class="page-link" href="/about"><i class="fa fa-address-card" aria-hidden="true"></i>About</a>
-				</div>
-				<div class="spacer"></div>
-				<div class="social-links">
-					<a class="social-link" href="https://twitter.com/pirhosoft" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
-					<a class="social-link" href="https://www.facebook.com/pirhosoft" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-					<a class="social-link" href="https://www.youtube.com/channel/UCRiSxdervZlO_RnMOa-PMhw" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i><span>YouTube</span></a>
-					<a class="social-link" href="https://github.com/pirhosoft" target="_blank"><i class="fab fa-github" aria-hidden="true"></i><span>Github</span></a>
-					<a class="social-link" href="https://discord.gg/9FAhush" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i><span>Discord</span></a>
-					<a class="social-link" href="mailto:support@pirhosoft.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i><span>Contact</span></a>
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+			<div class="container">
+				<!-- Brand -->
+				<a class="navbar-brand" href="/">
+					<img src="/img/logo.png" height="30">
+				</a>
+
+				<!-- Collapse -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Links -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+					<!-- Left -->
+					<div class="active-scroll mr-auto">
+						<ul class="nav navbar-nav">
+							<!-- About -->
+							<li class="nav-item">
+								<a class="nav-link" href="/">Home</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Right -->
+					<ul class="navbar-nav nav-flex-icons">
+						<!-- GitHub -->
+						<li class="nav-item">
+							<a href="https://github.com/pirhosoft/" class="nav-link" target="_blank">
+								<i class="fab fa-github mr-2"></i>GitHub
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="mailto:admin@pirhosoft.com" class="nav-link" target="_blank">
+								<i class="fa fa-envelope mr-2"></i>Contact
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="page"></div>
-			<div class="footer-spacing"></div>
+		</nav>
+
+		<!-- Jumbotron -->
+		<div class="card card-image" style="background-color: #242424">
+			<div class="text-white text-center animated fadeIn py-5 px-4">
+				<div class="py-5">
+					<!-- Content -->
+					<img class="w-responsive" src="/img/photon-phanatics-title.png" />
+				</div>
+			</div>
 		</div>
-		<div class="footer">
-			<span class="logo"><a href="/"><img src="/images/logo-full-white.png" /></a></span>
-			<span class="copyright">COPYRIGHT © 2010 - 2019 ALL RIGHTS RESERVED</span>
-			<span class="legal"><a href="/legal/terms-of-service">Terms of Service</a> | <a href="/legal/privacy-policy">Privacy Policy</a> | <a href="/legal/attribution">Attribution</a></span>
+
+		<div class="container animated fadeIn py-5">
+
+			<!-- Tips -->
+			<div class="card dark-grey-text">
+				<div class="header text-center py-3 unique-color-dark">
+					<h3 class="font-weight-bold white-text py-3">Tips</h3>
+				</div>
+				<div class="p-4">
+					<p><b>Experiment: </b>There is no penalty for failing so test fire the lasers often to visualize their path. This is especially important when a level contains switches as not all switches have the same behavior.</p>
+					<p><b>Work Backwards: </b>Some parts of the solution may be easier if you work backward from the solar panel instead of forward from the laser gun.</p>
+					<p><b>Moving and Rotating: </b>Remember, some fixtures that are placed in the level can be moved or rotated. Pay attention to the base of the fixture or select it to see what actions are available.</p>
+					<p><b>Retracing: </b>Sometimes it is useful, or even necessary, to have a laser retrace its path by having it hit a mirror straight on.</p>
+					<p><b>Do the Color Math: </b>
+						If a level includes lasers, prisms, capacitors, and/or filters it can be helpful to figure out all the colors you have to work with and compare that to the colors of all the panels. With that
+						information you can determine what colors need to be split by prisms, removed by filters, and joined by capacitors. For example: a level containing 2 white lasers, one turquoise laser, and one blue laser
+						has a total of 4 blue components, 3 green components, and 2 red components.
+					</p>
+					<p><b>Try a Different Level: </b>
+						All levels are unlocked from the start so if you get stuck it may help to move on to a different one. Sometimes you will see new patterns when you return with a fresh perspective. If you really can't
+						figure one out and are desperate to see how it's done, all the solutions can be found below.
+					</p>
+				</div>
+			</div>
+
+			<!-- Tips -->
+			<div class="mt-5 card dark-grey-text">
+				<div class="header text-center py-3 unique-color-dark">
+					<h3 class="font-weight-bold white-text py-3">Solutions</h3>
+				</div>
+				<div class="p-4 text-center">
+					<div class="packs">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="h3">Lights On!</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level0-0">
+											<div class="level-number">1</div>
+											<div class="level-name">Rotation</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Movement</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Inventory</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-3">
+											<div class="level-number">4</div>
+											<div class="level-name">Practice</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Straight On</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Guns and Panels</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-6">
+											<div class="level-number">7</div>
+											<div class="level-name">LEDs</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Multi-angle</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-8">
+											<div class="level-number">9</div>
+											<div class="level-name">More Practice</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Prisms</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-10">
+											<div class="level-number">11</div>
+											<div class="level-name">Capacitors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Filters</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-12">
+											<div class="level-number">13</div>
+											<div class="level-name">Color Combos</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Refractors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-14">
+											<div class="level-number">15</div>
+											<div class="level-name">One-Way Mirrors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-15">
+											<div class="level-number">16</div>
+											<div class="level-name">Switches</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Doors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Detonators</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-18">
+											<div class="level-number">19</div>
+											<div class="level-name">Valves</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level0-19">
+											<div class="level-number">20</div>
+											<div class="level-name">Last Lesson</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="h3">Starter Pack</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level1-0">
+											<div class="level-number">1</div>
+											<div class="level-name">Open Sesame</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Easy Switch</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Double Detonator</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-3">
+											<div class="level-number">4</div>
+											<div class="level-name">Ping Pong</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Detonation</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Blockade</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-6">
+											<div class="level-number">7</div>
+											<div class="level-name">Double Back</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Double Switch</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-8">
+											<div class="level-number">9</div>
+											<div class="level-name">Tricky Triangles</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Reflection</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-10">
+										<div class="level-number">11</div>
+										<div class="level-name">Walls &amp; Valves</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Labyrinth</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-12">
+											<div class="level-number">13</div>
+											<div class="level-name">More Switching</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Recombination</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-14">
+											<div class="level-number">15</div>
+											<div class="level-name">Symmetry</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-15">
+											<div class="level-number">16</div>
+											<div class="level-name">Split Decision</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Sharing</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Spiral</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-18">
+											<div class="level-number">19</div>
+											<div class="level-name">Color Exam</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level1-19">
+											<div class="level-number">20</div>
+											<div class="level-name">Final Exam</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="h3">Bonus Pack 1</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level2-0">
+											<div class="level-number">1</div>
+											<div class="level-name">Merge &amp; Conquer</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Passage</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Hello Maze</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-3">
+											<div class="level-number">4</div>
+											<div class="level-name">Jumble</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Flying Solo</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Force Split</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-6">
+											<div class="level-number">7</div>
+											<div class="level-name">Slide Puzzle</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Backed Up</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-8">
+											<div class="level-number">9</div>
+											<div class="level-name">Double Circuit</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Spinner</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-10">
+											<div class="level-number">11</div>
+											<div class="level-name">Whirlpool</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Two-Four</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-12">
+											<div class="level-number">13</div>
+											<div class="level-name">Kafei</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Lines</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-14">
+											<div class="level-number">15</div>
+											<div class="level-name">Packed House</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-15">
+											<div class="level-number">16</div>
+											<div class="level-name">The Ringer</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Six Split</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level2-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Pathways</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="h3">Bonus Pack 2</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level3-0">
+											<div class="level-number">1</div>
+											<div class="level-name">Hurry Up</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Straight In?</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Blackout</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-3">
+											<div class="level-number">4</div>
+											<div class="level-name">Delay</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Hall of Mirrors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Bounce Back</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-6">
+											<div class="level-number">7</div>
+											<div class="level-name">One For Me</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Scatter</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-8">
+											<div class="level-number">9</div>
+											<div class="level-name">King Me</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Pave The Way</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-10">
+											<div class="level-number">11</div>
+											<div class="level-name">Rainbow</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Four Ways</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-12">
+											<div class="level-number">13</div>
+											<div class="level-name">Dungeon</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Diagonal Alley</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-14">
+											<div class="level-number">15</div>
+											<div class="level-name">Quad Color</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-15">
+											<div class="level-number">16</div>
+											<div class="level-name">Angles</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Gridlock</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level3-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Aisle 2 Clean-Up</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="h3">Bonus Pack 3</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level4-0">
+											<div class="level-number">1</div>
+											<div class="level-name">Crisscross</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Wrap Around</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Rocketship</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-3">
+											<div class="level-number">4</div>
+											<div class="level-name">The Moat</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Use Em All</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Confusion</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-6">
+											<div class="level-number">7</div>
+											<div class="level-name">Retrieval</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Double Cross</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-8">
+											<div class="level-number">9</div>
+											<div class="level-name">Berry Picking</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Sliders: 2</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-10">
+											<div class="level-number">11</div>
+											<div class="level-name">Tight Spaces</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Snake</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-12">
+											<div class="level-number">13</div>
+											<div class="level-name">Place Switch</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Come Together</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-14">
+											<div class="level-number">15</div>
+											<div class="level-name">Too Easy</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-15">
+											<div class="level-number">16</div>
+											<div class="level-name">Worming</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Cave</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level4-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Lane Change</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="h3">Advanced Pack</div>
+								<div class="d-flex flex-wrap">
+									<div class="level">
+										<a href="solution.html#level5-0">
+											<div class="level-number">1</div>
+											<div class="level-name">The Crossing</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-1">
+											<div class="level-number">2</div>
+											<div class="level-name">Sewers</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-2">
+											<div class="level-number">3</div>
+											<div class="level-name">Dizzy</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-3">
+											<div class="level-number">4</div>
+											<div class="level-name">Giganto</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-4">
+											<div class="level-number">5</div>
+											<div class="level-name">Cross Detonation</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-5">
+											<div class="level-number">6</div>
+											<div class="level-name">Door Time</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-6">
+											<div class="level-number">7</div>
+											<div class="level-name">Switching Places</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-7">
+											<div class="level-number">8</div>
+											<div class="level-name">Land Grab</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-8">
+											<div class="level-number">9</div>
+											<div class="level-name">Rotation Maze</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-9">
+											<div class="level-number">10</div>
+											<div class="level-name">Wild Ones</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-10">
+											<div class="level-number">11</div>
+											<div class="level-name">Power Grid</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-11">
+											<div class="level-number">12</div>
+											<div class="level-name">Shutter Speed</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-12">
+											<div class="level-number">13</div>
+											<div class="level-name">City Blocks</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-13">
+											<div class="level-number">14</div>
+											<div class="level-name">Complex</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-14">
+											<div class="level-number">15</div>
+											<div class="level-name">2x4</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-15">
+											<div class="level-number">16</div>
+											<div class="level-name">Big Maze</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-16">
+											<div class="level-number">17</div>
+											<div class="level-name">Filter Frenzy</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-17">
+											<div class="level-number">18</div>
+											<div class="level-name">Boggle</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-18">
+											<div class="level-number">19</div>
+											<div class="level-name">Double Doors</div>
+										</a>
+									</div>
+									<div class="level">
+										<a href="solution.html#level5-19">
+											<div class="level-number">20</div>
+											<div class="level-name">Separation</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<!--Footer-->
+		<footer class="page-footer text-center font-small mt-4 fadeIn">
+			<!--Copyright-->
+			<div class="footer-copyright py-3">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							© 2020 Copywrite: <a href="/">PiRhoSoft, Inc.</a>
+						</div>
+						<div class="col-md-6 mt-2 mt-md-0">
+							<a href="/legal/privacy-policy.html">Privacy Policy</a> |
+							<a href="/legal/terms-of-service.html">Terms of Service</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<!-- Bootstrap tooltips -->
+		<script type="text/javascript" src="/js/popper.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="/js/mdb.min.js"></script>
+
 	</body>
 </html>
